@@ -1,0 +1,12 @@
+# Railway config for the API service (nixpacks auto-detects Python via requirements.txt).
+# The scraper worker is a SECOND Railway service — point it at railway.worker.toml
+# in the Railway dashboard (Settings -> Config file path).
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "uvicorn main:app --host 0.0.0.0 --port $PORT"
+healthcheckPath = "/health"
+healthcheckTimeout = 120
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3

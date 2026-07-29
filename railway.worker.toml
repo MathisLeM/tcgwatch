@@ -1,0 +1,10 @@
+# Railway config for the SCRAPER WORKER service (separate service, same repo).
+# In the Railway dashboard set this service's "Config file path" to railway.worker.toml.
+# It shares DATABASE_URL (Supabase) and R2_* env vars with the API service.
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "python -m scraper.worker"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3

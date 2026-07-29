@@ -1,0 +1,1735 @@
+{
+  "source": "https://www.pokecardex.com",
+  "count": 247,
+  "sets": [
+    {
+      "code": "CRI",
+      "name_fr": "Chaos Ascendant",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CRI.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CRI.png",
+      "url": "https://www.pokecardex.com/series/CRI"
+    },
+    {
+      "code": "POR",
+      "name_fr": "Équilibre Parfait",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/POR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/POR.png",
+      "url": "https://www.pokecardex.com/series/POR"
+    },
+    {
+      "code": "ASC",
+      "name_fr": "Héros Transcendants",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/ASC.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/ASC.png",
+      "url": "https://www.pokecardex.com/series/ASC"
+    },
+    {
+      "code": "PFL",
+      "name_fr": "Flammes Fantasmagoriques",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PFL.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PFL.png",
+      "url": "https://www.pokecardex.com/series/PFL"
+    },
+    {
+      "code": "MEG",
+      "name_fr": "Méga-Évolution",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MEG.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MEG.png",
+      "url": "https://www.pokecardex.com/series/MEG"
+    },
+    {
+      "code": "MEE",
+      "name_fr": "Énergies Méga-Évolution",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MEE.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MEE.png",
+      "url": "https://www.pokecardex.com/series/MEE"
+    },
+    {
+      "code": "MEP",
+      "name_fr": "Promos Méga-Évolution",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MEP.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MEP.png",
+      "url": "https://www.pokecardex.com/series/MEP"
+    },
+    {
+      "code": "BLK",
+      "name_fr": "Foudre Noire",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/BLK.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/BLK.png",
+      "url": "https://www.pokecardex.com/series/BLK"
+    },
+    {
+      "code": "WHT",
+      "name_fr": "Flamme Blanche",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WHT.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WHT.png",
+      "url": "https://www.pokecardex.com/series/WHT"
+    },
+    {
+      "code": "DRI",
+      "name_fr": "Rivalités Destinées",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/DRI.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/DRI.png",
+      "url": "https://www.pokecardex.com/series/DRI"
+    },
+    {
+      "code": "JTG",
+      "name_fr": "Aventures Ensemble",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/JTG.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/JTG.png",
+      "url": "https://www.pokecardex.com/series/JTG"
+    },
+    {
+      "code": "PRE",
+      "name_fr": "Évolutions Prismatiques",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PRE.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PRE.png",
+      "url": "https://www.pokecardex.com/series/PRE"
+    },
+    {
+      "code": "SSP",
+      "name_fr": "Étincelles Déferlantes",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SSP.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SSP.png",
+      "url": "https://www.pokecardex.com/series/SSP"
+    },
+    {
+      "code": "SCR",
+      "name_fr": "Couronne Stellaire",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SCR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SCR.png",
+      "url": "https://www.pokecardex.com/series/SCR"
+    },
+    {
+      "code": "SFA",
+      "name_fr": "Fable Nébuleuse",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SFA.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SFA.png",
+      "url": "https://www.pokecardex.com/series/SFA"
+    },
+    {
+      "code": "TWM",
+      "name_fr": "Mascarade Crépusculaire",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TWM.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TWM.png",
+      "url": "https://www.pokecardex.com/series/TWM"
+    },
+    {
+      "code": "TEF",
+      "name_fr": "Forces Temporelles",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TEF.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TEF.png",
+      "url": "https://www.pokecardex.com/series/TEF"
+    },
+    {
+      "code": "PAF",
+      "name_fr": "Destinées de Paldea",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PAF.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PAF.png",
+      "url": "https://www.pokecardex.com/series/PAF"
+    },
+    {
+      "code": "PAR",
+      "name_fr": "Faille Paradoxe",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PAR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PAR.png",
+      "url": "https://www.pokecardex.com/series/PAR"
+    },
+    {
+      "code": "MEW",
+      "name_fr": "151",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MEW.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MEW.png",
+      "url": "https://www.pokecardex.com/series/MEW"
+    },
+    {
+      "code": "OBF",
+      "name_fr": "Flammes Obsidiennes",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/OBF.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/OBF.png",
+      "url": "https://www.pokecardex.com/series/OBF"
+    },
+    {
+      "code": "PAL",
+      "name_fr": "Évolutions à Paldea",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PAL.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PAL.png",
+      "url": "https://www.pokecardex.com/series/PAL"
+    },
+    {
+      "code": "SVI",
+      "name_fr": "Écarlate et Violet",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SVI.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SVI.png",
+      "url": "https://www.pokecardex.com/series/SVI"
+    },
+    {
+      "code": "SVE",
+      "name_fr": "Énergies Écarlate et Violet",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SVE.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SVE.png",
+      "url": "https://www.pokecardex.com/series/SVE"
+    },
+    {
+      "code": "SVP",
+      "name_fr": "Promos Écarlate et Violet",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SVP.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SVP.png",
+      "url": "https://www.pokecardex.com/series/SVP"
+    },
+    {
+      "code": "CRZ",
+      "name_fr": "Zénith Suprême",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CRZ.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CRZ.png",
+      "url": "https://www.pokecardex.com/series/CRZ"
+    },
+    {
+      "code": "SIT",
+      "name_fr": "Tempête Argentée",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SIT.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SIT.png",
+      "url": "https://www.pokecardex.com/series/SIT"
+    },
+    {
+      "code": "LOR",
+      "name_fr": "Origine Perdue",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/LOR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/LOR.png",
+      "url": "https://www.pokecardex.com/series/LOR"
+    },
+    {
+      "code": "PGO",
+      "name_fr": "Pokémon GO",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PGO.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PGO.png",
+      "url": "https://www.pokecardex.com/series/PGO"
+    },
+    {
+      "code": "ASR",
+      "name_fr": "Astres Radieux",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/ASR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/ASR.png",
+      "url": "https://www.pokecardex.com/series/ASR"
+    },
+    {
+      "code": "BRS",
+      "name_fr": "Stars Étincelantes",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/BRS.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/BRS.png",
+      "url": "https://www.pokecardex.com/series/BRS"
+    },
+    {
+      "code": "FST",
+      "name_fr": "Poing de Fusion",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/FST.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/FST.png",
+      "url": "https://www.pokecardex.com/series/FST"
+    },
+    {
+      "code": "CEL",
+      "name_fr": "Célébrations",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CEL.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CEL.png",
+      "url": "https://www.pokecardex.com/series/CEL"
+    },
+    {
+      "code": "EVS",
+      "name_fr": "Évolution Céleste",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/EVS.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/EVS.png",
+      "url": "https://www.pokecardex.com/series/EVS"
+    },
+    {
+      "code": "CRE",
+      "name_fr": "Règne de Glace",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CRE.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CRE.png",
+      "url": "https://www.pokecardex.com/series/CRE"
+    },
+    {
+      "code": "SWSH5",
+      "name_fr": "Styles de Combat",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SWSH5.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SWSH5.png",
+      "url": "https://www.pokecardex.com/series/SWSH5"
+    },
+    {
+      "code": "SWSH45",
+      "name_fr": "Destinées Radieuses",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SWSH45.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SWSH45.png",
+      "url": "https://www.pokecardex.com/series/SWSH45"
+    },
+    {
+      "code": "SWSH4",
+      "name_fr": "Voltage Éclatant",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SWSH4.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SWSH4.png",
+      "url": "https://www.pokecardex.com/series/SWSH4"
+    },
+    {
+      "code": "SWSH35",
+      "name_fr": "La Voie du Maître",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SWSH35.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SWSH35.png",
+      "url": "https://www.pokecardex.com/series/SWSH35"
+    },
+    {
+      "code": "SWSH3",
+      "name_fr": "Ténèbres Embrasées",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SWSH3.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SWSH3.png",
+      "url": "https://www.pokecardex.com/series/SWSH3"
+    },
+    {
+      "code": "SWSH2",
+      "name_fr": "Clash des Rebelles",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SWSH2.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SWSH2.png",
+      "url": "https://www.pokecardex.com/series/SWSH2"
+    },
+    {
+      "code": "SWSH1",
+      "name_fr": "Épée et Bouclier",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SWSH1.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SWSH1.png",
+      "url": "https://www.pokecardex.com/series/SWSH1"
+    },
+    {
+      "code": "PRSWSH",
+      "name_fr": "Promos Épée et Bouclier",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PRSWSH.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PRSWSH.png",
+      "url": "https://www.pokecardex.com/series/PRSWSH"
+    },
+    {
+      "code": "SM12",
+      "name_fr": "Éclipse Cosmique",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SM12.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SM12.png",
+      "url": "https://www.pokecardex.com/series/SM12"
+    },
+    {
+      "code": "SM115",
+      "name_fr": "Destinées Occultes",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SM115.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SM115.png",
+      "url": "https://www.pokecardex.com/series/SM115"
+    },
+    {
+      "code": "SM11",
+      "name_fr": "Harmonie des Esprits",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SM11.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SM11.png",
+      "url": "https://www.pokecardex.com/series/SM11"
+    },
+    {
+      "code": "SM10",
+      "name_fr": "Alliance Infaillible",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SM10.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SM10.png",
+      "url": "https://www.pokecardex.com/series/SM10"
+    },
+    {
+      "code": "SM09",
+      "name_fr": "Duo de Choc",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SM09.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SM09.png",
+      "url": "https://www.pokecardex.com/series/SM09"
+    },
+    {
+      "code": "SM08",
+      "name_fr": "Tonnerre Perdu",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SM08.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SM08.png",
+      "url": "https://www.pokecardex.com/series/SM08"
+    },
+    {
+      "code": "SM75",
+      "name_fr": "Majesté des Dragons",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SM75.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SM75.png",
+      "url": "https://www.pokecardex.com/series/SM75"
+    },
+    {
+      "code": "SM07",
+      "name_fr": "Tempête Céleste",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SM07.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SM07.png",
+      "url": "https://www.pokecardex.com/series/SM07"
+    },
+    {
+      "code": "SM06",
+      "name_fr": "Lumière Interdite",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SM06.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SM06.png",
+      "url": "https://www.pokecardex.com/series/SM06"
+    },
+    {
+      "code": "SM05",
+      "name_fr": "Ultra-Prisme",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SM05.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SM05.png",
+      "url": "https://www.pokecardex.com/series/SM05"
+    },
+    {
+      "code": "SM04",
+      "name_fr": "Invasion Carmin",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SM04.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SM04.png",
+      "url": "https://www.pokecardex.com/series/SM04"
+    },
+    {
+      "code": "SLE",
+      "name_fr": "Légendes Brillantes",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SLE.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SLE.png",
+      "url": "https://www.pokecardex.com/series/SLE"
+    },
+    {
+      "code": "SM03",
+      "name_fr": "Ombres Ardentes",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SM03.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SM03.png",
+      "url": "https://www.pokecardex.com/series/SM03"
+    },
+    {
+      "code": "SM02",
+      "name_fr": "Gardiens Ascendants",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SM02.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SM02.png",
+      "url": "https://www.pokecardex.com/series/SM02"
+    },
+    {
+      "code": "SM01",
+      "name_fr": "Soleil et Lune",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SM01.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SM01.png",
+      "url": "https://www.pokecardex.com/series/SM01"
+    },
+    {
+      "code": "PRSM",
+      "name_fr": "Promos Soleil et Lune",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PRSM.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PRSM.png",
+      "url": "https://www.pokecardex.com/series/PRSM"
+    },
+    {
+      "code": "EVO",
+      "name_fr": "Évolutions",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/EVO.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/EVO.png",
+      "url": "https://www.pokecardex.com/series/EVO"
+    },
+    {
+      "code": "STS",
+      "name_fr": "Offensive Vapeur",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/STS.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/STS.png",
+      "url": "https://www.pokecardex.com/series/STS"
+    },
+    {
+      "code": "FAC",
+      "name_fr": "Impact des Destins",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/FAC.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/FAC.png",
+      "url": "https://www.pokecardex.com/series/FAC"
+    },
+    {
+      "code": "GNR",
+      "name_fr": "Générations",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/GNR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/GNR.png",
+      "url": "https://www.pokecardex.com/series/GNR"
+    },
+    {
+      "code": "BKP",
+      "name_fr": "Rupture Turbo",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/BKP.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/BKP.png",
+      "url": "https://www.pokecardex.com/series/BKP"
+    },
+    {
+      "code": "BKT",
+      "name_fr": "Impulsion Turbo",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/BKT.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/BKT.png",
+      "url": "https://www.pokecardex.com/series/BKT"
+    },
+    {
+      "code": "AOR",
+      "name_fr": "Origines Antiques",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/AOR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/AOR.png",
+      "url": "https://www.pokecardex.com/series/AOR"
+    },
+    {
+      "code": "ROS",
+      "name_fr": "Ciel Rugissant",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/ROS.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/ROS.png",
+      "url": "https://www.pokecardex.com/series/ROS"
+    },
+    {
+      "code": "DCR",
+      "name_fr": "Double Danger",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/DCR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/DCR.png",
+      "url": "https://www.pokecardex.com/series/DCR"
+    },
+    {
+      "code": "PRC",
+      "name_fr": "Primo-Choc",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PRC.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PRC.png",
+      "url": "https://www.pokecardex.com/series/PRC"
+    },
+    {
+      "code": "PHF",
+      "name_fr": "Vigueur Spectrale",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PHF.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PHF.png",
+      "url": "https://www.pokecardex.com/series/PHF"
+    },
+    {
+      "code": "FFI",
+      "name_fr": "Poings Furieux",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/FFI.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/FFI.png",
+      "url": "https://www.pokecardex.com/series/FFI"
+    },
+    {
+      "code": "FLF",
+      "name_fr": "Étincelles",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/FLF.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/FLF.png",
+      "url": "https://www.pokecardex.com/series/FLF"
+    },
+    {
+      "code": "XY",
+      "name_fr": "XY",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/XY.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/XY.png",
+      "url": "https://www.pokecardex.com/series/XY"
+    },
+    {
+      "code": "KSS",
+      "name_fr": "Bienvenue à Kalos",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/KSS.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/KSS.png",
+      "url": "https://www.pokecardex.com/series/KSS"
+    },
+    {
+      "code": "PRXY",
+      "name_fr": "Promos X&Y",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PRXY.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PRXY.png",
+      "url": "https://www.pokecardex.com/series/PRXY"
+    },
+    {
+      "code": "LTR",
+      "name_fr": "Legendary Treasures",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/LTR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/LTR.png",
+      "url": "https://www.pokecardex.com/series/LTR"
+    },
+    {
+      "code": "PLB",
+      "name_fr": "Explosion Plasma",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PLB.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PLB.png",
+      "url": "https://www.pokecardex.com/series/PLB"
+    },
+    {
+      "code": "PLF",
+      "name_fr": "Glaciation Plasma",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PLF.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PLF.png",
+      "url": "https://www.pokecardex.com/series/PLF"
+    },
+    {
+      "code": "PLS",
+      "name_fr": "Tempête Plasma",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PLS.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PLS.png",
+      "url": "https://www.pokecardex.com/series/PLS"
+    },
+    {
+      "code": "BCR",
+      "name_fr": "Frontières Franchies",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/BCR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/BCR.png",
+      "url": "https://www.pokecardex.com/series/BCR"
+    },
+    {
+      "code": "DRV",
+      "name_fr": "Coffre des Dragons",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/DRV.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/DRV.png",
+      "url": "https://www.pokecardex.com/series/DRV"
+    },
+    {
+      "code": "DRX",
+      "name_fr": "Dragons Exaltés",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/DRX.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/DRX.png",
+      "url": "https://www.pokecardex.com/series/DRX"
+    },
+    {
+      "code": "DEX",
+      "name_fr": "Explorateurs Obscurs",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/DEX.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/DEX.png",
+      "url": "https://www.pokecardex.com/series/DEX"
+    },
+    {
+      "code": "NXD",
+      "name_fr": "Destinées Futures",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/NXD.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/NXD.png",
+      "url": "https://www.pokecardex.com/series/NXD"
+    },
+    {
+      "code": "NVI",
+      "name_fr": "Nobles Victoires",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/NVI.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/NVI.png",
+      "url": "https://www.pokecardex.com/series/NVI"
+    },
+    {
+      "code": "EPO",
+      "name_fr": "Pouvoirs Émergents",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/EPO.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/EPO.png",
+      "url": "https://www.pokecardex.com/series/EPO"
+    },
+    {
+      "code": "BLW",
+      "name_fr": "Noir et Blanc",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/BLW.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/BLW.png",
+      "url": "https://www.pokecardex.com/series/BLW"
+    },
+    {
+      "code": "PRBW",
+      "name_fr": "Promos Black Star Noir & Blanc",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PRBW.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PRBW.png",
+      "url": "https://www.pokecardex.com/series/PRBW"
+    },
+    {
+      "code": "CL",
+      "name_fr": "L'appel des légendes",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CL.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CL.png",
+      "url": "https://www.pokecardex.com/series/CL"
+    },
+    {
+      "code": "TM",
+      "name_fr": "HS : Triomphe",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TM.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TM.png",
+      "url": "https://www.pokecardex.com/series/TM"
+    },
+    {
+      "code": "UD",
+      "name_fr": "HS : Indomptable",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/UD.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/UD.png",
+      "url": "https://www.pokecardex.com/series/UD"
+    },
+    {
+      "code": "UL",
+      "name_fr": "HS : Déchaînement",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/UL.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/UL.png",
+      "url": "https://www.pokecardex.com/series/UL"
+    },
+    {
+      "code": "HGSS",
+      "name_fr": "HeartGold SoulSilver",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/HGSS.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/HGSS.png",
+      "url": "https://www.pokecardex.com/series/HGSS"
+    },
+    {
+      "code": "PRHS",
+      "name_fr": "Promos Black Star HeartGold SoulSilver",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PRHS.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PRHS.png",
+      "url": "https://www.pokecardex.com/series/PRHS"
+    },
+    {
+      "code": "AR",
+      "name_fr": "Platine : Arceus",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/AR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/AR.png",
+      "url": "https://www.pokecardex.com/series/AR"
+    },
+    {
+      "code": "SV",
+      "name_fr": "Platine : Vainqueurs Suprêmes",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SV.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SV.png",
+      "url": "https://www.pokecardex.com/series/SV"
+    },
+    {
+      "code": "RR",
+      "name_fr": "Platine : Rivaux Émergeants",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/RR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/RR.png",
+      "url": "https://www.pokecardex.com/series/RR"
+    },
+    {
+      "code": "PT",
+      "name_fr": "Platine",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PT.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PT.png",
+      "url": "https://www.pokecardex.com/series/PT"
+    },
+    {
+      "code": "SF",
+      "name_fr": "Diamant & Perle : Tempête",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SF.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SF.png",
+      "url": "https://www.pokecardex.com/series/SF"
+    },
+    {
+      "code": "LA",
+      "name_fr": "Diamant & Perle : Eveil des Légendes",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/LA.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/LA.png",
+      "url": "https://www.pokecardex.com/series/LA"
+    },
+    {
+      "code": "MD",
+      "name_fr": "Diamant & Perle : Aube Majestueuse",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MD.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MD.png",
+      "url": "https://www.pokecardex.com/series/MD"
+    },
+    {
+      "code": "GE",
+      "name_fr": "Diamant & Perle : Duels au Sommet",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/GE.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/GE.png",
+      "url": "https://www.pokecardex.com/series/GE"
+    },
+    {
+      "code": "SW",
+      "name_fr": "Diamant & Perle : Merveilles Secrètes",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SW.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SW.png",
+      "url": "https://www.pokecardex.com/series/SW"
+    },
+    {
+      "code": "MT",
+      "name_fr": "Diamant & Perle : Trésors Mystérieux",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MT.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MT.png",
+      "url": "https://www.pokecardex.com/series/MT"
+    },
+    {
+      "code": "DP",
+      "name_fr": "Diamant & Perle",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/DP.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/DP.png",
+      "url": "https://www.pokecardex.com/series/DP"
+    },
+    {
+      "code": "PRDP",
+      "name_fr": "Promos Black Star DP",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PRDP.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PRDP.png",
+      "url": "https://www.pokecardex.com/series/PRDP"
+    },
+    {
+      "code": "PK",
+      "name_fr": "EX : Gardiens du Pouvoir",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PK.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PK.png",
+      "url": "https://www.pokecardex.com/series/PK"
+    },
+    {
+      "code": "DF",
+      "name_fr": "EX : Île des Dragons",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/DF.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/DF.png",
+      "url": "https://www.pokecardex.com/series/DF"
+    },
+    {
+      "code": "CG",
+      "name_fr": "EX : Gardiens de Cristal",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CG.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CG.png",
+      "url": "https://www.pokecardex.com/series/CG"
+    },
+    {
+      "code": "HP",
+      "name_fr": "EX : Fantômes Holon",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/HP.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/HP.png",
+      "url": "https://www.pokecardex.com/series/HP"
+    },
+    {
+      "code": "LM",
+      "name_fr": "EX : Créateurs de Légendes",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/LM.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/LM.png",
+      "url": "https://www.pokecardex.com/series/LM"
+    },
+    {
+      "code": "DS",
+      "name_fr": "EX : Espèces Delta",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/DS.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/DS.png",
+      "url": "https://www.pokecardex.com/series/DS"
+    },
+    {
+      "code": "UF",
+      "name_fr": "EX : Forces Cachées",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/UF.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/UF.png",
+      "url": "https://www.pokecardex.com/series/UF"
+    },
+    {
+      "code": "EM",
+      "name_fr": "EX : Émeraude",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/EM.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/EM.png",
+      "url": "https://www.pokecardex.com/series/EM"
+    },
+    {
+      "code": "DX",
+      "name_fr": "EX : Deoxys",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/DX.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/DX.png",
+      "url": "https://www.pokecardex.com/series/DX"
+    },
+    {
+      "code": "TRR",
+      "name_fr": "EX : Team Rocket Returns",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TRR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TRR.png",
+      "url": "https://www.pokecardex.com/series/TRR"
+    },
+    {
+      "code": "RFVF",
+      "name_fr": "EX : Rouge Feu & Vert Feuille",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/RFVF.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/RFVF.png",
+      "url": "https://www.pokecardex.com/series/RFVF"
+    },
+    {
+      "code": "HL",
+      "name_fr": "EX : Légendes Oubliées",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/HL.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/HL.png",
+      "url": "https://www.pokecardex.com/series/HL"
+    },
+    {
+      "code": "TMTA",
+      "name_fr": "EX : Team Magma VS Team Aqua",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TMTA.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TMTA.png",
+      "url": "https://www.pokecardex.com/series/TMTA"
+    },
+    {
+      "code": "DR",
+      "name_fr": "EX : Dragon",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/DR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/DR.png",
+      "url": "https://www.pokecardex.com/series/DR"
+    },
+    {
+      "code": "SS",
+      "name_fr": "EX : Tempête de Sable",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SS.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SS.png",
+      "url": "https://www.pokecardex.com/series/SS"
+    },
+    {
+      "code": "RS",
+      "name_fr": "EX : Rubis & Saphir",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/RS.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/RS.png",
+      "url": "https://www.pokecardex.com/series/RS"
+    },
+    {
+      "code": "PRNI",
+      "name_fr": "Black Star Nintendo",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PRNI.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PRNI.png",
+      "url": "https://www.pokecardex.com/series/PRNI"
+    },
+    {
+      "code": "SK",
+      "name_fr": "Skyridge",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SK.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SK.png",
+      "url": "https://www.pokecardex.com/series/SK"
+    },
+    {
+      "code": "AQ",
+      "name_fr": "Aquapolis",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/AQ.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/AQ.png",
+      "url": "https://www.pokecardex.com/series/AQ"
+    },
+    {
+      "code": "EX",
+      "name_fr": "Expedition",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/EX.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/EX.png",
+      "url": "https://www.pokecardex.com/series/EX"
+    },
+    {
+      "code": "LC",
+      "name_fr": "Legendary Collection",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/LC.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/LC.png",
+      "url": "https://www.pokecardex.com/series/LC"
+    },
+    {
+      "code": "N4",
+      "name_fr": "Neo Destiny",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/N4.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/N4.png",
+      "url": "https://www.pokecardex.com/series/N4"
+    },
+    {
+      "code": "NR",
+      "name_fr": "Neo Revelation",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/NR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/NR.png",
+      "url": "https://www.pokecardex.com/series/NR"
+    },
+    {
+      "code": "ND",
+      "name_fr": "Neo Discovery",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/ND.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/ND.png",
+      "url": "https://www.pokecardex.com/series/ND"
+    },
+    {
+      "code": "NG",
+      "name_fr": "Neo Genesis",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/NG.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/NG.png",
+      "url": "https://www.pokecardex.com/series/NG"
+    },
+    {
+      "code": "GC",
+      "name_fr": "Gym Challenge",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/GC.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/GC.png",
+      "url": "https://www.pokecardex.com/series/GC"
+    },
+    {
+      "code": "GH",
+      "name_fr": "Gym Heroes",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/GH.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/GH.png",
+      "url": "https://www.pokecardex.com/series/GH"
+    },
+    {
+      "code": "TR",
+      "name_fr": "Team Rocket",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TR.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TR.png",
+      "url": "https://www.pokecardex.com/series/TR"
+    },
+    {
+      "code": "BS2",
+      "name_fr": "Base Set 2",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/BS2.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/BS2.png",
+      "url": "https://www.pokecardex.com/series/BS2"
+    },
+    {
+      "code": "FO",
+      "name_fr": "Fossile",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/FO.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/FO.png",
+      "url": "https://www.pokecardex.com/series/FO"
+    },
+    {
+      "code": "JU",
+      "name_fr": "Jungle",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/JU.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/JU.png",
+      "url": "https://www.pokecardex.com/series/JU"
+    },
+    {
+      "code": "BS",
+      "name_fr": "Set de base",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/BS.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/BS.png",
+      "url": "https://www.pokecardex.com/series/BS"
+    },
+    {
+      "code": "PRWC",
+      "name_fr": "Promo Black Star Wizards Of The Coast",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PRWC.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PRWC.png",
+      "url": "https://www.pokecardex.com/series/PRWC"
+    },
+    {
+      "code": "TOT24",
+      "name_fr": "Trick or Trade 2024",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TOT24.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TOT24.png",
+      "url": "https://www.pokecardex.com/series/TOT24"
+    },
+    {
+      "code": "CLB",
+      "name_fr": "TCG Classic Blastoise & Suicune",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CLB.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CLB.png",
+      "url": "https://www.pokecardex.com/series/CLB"
+    },
+    {
+      "code": "CLC",
+      "name_fr": "TCG Classic Charizard & Ho-Oh",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CLC.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CLC.png",
+      "url": "https://www.pokecardex.com/series/CLC"
+    },
+    {
+      "code": "CLV",
+      "name_fr": "TCG Classic Venusaur & Lugia",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CLV.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CLV.png",
+      "url": "https://www.pokecardex.com/series/CLV"
+    },
+    {
+      "code": "TOT23",
+      "name_fr": "Trick or Trade 2023",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TOT23.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TOT23.png",
+      "url": "https://www.pokecardex.com/series/TOT23"
+    },
+    {
+      "code": "TOT22",
+      "name_fr": "Trick or Trade 2022",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TOT22.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TOT22.png",
+      "url": "https://www.pokecardex.com/series/TOT22"
+    },
+    {
+      "code": "FUTSAL",
+      "name_fr": "Pokémon Futsal Collection",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/FUTSAL.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/FUTSAL.png",
+      "url": "https://www.pokecardex.com/series/FUTSAL"
+    },
+    {
+      "code": "DPK",
+      "name_fr": "Détective Pikachu",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/DPK.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/DPK.png",
+      "url": "https://www.pokecardex.com/series/DPK"
+    },
+    {
+      "code": "TPCI",
+      "name_fr": "TPCi Black Star Promo",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TPCI.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TPCI.png",
+      "url": "https://www.pokecardex.com/series/TPCI"
+    },
+    {
+      "code": "PRAL",
+      "name_fr": "Promos Alternative",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PRAL.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PRAL.png",
+      "url": "https://www.pokecardex.com/series/PRAL"
+    },
+    {
+      "code": "RUM",
+      "name_fr": "Rumble set",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/RUM.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/RUM.png",
+      "url": "https://www.pokecardex.com/series/RUM"
+    },
+    {
+      "code": "PCP",
+      "name_fr": "Poké Card Creator Pack",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PCP.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PCP.png",
+      "url": "https://www.pokecardex.com/series/PCP"
+    },
+    {
+      "code": "SI",
+      "name_fr": "Southern Islands",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/SI.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/SI.png",
+      "url": "https://www.pokecardex.com/series/SI"
+    },
+    {
+      "code": "UPC",
+      "name_fr": "Promos non numérotées",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/UPC.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/UPC.png",
+      "url": "https://www.pokecardex.com/series/UPC"
+    },
+    {
+      "code": "WBP",
+      "name_fr": "WOTC Best Promos",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WBP.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WBP.png",
+      "url": "https://www.pokecardex.com/series/WBP"
+    },
+    {
+      "code": "BXT",
+      "name_fr": "Box Topper",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/BXT.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/BXT.png",
+      "url": "https://www.pokecardex.com/series/BXT"
+    },
+    {
+      "code": "PRZP",
+      "name_fr": "Pack Récompense",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PRZP.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PRZP.png",
+      "url": "https://www.pokecardex.com/series/PRZP"
+    },
+    {
+      "code": "POP9",
+      "name_fr": "POP 9",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/POP9.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/POP9.png",
+      "url": "https://www.pokecardex.com/series/POP9"
+    },
+    {
+      "code": "POP8",
+      "name_fr": "POP 8",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/POP8.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/POP8.png",
+      "url": "https://www.pokecardex.com/series/POP8"
+    },
+    {
+      "code": "POP7",
+      "name_fr": "POP 7",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/POP7.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/POP7.png",
+      "url": "https://www.pokecardex.com/series/POP7"
+    },
+    {
+      "code": "POP6",
+      "name_fr": "POP 6",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/POP6.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/POP6.png",
+      "url": "https://www.pokecardex.com/series/POP6"
+    },
+    {
+      "code": "POP5",
+      "name_fr": "POP 5",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/POP5.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/POP5.png",
+      "url": "https://www.pokecardex.com/series/POP5"
+    },
+    {
+      "code": "POP4",
+      "name_fr": "POP 4",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/POP4.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/POP4.png",
+      "url": "https://www.pokecardex.com/series/POP4"
+    },
+    {
+      "code": "POP3",
+      "name_fr": "POP 3",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/POP3.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/POP3.png",
+      "url": "https://www.pokecardex.com/series/POP3"
+    },
+    {
+      "code": "POP2",
+      "name_fr": "POP 2",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/POP2.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/POP2.png",
+      "url": "https://www.pokecardex.com/series/POP2"
+    },
+    {
+      "code": "POP1",
+      "name_fr": "POP 1",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/POP1.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/POP1.png",
+      "url": "https://www.pokecardex.com/series/POP1"
+    },
+    {
+      "code": "JUMBO",
+      "name_fr": "Jumbo",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/JUMBO.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/JUMBO.png",
+      "url": "https://www.pokecardex.com/series/JUMBO"
+    },
+    {
+      "code": "ADC3-D",
+      "name_fr": "Académie de Combat 2024 (Deck Darkrai)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/ADC3-D.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/ADC3-D.png",
+      "url": "https://www.pokecardex.com/series/ADC3-D"
+    },
+    {
+      "code": "ADC3-P",
+      "name_fr": "Académie de Combat 2024 (Deck Pikachu)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/ADC3-P.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/ADC3-P.png",
+      "url": "https://www.pokecardex.com/series/ADC3-P"
+    },
+    {
+      "code": "ADC3-C",
+      "name_fr": "Académie de Combat 2024 (Deck Carmadura)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/ADC3-C.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/ADC3-C.png",
+      "url": "https://www.pokecardex.com/series/ADC3-C"
+    },
+    {
+      "code": "MFB23",
+      "name_fr": "Mon Premier Combat",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MFB23.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MFB23.png",
+      "url": "https://www.pokecardex.com/series/MFB23"
+    },
+    {
+      "code": "ADC2-E",
+      "name_fr": "Académie de Combat 2022 (Deck Évoli)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/ADC2-E.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/ADC2-E.png",
+      "url": "https://www.pokecardex.com/series/ADC2-E"
+    },
+    {
+      "code": "ADC2-P",
+      "name_fr": "Académie de Combat 2022 (Deck Pikachu)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/ADC2-P.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/ADC2-P.png",
+      "url": "https://www.pokecardex.com/series/ADC2-P"
+    },
+    {
+      "code": "ADC2-C",
+      "name_fr": "Académie de Combat 2022 (Deck Pyrobut)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/ADC2-C.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/ADC2-C.png",
+      "url": "https://www.pokecardex.com/series/ADC2-C"
+    },
+    {
+      "code": "ADC-M",
+      "name_fr": "Académie de Combat (Deck Mewtwo)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/ADC-M.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/ADC-M.png",
+      "url": "https://www.pokecardex.com/series/ADC-M"
+    },
+    {
+      "code": "ADC-P",
+      "name_fr": "Académie de Combat (Deck Pikachu)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/ADC-P.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/ADC-P.png",
+      "url": "https://www.pokecardex.com/series/ADC-P"
+    },
+    {
+      "code": "ADC-D",
+      "name_fr": "Académie de Combat (Deck Dracaufeu)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/ADC-D.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/ADC-D.png",
+      "url": "https://www.pokecardex.com/series/ADC-D"
+    },
+    {
+      "code": "TK11-S",
+      "name_fr": "SL Kit du Dresseur (Sablaireau d'Alola)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK11-S.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK11-S.png",
+      "url": "https://www.pokecardex.com/series/TK11-S"
+    },
+    {
+      "code": "TK11-F",
+      "name_fr": "SL Kit du Dresseur (Feunard d'Alola)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK11-F.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK11-F.png",
+      "url": "https://www.pokecardex.com/series/TK11-F"
+    },
+    {
+      "code": "TK10-R",
+      "name_fr": "SL Kit du Dresseur (Raichu d'Alola)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK10-R.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK10-R.png",
+      "url": "https://www.pokecardex.com/series/TK10-R"
+    },
+    {
+      "code": "TK10-L",
+      "name_fr": "SL Kit du Dresseur (Lougaroc)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK10-L.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK10-L.png",
+      "url": "https://www.pokecardex.com/series/TK10-L"
+    },
+    {
+      "code": "TK9-S",
+      "name_fr": "XY Trainer Kit (Suicune)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK9-S.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK9-S.png",
+      "url": "https://www.pokecardex.com/series/TK9-S"
+    },
+    {
+      "code": "TK9-P",
+      "name_fr": "XY Trainer Kit (Pikachu Catcheur)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK9-P.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK9-P.png",
+      "url": "https://www.pokecardex.com/series/TK9-P"
+    },
+    {
+      "code": "TK8-LO",
+      "name_fr": "XY Trainer Kit (Latios)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK8-LO.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK8-LO.png",
+      "url": "https://www.pokecardex.com/series/TK8-LO"
+    },
+    {
+      "code": "TK8-LA",
+      "name_fr": "XY Trainer Kit (Latias)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK8-LA.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK8-LA.png",
+      "url": "https://www.pokecardex.com/series/TK8-LA"
+    },
+    {
+      "code": "TK7-G",
+      "name_fr": "XY Trainer Kit (Grodoudou)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK7-G.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK7-G.png",
+      "url": "https://www.pokecardex.com/series/TK7-G"
+    },
+    {
+      "code": "TK7-S",
+      "name_fr": "XY Trainer Kit (Scalproie)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK7-S.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK7-S.png",
+      "url": "https://www.pokecardex.com/series/TK7-S"
+    },
+    {
+      "code": "TK6-B",
+      "name_fr": "XY Kit du Dresseur (Bruyverne)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK6-B.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK6-B.png",
+      "url": "https://www.pokecardex.com/series/TK6-B"
+    },
+    {
+      "code": "TK6-N",
+      "name_fr": "XY Kit du Dresseur (Nymphali)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK6-N.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK6-N.png",
+      "url": "https://www.pokecardex.com/series/TK6-N"
+    },
+    {
+      "code": "TK5-M",
+      "name_fr": "N&B Kit du Dresseur (Minotaupe)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK5-M.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK5-M.png",
+      "url": "https://www.pokecardex.com/series/TK5-M"
+    },
+    {
+      "code": "TK5-Z",
+      "name_fr": "N&B Kit du Dresseur (Zoroark)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK5-Z.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK5-Z.png",
+      "url": "https://www.pokecardex.com/series/TK5-Z"
+    },
+    {
+      "code": "TK4-R",
+      "name_fr": "HS Kit du Dresseur (Raichu)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK4-R.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK4-R.png",
+      "url": "https://www.pokecardex.com/series/TK4-R"
+    },
+    {
+      "code": "TK4-L",
+      "name_fr": "HS Kit du Dresseur (Léviator)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK4-L.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK4-L.png",
+      "url": "https://www.pokecardex.com/series/TK4-L"
+    },
+    {
+      "code": "TK3-M",
+      "name_fr": "D&P Kit Dresseur (Manaphy)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK3-M.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK3-M.png",
+      "url": "https://www.pokecardex.com/series/TK3-M"
+    },
+    {
+      "code": "TK3-L",
+      "name_fr": "D&P Kit Dresseur (Lucario)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK3-L.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK3-L.png",
+      "url": "https://www.pokecardex.com/series/TK3-L"
+    },
+    {
+      "code": "TK2-P",
+      "name_fr": "EX Kit Dresseur (Posipi)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK2-P.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK2-P.png",
+      "url": "https://www.pokecardex.com/series/TK2-P"
+    },
+    {
+      "code": "TK2-N",
+      "name_fr": "EX Kit Dresseur (Negapi)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK2-N.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK2-N.png",
+      "url": "https://www.pokecardex.com/series/TK2-N"
+    },
+    {
+      "code": "TK1-LO",
+      "name_fr": "EX Kit Dresseur (Latios)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK1-LO.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK1-LO.png",
+      "url": "https://www.pokecardex.com/series/TK1-LO"
+    },
+    {
+      "code": "TK1-LA",
+      "name_fr": "EX Kit Dresseur (Latias)",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TK1-LA.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TK1-LA.png",
+      "url": "https://www.pokecardex.com/series/TK1-LA"
+    },
+    {
+      "code": "WC25",
+      "name_fr": "World Championships 2025",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC25.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC25.png",
+      "url": "https://www.pokecardex.com/series/WC25"
+    },
+    {
+      "code": "WC24",
+      "name_fr": "World Championships 2024",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC24.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC24.png",
+      "url": "https://www.pokecardex.com/series/WC24"
+    },
+    {
+      "code": "WC23",
+      "name_fr": "World Championships 2023",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC23.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC23.png",
+      "url": "https://www.pokecardex.com/series/WC23"
+    },
+    {
+      "code": "WC22",
+      "name_fr": "World Championships 2022",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC22.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC22.png",
+      "url": "https://www.pokecardex.com/series/WC22"
+    },
+    {
+      "code": "WC19",
+      "name_fr": "World Championships 2019",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC19.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC19.png",
+      "url": "https://www.pokecardex.com/series/WC19"
+    },
+    {
+      "code": "WC18",
+      "name_fr": "World Championships 2018",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC18.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC18.png",
+      "url": "https://www.pokecardex.com/series/WC18"
+    },
+    {
+      "code": "WC17",
+      "name_fr": "World Championships 2017",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC17.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC17.png",
+      "url": "https://www.pokecardex.com/series/WC17"
+    },
+    {
+      "code": "WC16",
+      "name_fr": "World Championships 2016",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC16.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC16.png",
+      "url": "https://www.pokecardex.com/series/WC16"
+    },
+    {
+      "code": "WC15",
+      "name_fr": "World Championships 2015",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC15.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC15.png",
+      "url": "https://www.pokecardex.com/series/WC15"
+    },
+    {
+      "code": "WC14",
+      "name_fr": "World Championships 2014",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC14.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC14.png",
+      "url": "https://www.pokecardex.com/series/WC14"
+    },
+    {
+      "code": "WC13",
+      "name_fr": "World Championships 2013",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC13.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC13.png",
+      "url": "https://www.pokecardex.com/series/WC13"
+    },
+    {
+      "code": "WC12",
+      "name_fr": "World Championships 2012",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC12.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC12.png",
+      "url": "https://www.pokecardex.com/series/WC12"
+    },
+    {
+      "code": "WC11",
+      "name_fr": "World Championships 2011",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC11.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC11.png",
+      "url": "https://www.pokecardex.com/series/WC11"
+    },
+    {
+      "code": "WC10",
+      "name_fr": "World Championships 2010",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC10.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC10.png",
+      "url": "https://www.pokecardex.com/series/WC10"
+    },
+    {
+      "code": "WC09",
+      "name_fr": "World Championships 2009",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC09.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC09.png",
+      "url": "https://www.pokecardex.com/series/WC09"
+    },
+    {
+      "code": "WC08",
+      "name_fr": "World Championships 2008",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC08.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC08.png",
+      "url": "https://www.pokecardex.com/series/WC08"
+    },
+    {
+      "code": "WC07",
+      "name_fr": "World Championships 2007",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC07.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC07.png",
+      "url": "https://www.pokecardex.com/series/WC07"
+    },
+    {
+      "code": "WC06",
+      "name_fr": "World Championships 2006",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC06.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC06.png",
+      "url": "https://www.pokecardex.com/series/WC06"
+    },
+    {
+      "code": "WC05",
+      "name_fr": "World Championships 2005",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC05.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC05.png",
+      "url": "https://www.pokecardex.com/series/WC05"
+    },
+    {
+      "code": "WC04",
+      "name_fr": "World Championships 2004",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/WC04.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/WC04.png",
+      "url": "https://www.pokecardex.com/series/WC04"
+    },
+    {
+      "code": "M24",
+      "name_fr": "Promo McDonald's 2024",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/M24.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/M24.png",
+      "url": "https://www.pokecardex.com/series/M24"
+    },
+    {
+      "code": "M23",
+      "name_fr": "Promo McDonald's 2023",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/M23.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/M23.png",
+      "url": "https://www.pokecardex.com/series/M23"
+    },
+    {
+      "code": "MC11US",
+      "name_fr": "Promo McDonald's 2022",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MC11US.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MC11US.png",
+      "url": "https://www.pokecardex.com/series/MC11US"
+    },
+    {
+      "code": "MC10US",
+      "name_fr": "Promo McDonald's 2021",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MC10US.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MC10US.png",
+      "url": "https://www.pokecardex.com/series/MC10US"
+    },
+    {
+      "code": "MC9",
+      "name_fr": "Promo McDonald's 2019",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MC9.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MC9.png",
+      "url": "https://www.pokecardex.com/series/MC9"
+    },
+    {
+      "code": "MC9US",
+      "name_fr": "Promo McDonald's 2019 - USA",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MC9US.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MC9US.png",
+      "url": "https://www.pokecardex.com/series/MC9US"
+    },
+    {
+      "code": "MC8US",
+      "name_fr": "Promo McDonald's 2018 - USA",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MC8US.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MC8US.png",
+      "url": "https://www.pokecardex.com/series/MC8US"
+    },
+    {
+      "code": "MC8",
+      "name_fr": "Promo McDonald's 2018",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MC8.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MC8.png",
+      "url": "https://www.pokecardex.com/series/MC8"
+    },
+    {
+      "code": "MC7",
+      "name_fr": "Promo McDonald's 2017",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MC7.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MC7.png",
+      "url": "https://www.pokecardex.com/series/MC7"
+    },
+    {
+      "code": "MC6",
+      "name_fr": "Promo McDonald's 2016",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MC6.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MC6.png",
+      "url": "https://www.pokecardex.com/series/MC6"
+    },
+    {
+      "code": "MC5",
+      "name_fr": "Promo McDonald's 2015",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MC5.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MC5.png",
+      "url": "https://www.pokecardex.com/series/MC5"
+    },
+    {
+      "code": "MC4",
+      "name_fr": "Promo McDonald's 2014",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MC4.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MC4.png",
+      "url": "https://www.pokecardex.com/series/MC4"
+    },
+    {
+      "code": "MC3",
+      "name_fr": "Promo McDonald's 2013",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MC3.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MC3.png",
+      "url": "https://www.pokecardex.com/series/MC3"
+    },
+    {
+      "code": "MC2",
+      "name_fr": "Promo McDonald's 2012",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MC2.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MC2.png",
+      "url": "https://www.pokecardex.com/series/MC2"
+    },
+    {
+      "code": "MC1",
+      "name_fr": "Promo McDonald's 2011",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/MC1.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/MC1.png",
+      "url": "https://www.pokecardex.com/series/MC1"
+    },
+    {
+      "code": "CP25",
+      "name_fr": "Calendrier des Fêtes 2025",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CP25.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CP25.png",
+      "url": "https://www.pokecardex.com/series/CP25"
+    },
+    {
+      "code": "CP24",
+      "name_fr": "Calendrier des Fêtes 2024",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CP24.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CP24.png",
+      "url": "https://www.pokecardex.com/series/CP24"
+    },
+    {
+      "code": "CP23",
+      "name_fr": "Calendrier des Fêtes 2023",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CP23.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CP23.png",
+      "url": "https://www.pokecardex.com/series/CP23"
+    },
+    {
+      "code": "CP22",
+      "name_fr": "Holiday Calendar 2022",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CP22.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CP22.png",
+      "url": "https://www.pokecardex.com/series/CP22"
+    },
+    {
+      "code": "NRGY",
+      "name_fr": "Énergies",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/NRGY.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/NRGY.png",
+      "url": "https://www.pokecardex.com/series/NRGY"
+    },
+    {
+      "code": "ARTAC",
+      "name_fr": "Art Academy",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/ARTAC.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/ARTAC.png",
+      "url": "https://www.pokecardex.com/series/ARTAC"
+    },
+    {
+      "code": "CP10",
+      "name_fr": "Calendrier Pokémon 2010",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CP10.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CP10.png",
+      "url": "https://www.pokecardex.com/series/CP10"
+    },
+    {
+      "code": "CP09",
+      "name_fr": "Calendrier Pokémon 2009",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/CP09.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/CP09.png",
+      "url": "https://www.pokecardex.com/series/CP09"
+    },
+    {
+      "code": "JFC",
+      "name_fr": "Premier Défi",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/JFC.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/JFC.png",
+      "url": "https://www.pokecardex.com/series/JFC"
+    },
+    {
+      "code": "PWC98",
+      "name_fr": "Pikachu World Collection 2000",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PWC98.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PWC98.png",
+      "url": "https://www.pokecardex.com/series/PWC98"
+    },
+    {
+      "code": "TOPPS",
+      "name_fr": "Topps",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/TOPPS.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/TOPPS.png",
+      "url": "https://www.pokecardex.com/series/TOPPS"
+    },
+    {
+      "code": "PWC10",
+      "name_fr": "Pikachu World Collection 2010",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/PWC10.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/PWC10.png",
+      "url": "https://www.pokecardex.com/series/PWC10"
+    },
+    {
+      "code": "LMN6",
+      "name_fr": "Lamincards 2006",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/LMN6.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/LMN6.png",
+      "url": "https://www.pokecardex.com/series/LMN6"
+    },
+    {
+      "code": "LMN5",
+      "name_fr": "Lamincards 2005",
+      "logo_url_fr": "https://pokecardex.b-cdn.net/assets/images/logos/LMN5.png",
+      "logo_url_us": "https://pokecardex.b-cdn.net/assets/images/logos/US/LMN5.png",
+      "url": "https://www.pokecardex.com/series/LMN5"
+    }
+  ]
+}

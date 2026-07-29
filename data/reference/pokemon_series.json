@@ -1,0 +1,71 @@
+{
+  "fr": {
+    "base": "Base",
+    "misc": "Autre",
+    "neo": "Neo",
+    "ecard": "e-cards",
+    "ex": "EX",
+    "pop": "POP",
+    "tk": "Kits du dresseur",
+    "dp": "Diamant & Perle",
+    "pl": "Platine",
+    "hgss": "HeartGold SoulSilver",
+    "col": "L'appel des Légendes",
+    "bw": "Noir & Blanc",
+    "mc": "Collection McDonald's",
+    "xy": "XY",
+    "sm": "Soleil et Lune",
+    "swsh": "Épée et Bouclier",
+    "sv": "Écarlate et Violet",
+    "tcgp": "Jeu de Cartes à Collectionner Pokémon Pocket",
+    "me": "Méga-Évolution"
+  },
+  "en": {
+    "base": "Base",
+    "misc": "Miscellaneous",
+    "gym": "Gym",
+    "neo": "Neo",
+    "lc": "Legendary Collection",
+    "ecard": "E-Card",
+    "ex": "EX",
+    "pop": "POP",
+    "tk": "Trainer kits",
+    "dp": "Diamond & Pearl",
+    "pl": "Platinum",
+    "hgss": "HeartGold & SoulSilver",
+    "col": "Call of Legends",
+    "bw": "Black & White",
+    "mc": "McDonald's Collection",
+    "xy": "XY",
+    "sm": "Sun & Moon",
+    "swsh": "Sword & Shield",
+    "sv": "Scarlet & Violet",
+    "tcgp": "Pokémon TCG Pocket",
+    "me": "Mega Evolution"
+  },
+  "ja": {
+    "PMCG": "ポケットモンスターカードゲーム",
+    "neo": "ポケモンカード★neo",
+    "VS": "VS",
+    "web": "web",
+    "e": "ポケモンカードe",
+    "ADV": "ADV",
+    "PCG": "PCG",
+    "L": "LEGEND",
+    "XY": "XY",
+    "XYb": "XY BREAK",
+    "SM": "サン＆ムーン",
+    "S": "剣と盾",
+    "M": "ポケモンカードゲーム MEGA",
+    "SV": "ポケモンカードゲーム スカーレット&バイオレット"
+  },
+  "ko": {
+    "SM": "썬&문",
+    "S": "검과 방패",
+    "SV": "스칼렛・바이올렛"
+  },
+  "zh": {
+    "S": "劍＆盾",
+    "SV": "朱&紫系列"
+  }
+}

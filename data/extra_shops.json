@@ -1,0 +1,137 @@
+{
+  "shopify": [
+    "linkytcgstore.com",
+    "shibagames.fr",
+    "nevermint.fr",
+    "lootboxjeux.fr",
+    "manamecha.fr",
+    "mrjoshop.com",
+    "www.vegastore.fr",
+    "apothicarte.com",
+    "lesnouveauxdisciples.be",
+    "miyatakardmarket.re",
+    "zadoys.ch",
+    "snooop.gg",
+    "leparadisduhobby.com",
+    "mocards.fr",
+    "cardsgamecollect.fr",
+    "lemantcg.fr"
+  ],
+  "prestashop": [
+    "www.foxchip-collector.com",
+    "www.agorajeux.com",
+    "kyseii.fr",
+    "www.latouchegeek.fr",
+    "shop.magicfranco.be",
+    "www.bcd-jeux.fr",
+    "www.hobby-max.fr",
+    "troll2jeux.com",
+    "www.fairplay-jeux.com",
+    "www.ludum.fr",
+    "ludivers.net"
+  ],
+  "woocommerce": [
+    "importpokecoree.com",
+    "www.pakushop.com",
+    "shop-tcg.fr",
+    "maxireves.fr",
+    "pokuji.fr",
+    "jmcards.fr",
+    "lerepairetcg.com",
+    "narutopia.fr",
+    "shoptjeux.com",
+    "lecercledujeu.fr",
+    "www.linstantludique.com",
+    "www.lesdesmaskes.fr",
+    "www.goldenmeeple.be",
+    "shop.otakusmafiaworld.fr",
+    "pokemoms.fr",
+    "jeuxbarjo.com",
+    "lestresorsdutcg.fr",
+    "fuji-store.fr",
+    "www.ledragondujeu.fr",
+    "geekingdome.com"
+  ],
+  "wix": [],
+  "powerboutique": [],
+  "nextjs": [],
+  "emonsite": [],
+  "fantasysphere": [],
+  "direct_urls": {
+    "www.foxchip-collector.com": [
+      {
+        "game": "optcg",
+        "url": "https://www.foxchip-collector.com/fr/30106756-one-piece",
+        "scope": "dedicated"
+      }
+    ],
+    "www.agorajeux.com": [
+      {
+        "game": "optcg",
+        "url": "https://www.agorajeux.com/fr/265-one-piece-card-game",
+        "scope": "dedicated"
+      }
+    ],
+    "kyseii.fr": [
+      {
+        "game": "optcg",
+        "url": "https://kyseii.fr/module/iqitsearch/searchiqit?s=one+piece+booster",
+        "scope": "dedicated"
+      }
+    ],
+    "www.latouchegeek.fr": [
+      {
+        "game": "optcg",
+        "url": "https://www.latouchegeek.fr/module/ambjolisearch/jolisearch?s=booster+one+piece",
+        "scope": "dedicated"
+      }
+    ],
+    "shop.magicfranco.be": [
+      {
+        "game": "optcg",
+        "url": "https://shop.magicfranco.be/79-one-piece-tcg",
+        "scope": "dedicated"
+      },
+      {
+        "game": "naruto_mythos",
+        "url": "https://shop.magicfranco.be/298-naruto-mythos-tcg",
+        "scope": "dedicated"
+      }
+    ],
+    "www.hobby-max.fr": [
+      {
+        "game": "optcg",
+        "url": "https://www.hobby-max.fr/2318-one-piece",
+        "scope": "dedicated"
+      }
+    ],
+    "troll2jeux.com": [
+      {
+        "game": "optcg",
+        "url": "https://troll2jeux.com/10002430-one-piece",
+        "scope": "dedicated"
+      }
+    ],
+    "www.fairplay-jeux.com": [
+      {
+        "game": "optcg",
+        "url": "https://www.fairplay-jeux.com/fr/213-one-piece",
+        "scope": "dedicated"
+      }
+    ],
+    "www.ludum.fr": [
+      {
+        "game": "optcg",
+        "url": "https://www.ludum.fr/rechercher?s=booster%20one%20piece",
+        "scope": "dedicated"
+      }
+    ],
+    "ludivers.net": [
+      {
+        "game": "optcg",
+        "url": "https://ludivers.net/73-one-piece",
+        "scope": "dedicated"
+      }
+    ]
+  }
+}
