@@ -25,12 +25,12 @@ export default function AppNav() {
     <header className="sticky top-0 z-50 border-b border-white/5 bg-gray-950/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <Link href="/dashboard" className="flex items-center gap-2 font-bold text-lg">
+          <Link href="/catalog" className="flex items-center gap-2 font-bold text-lg">
             <span>🎴</span> {BRAND}
           </Link>
           <nav className="flex items-center gap-5">
-            {link("/dashboard", "Dashboard")}
-            {link("/sets", "Catalogue")}
+            {link("/catalog", "Catalogue")}
+            {link("/dashboard", "Produits")}
             {link("/favorites", "Favoris")}
             {link("/alerts", "Alertes")}
           </nav>

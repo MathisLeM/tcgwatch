@@ -1,7 +1,10 @@
 // Typed fetch wrappers around the TCGWatch API.
 // All backend calls go through here (Vigilyx convention). Auth uses an httpOnly
 // cookie, so every request sends credentials.
-const API = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+// Strip any trailing slash(es) so `${API}${path}` never produces a double slash
+// (`https://api//auth/login` 404s). Guards against NEXT_PUBLIC_API_URL being set
+// with a trailing "/".
+const API = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000").replace(/\/+$/, "");
 
 async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   const headers: Record<string, string> = {
@@ -201,6 +204,76 @@ export const fetchBlocks = (language?: string) => {
 /** Absolute URL for a root-relative reference image path (block/set logo). */
 export const imageUrl = (path: string | null | undefined) =>
   path ? `${API}/${path.split("/").map(encodeURIComponent).join("/")}` : null;
+
+// ── Multi-TCG catalogue (TCG > (block >) set > article type) ──────────────────
+export interface CatalogGame {
+  game: string;
+  label: string;
+  mode: "blocks" | "sets";
+  product_count: number;
+  available_count: number;
+  set_count: number;
+  image: string | null;
+}
+
+export const fetchGames = () => request<CatalogGame[]>("/catalog/games");
+
+export interface CatalogKind {
+  kind: string;
+  label: string;
+  label_en?: string;
+  product_count: number;
+  available_count?: number;
+  min_price?: number | null;
+  image?: string | null;
+}
+
+export interface CatalogSet {
+  set_code: string;
+  language: string;
+  abbreviation: string;
+  name: string;
+  image: string | null;
+  product_count: number;
+  available_count: number;
+  min_price: number | null;
+  kinds: CatalogKind[];
+  release_date?: string | null;
+  number?: string;
+  card_count?: number | null;
+  block?: string;
+}
+
+export interface CatalogBlock {
+  block: string;
+  block_code: string;
+  name: { fr: string; en: string };
+  image: string | null;
+  release_start: string | null;
+  release_end: string | null;
+  set_count: number;
+  product_count: number;
+  available_count: number;
+  min_price: number | null;
+  sets: CatalogSet[];
+}
+
+export interface Catalog {
+  game: string;
+  mode: "blocks" | "sets";
+  language?: string;
+  blocks?: CatalogBlock[];
+  sets?: CatalogSet[];
+  block_count?: number;
+  set_count?: number;
+  unassigned: { product_count: number; kinds: CatalogKind[] };
+}
+
+export const fetchCatalog = (game: string, language?: string) => {
+  const p = new URLSearchParams({ game });
+  if (language) p.set("language", language);
+  return request<Catalog>(`/catalog?${p.toString()}`);
+};
 
 // ── Favorites ───────────────────────────────────────────────────────────────
 export interface Favorite {

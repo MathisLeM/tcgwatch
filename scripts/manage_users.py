@@ -112,7 +112,7 @@ def main():
     sub = ap.add_subparsers(dest="command", required=True)
 
     p = sub.add_parser("create", help="Créer un compte")
-    p.add_argument("email")
+    p.add_argument("email", metavar="identifiant", help="Pseudo ou email (identifiant de connexion)")
     p.add_argument("--password", help="Mot de passe (sinon généré et affiché)")
     p.add_argument("--admin", action="store_true", help="Compte admin")
     p.set_defaults(func=cmd_create)

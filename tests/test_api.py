@@ -39,6 +39,18 @@ def test_signup_closed_returns_403(client, monkeypatch):
     assert r.status_code == 403
 
 
+def test_login_identifier_accepts_pseudo(client):
+    # Identifier is free-form: a pseudo (no email format) must work end to end.
+    r = client.post("/auth/signup", json={"email": "mathis_59", "password": "password123"})
+    assert r.status_code == 200, r.text
+    assert r.json()["email"] == "mathis_59"
+    # too-short identifier rejected
+    assert client.post("/auth/signup", json={"email": "ab", "password": "password123"}).status_code == 400
+    # login with the pseudo
+    r = client.post("/auth/login", data={"username": "mathis_59", "password": "password123"})
+    assert r.status_code == 200
+
+
 def test_me_requires_auth(client):
     fresh = client.__class__(client.app)  # cookie-less client
     assert fresh.get("/auth/me").status_code == 401
@@ -75,6 +87,41 @@ def test_facets(client):
 def test_sets(client):
     s = client.get("/sets", params={"game": "pokemon"}).json()
     assert any(x["abbreviation"] == "PRE" for x in s)
+
+
+# ── Catalogue (multi-TCG navigation) ─────────────────────────────────────────
+def test_catalog_games_lists_three_tcgs(client):
+    games = {g["game"]: g for g in client.get("/catalog/games").json()}
+    assert {"pokemon", "optcg"} <= set(games)
+    assert games["pokemon"]["mode"] == "blocks"
+    assert games["optcg"]["mode"] == "sets"
+    # each game exposes a live availability count
+    assert games["optcg"]["available_count"] >= 1
+
+
+def test_optcg_kind_derived_without_stored_column(client):
+    # OPTCG products have kind=NULL in the DB; the catalogue + product table must
+    # still surface the article type, derived from the title. No DB change needed.
+    d = client.get("/catalog", params={"game": "optcg"}).json()
+    assert d["mode"] == "sets"
+    op10 = next(s for s in d["sets"] if s["set_code"] == "OP10")
+    assert op10["name"] == "Sang Royal"
+    assert any(k["kind"] == "display" for k in op10["kinds"])
+    # availability preview: the seeded OP10 listing is in stock at 89.9
+    assert op10["available_count"] == 1
+    assert op10["min_price"] == 89.9
+    display = next(k for k in op10["kinds"] if k["kind"] == "display")
+    assert display["available_count"] == 1 and display["min_price"] == 89.9
+
+    # kind filter (a catalogue chip deep-link) works despite the NULL column
+    r = client.get("/products", params={"game": "optcg", "set_code": "OP10", "kind": "display"})
+    items = r.json()["items"]
+    assert items and items[0]["kind"] == "display"
+    # and the wrong kind returns nothing
+    assert client.get("/products", params={"game": "optcg", "kind": "booster"}).json()["total"] == 0
+
+    # facet dropdown is populated for OPTCG too
+    assert "display" in client.get("/products/facets", params={"game": "optcg"}).json()["kinds"]
 
 
 # ── Favorites ───────────────────────────────────────────────────────────────

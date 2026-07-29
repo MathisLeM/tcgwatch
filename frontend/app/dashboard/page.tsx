@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Protected from "@/components/Protected";
 import {
   addFavorite,
@@ -40,12 +41,24 @@ function StatusBadge({ s }: { s: string }) {
 }
 
 function DashboardInner() {
-  const [game, setGame] = useState<"pokemon" | "optcg">("pokemon");
-  const [search, setSearch] = useState("");
-  const [status, setStatus] = useState<string[]>(["In Stock"]);
-  const [language, setLanguage] = useState<string>("");
-  const [kind, setKind] = useState<string>("");
-  const [setCode, setSetCode] = useState<string>("");
+  // Deep-link from the catalogue: /dashboard?game=&language=&set_code=&kind=&search=.
+  // useSearchParams reads the query reliably on client navigation (unlike reading
+  // window.location in an effect); we seed the initial filter state from it.
+  const params = useSearchParams();
+  const initGame = ((): "pokemon" | "optcg" => {
+    const g = params.get("game");
+    return g === "optcg" || g === "naruto_mythos" ? "optcg" : "pokemon";
+  })();
+  const deepLinked = !!(params.get("set_code") || params.get("kind"));
+
+  const [game, setGame] = useState<"pokemon" | "optcg">(initGame);
+  const [search, setSearch] = useState(params.get("search") ?? "");
+  // Arriving via a set/type link: drop the default "In Stock" gate so the whole
+  // filtered inventory is visible.
+  const [status, setStatus] = useState<string[]>(deepLinked ? [] : ["In Stock"]);
+  const [language, setLanguage] = useState<string>(params.get("language") ?? "");
+  const [kind, setKind] = useState<string>(params.get("kind") ?? "");
+  const [setCode, setSetCode] = useState<string>(params.get("set_code") ?? "");
   const [order, setOrder] = useState("default");
   const [page, setPage] = useState(0);
 
@@ -57,23 +70,6 @@ function DashboardInner() {
   const [loading, setLoading] = useState(false);
 
   const games = game === "pokemon" ? POKEMON : OPTCG;
-
-  // Deep-link from the catalogue (/sets): apply set_code / language / kind filters
-  // passed in the URL. Reading window here keeps it client-only (no Suspense
-  // boundary needed). Runs once on mount.
-  useEffect(() => {
-    /* eslint-disable react-hooks/set-state-in-effect */
-    const q = new URLSearchParams(window.location.search);
-    if (q.get("game") === "optcg") setGame("optcg");
-    const lang = q.get("language"); if (lang) setLanguage(lang);
-    const k = q.get("kind"); if (k) setKind(k);
-    const sc = q.get("set_code"); if (sc) setSetCode(sc);
-    const s = q.get("search"); if (s) setSearch(s);
-    // Arriving via a set link: drop the default "In Stock" gate so the whole set
-    // inventory is visible (in stock + épuisé).
-    if (q.get("set_code") || q.get("kind")) setStatus([]);
-    /* eslint-enable react-hooks/set-state-in-effect */
-  }, []);
 
   // Reference data (sets + facets + favorites) — reload when game changes.
   useEffect(() => {
@@ -197,14 +193,24 @@ function DashboardInner() {
         </select>
       </div>
 
-      {setCode && (
-        <div className="mb-3">
-          <span className="inline-flex items-center gap-2 text-xs bg-red-500/15 text-red-300
-                           border border-red-500/30 rounded-full px-3 py-1">
-            Set : {setCode}
-            <button onClick={() => setSetCode("")} title="Retirer le filtre set"
-              className="hover:text-white">✕</button>
-          </span>
+      {(setCode || kind) && (
+        <div className="mb-3 flex flex-wrap gap-2">
+          {setCode && (
+            <span className="inline-flex items-center gap-2 text-xs bg-red-500/15 text-red-300
+                             border border-red-500/30 rounded-full px-3 py-1">
+              Set : {setCode}
+              <button onClick={() => setSetCode("")} title="Retirer le filtre set"
+                className="hover:text-white">✕</button>
+            </span>
+          )}
+          {kind && (
+            <span className="inline-flex items-center gap-2 text-xs bg-red-500/15 text-red-300
+                             border border-red-500/30 rounded-full px-3 py-1">
+              Type : {kind}
+              <button onClick={() => setKind("")} title="Retirer le filtre type"
+                className="hover:text-white">✕</button>
+            </span>
+          )}
         </div>
       )}
 
@@ -279,7 +285,9 @@ function DashboardInner() {
 export default function DashboardPage() {
   return (
     <Protected>
-      <DashboardInner />
+      <Suspense fallback={<p className="text-gray-500">Chargement…</p>}>
+        <DashboardInner />
+      </Suspense>
     </Protected>
   );
 }

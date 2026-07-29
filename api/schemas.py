@@ -7,18 +7,20 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Optional
 
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 
 
 # ── Auth ────────────────────────────────────────────────────────────────────
 class UserOut(BaseModel):
     id: int
-    email: str
+    email: str            # login identifier — a free-form pseudo OR an email
     is_admin: bool
 
 
 class SignupRequest(BaseModel):
-    email: EmailStr
+    # Free-form identifier (pseudo or email); no email-format constraint so a
+    # simple pseudo works. Stored in User.email and matched verbatim at login.
+    email: str
     password: str
 
 

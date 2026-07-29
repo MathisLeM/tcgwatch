@@ -10,6 +10,7 @@ from sqlalchemy.orm import Session
 
 from api.database import get_db
 from api.schemas import ProductListing, ProductPage
+from api.services.kinds import DERIVED_KIND_GAMES, effective_kind
 from api.services.listings import query_listings, status_of
 
 router = APIRouter()
@@ -31,25 +32,33 @@ def list_products(
     limit: int = Query(100, ge=1, le=500),
     offset: int = Query(0, ge=0),
 ):
-    total, rows = query_listings(
-        db,
-        games=game,
-        languages=language,
-        set_codes=set_code,
-        series=series,
-        kinds=kind,
-        shops=shop,
-        statuses=status,
-        max_price=max_price,
-        search=search,
-        order=order,
-        limit=limit,
-        offset=offset,
-    )
-    items = [
-        ProductListing(**row, status=status_of(row.get("available")))
-        for row in rows
-    ]
+    # OPTCG/Naruto store no `kind`; it's derived from the title on-read. When a
+    # kind filter is requested for these games, the SQL WHERE can't use the (NULL)
+    # column, so we fetch the matching rows, derive+filter+paginate in Python.
+    # Safe because these games are small (a few hundred rows) and French-only.
+    derived_only = bool(game) and all(g in DERIVED_KIND_GAMES for g in game)
+    if kind and derived_only:
+        _, all_rows = query_listings(
+            db, games=game, languages=language, set_codes=set_code, series=series,
+            kinds=None, shops=shop, statuses=status, max_price=max_price,
+            search=search, order=order, limit=100_000, offset=0,
+        )
+        wanted = set(kind)
+        matched = [r for r in all_rows
+                   if effective_kind(r["game"], r.get("kind"), r["title"]) in wanted]
+        total = len(matched)
+        rows = matched[offset:offset + limit]
+    else:
+        total, rows = query_listings(
+            db, games=game, languages=language, set_codes=set_code, series=series,
+            kinds=kind, shops=shop, statuses=status, max_price=max_price,
+            search=search, order=order, limit=limit, offset=offset,
+        )
+
+    items = []
+    for row in rows:
+        row["kind"] = effective_kind(row["game"], row.get("kind"), row["title"])
+        items.append(ProductListing(**row, status=status_of(row.get("available"))))
     return ProductPage(total=total, limit=limit, offset=offset, items=items)
 
 
@@ -76,11 +85,21 @@ def facets(
         ).scalars().all()
         return sorted(v for v in rows if v)
 
+    # OPTCG/Naruto have no stored kind — derive the kind facet from titles so the
+    # dashboard's type dropdown is populated for them too.
+    if game and all(g in DERIVED_KIND_GAMES for g in game):
+        rows = db.execute(
+            text(f"SELECT game, kind, title FROM products WHERE 1=1{game_filter}"), params
+        ).all()
+        kinds = sorted({k for k in (effective_kind(g, st, t) for g, st, t in rows) if k})
+    else:
+        kinds = distinct("kind")
+
     return {
         "games": distinct("game"),
         "languages": distinct("language"),
         "series": distinct("series"),
-        "kinds": distinct("kind"),
+        "kinds": kinds,
         "shops": distinct("shop"),
         "set_codes": distinct("set_code"),
     }

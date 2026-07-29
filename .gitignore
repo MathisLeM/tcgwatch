@@ -56,6 +56,12 @@ images/Pokemon/*
 !images/Pokemon/Image_Serie/
 !images/Pokemon/Image_Serie_auto/
 !images/Pokemon/Image_Serie_pokecardex/
+# OPTCG / Naruto set images live at the images/ root, named "<SETCODE><suffix>.<ext>"
+# (BB=display, SB=booster, SPC=case). Ship them for the alpha catalogue.
+!images/OP*
+!images/EB*
+!images/PRB*
+!images/NRT*
 
 # ---- Node / Next.js (frontend) ----
 frontend/node_modules/

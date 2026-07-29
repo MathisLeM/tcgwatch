@@ -29,7 +29,7 @@ function AuthForm() {
     try {
       if (mode === "signup") await signup(email, password);
       else await login(email, password);
-      router.push("/dashboard");
+      router.push("/catalog");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Erreur");
     } finally {
@@ -56,7 +56,8 @@ function AuthForm() {
           </p>
           <form onSubmit={onSubmit} className="space-y-3">
             <input
-              type="email" required placeholder="Email" value={email}
+              type="text" required autoComplete="username"
+              placeholder="Identifiant (pseudo ou email)" value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full rounded-lg bg-gray-950 border border-white/10 px-3 py-2 text-sm
                          focus:outline-none focus:border-red-500"

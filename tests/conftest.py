@@ -66,6 +66,20 @@ def _setup_db():
         db.flush()
         db.add(Snapshot(product_id=mm.id, observed_at="2026-06-02T10:00:00", price_eur=19.99,
                         available=1, stock_remaining=None))
+        # An OPTCG product with NO stored kind (like prod) — exercises the
+        # derive-kind-from-title path (api.services.kinds).
+        db.add(Site(host="opshop.fr", platform="shopify", games="optcg", active=1,
+                    first_seen_at="2026-01-01"))
+        op = Product(
+            platform="shopify", shop="opshop.fr", platform_pid="op10-1",
+            game="optcg", language="fr", set_code="OP10", series=None, kind=None,
+            title="Display One Piece Card Game OP10 : Sang Royal - Version Française",
+            url="https://opshop.fr/op10-display", first_seen_at="2026-01-01",
+        )
+        db.add(op)
+        db.flush()
+        db.add(Snapshot(product_id=op.id, observed_at="2026-06-02T10:00:00", price_eur=89.9,
+                        available=1, stock_remaining=2))
         db.commit()
     finally:
         db.close()

@@ -105,12 +105,15 @@ def signup(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Les inscriptions sont fermées (alpha sur invitation).",
         )
+    identifier = (body.email or "").strip()
+    if len(identifier) < 3:
+        raise HTTPException(status_code=400, detail="L'identifiant doit faire au moins 3 caractères")
     if len(body.password) < 8:
-        raise HTTPException(status_code=400, detail="Password must be at least 8 characters")
-    if db.query(User).filter(User.email == body.email).first():
-        raise HTTPException(status_code=400, detail="Email already registered")
+        raise HTTPException(status_code=400, detail="Le mot de passe doit faire au moins 8 caractères")
+    if db.query(User).filter(User.email == identifier).first():
+        raise HTTPException(status_code=400, detail="Cet identifiant est déjà pris")
 
-    user = User(email=body.email, hashed_password=hash_password(body.password))
+    user = User(email=identifier, hashed_password=hash_password(body.password))
     db.add(user)
     db.commit()
     db.refresh(user)

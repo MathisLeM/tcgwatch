@@ -15,7 +15,7 @@ from slowapi.errors import RateLimitExceeded
 from api.config import _WEAK_SECRET, settings
 from api.database import init_db
 from api.limiter import limiter
-from api.routers import alerts, auth, favorites, products, retailers, sets
+from api.routers import alerts, auth, catalog, favorites, products, retailers, sets
 from scraper.config import IMAGES_DIR
 
 logging.basicConfig(
@@ -76,6 +76,7 @@ app.add_middleware(
 app.include_router(auth.router, prefix="/auth", tags=["Auth"])
 app.include_router(products.router, prefix="/products", tags=["Products"])
 app.include_router(sets.router, prefix="/sets", tags=["Sets"])
+app.include_router(catalog.router, prefix="/catalog", tags=["Catalog"])
 app.include_router(retailers.router, prefix="/retailers", tags=["Retailers"])
 app.include_router(favorites.router, prefix="/favorites", tags=["Favorites"])
 app.include_router(alerts.router, prefix="/alerts", tags=["Alerts"])
