@@ -43,11 +43,11 @@ function AuthForm() {
         <Link href="/" className="flex items-center justify-center gap-2 font-bold text-xl mb-8">
           <span>🎴</span> {BRAND}
         </Link>
-        <div className="bg-gray-900 border border-white/10 rounded-2xl p-6">
+        <div className="bg-panel border border-line-strong rounded-2xl p-6">
           <h1 className="text-lg font-semibold mb-1">
             {mode === "signup" ? "Créer un compte" : "Connexion"}
           </h1>
-          <p className="text-sm text-gray-400 mb-5">
+          <p className="text-sm text-muted mb-5">
             {mode === "signup"
               ? "Suivez vos produits et recevez des alertes de réapprovisionnement."
               : ALLOW_SIGNUP
@@ -59,19 +59,19 @@ function AuthForm() {
               type="text" required autoComplete="username"
               placeholder="Identifiant (pseudo ou email)" value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full rounded-lg bg-gray-950 border border-white/10 px-3 py-2 text-sm
-                         focus:outline-none focus:border-red-500"
+              className="w-full rounded-lg bg-canvas border border-line-strong px-3 py-2 text-sm
+                         focus:outline-none focus:border-accent"
             />
             <input
               type="password" required placeholder="Mot de passe (8+ caractères)" value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full rounded-lg bg-gray-950 border border-white/10 px-3 py-2 text-sm
-                         focus:outline-none focus:border-red-500"
+              className="w-full rounded-lg bg-canvas border border-line-strong px-3 py-2 text-sm
+                         focus:outline-none focus:border-accent"
             />
-            {error && <p className="text-sm text-red-400">{error}</p>}
+            {error && <p className="text-sm text-accent">{error}</p>}
             <button
               type="submit" disabled={busy}
-              className="w-full bg-red-600 hover:bg-red-500 disabled:opacity-60 text-white
+              className="w-full bg-accent hover:brightness-110 disabled:opacity-60 text-on-accent
                          text-sm font-semibold py-2 rounded-lg transition-colors"
             >
               {busy ? "…" : mode === "signup" ? "Créer mon compte" : "Se connecter"}
@@ -80,7 +80,7 @@ function AuthForm() {
           {ALLOW_SIGNUP && (
             <button
               onClick={() => { setMode(mode === "signup" ? "login" : "signup"); setError(null); }}
-              className="mt-4 text-sm text-gray-400 hover:text-white transition-colors w-full text-center"
+              className="mt-4 text-sm text-muted hover:text-ink transition-colors w-full text-center"
             >
               {mode === "signup"
                 ? "Déjà un compte ? Se connecter"

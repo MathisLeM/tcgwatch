@@ -40,6 +40,19 @@ data/reference/cardmarket/
 data/reference/limitless_promo_cache/
 data/reference/tcgplayer_*.json
 
+# ---- Cardmarket raw inputs (large; ingested locally into the DB via
+#      scraper.cardmarket.ingest — not needed in the repo). Keep the small
+#      tracked_*.json seed lists under version control. ----
+data/cardmarket/price_guide/
+data/cardmarket/products_singles_*.json
+data/cardmarket/products_nonsingles_*.json
+
+# ---- Valuation model: raw apitcg per-set dumps are regenerable (keyless
+#      GitHub mirror). Keep the small consolidated optcg_cards.json committed
+#      so the pipeline + tests run offline. ----
+data/valuation/apitcg/
+data/valuation/limitless/
+
 # ---- Playwright/POC debug captures (screenshots, HTML dumps) ----
 scraper/poc/*.png
 scraper/poc/*.html
@@ -77,3 +90,6 @@ Thumbs.db
 .idea/
 .vscode/
 *.log
+
+# valuation EDA charts (regenerable)
+data/valuation/analysis/

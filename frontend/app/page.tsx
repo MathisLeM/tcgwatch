@@ -1,117 +1,113 @@
 import Image from "next/image";
 import LandingNav from "@/components/LandingNav";
+import Icon, { type IconName } from "@/components/Icons";
 import { BRAND, SITE_URL } from "@/lib/brand";
 
-const FEATURES = [
+/* Classes partagées — reprises de la maquette « Landing v2 ». */
+const SECTION = "py-[clamp(56px,8vw,100px)] px-[clamp(16px,4vw,32px)] border-t border-line";
+const SHELL = "max-w-[1160px] mx-auto";
+const EYEBROW = "text-[13px] font-semibold tracking-[0.14em] uppercase text-accent";
+const H2 = "font-display text-[clamp(28px,3.4vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12]";
+const CARD = "bg-panel border border-line rounded-[18px] p-6 flex flex-col gap-3.5";
+const ICON_TILE = "flex items-center justify-center w-[42px] h-[42px] rounded-xl";
+
+const STATS = [
+  { value: "100+", label: "boutiques françaises suivies", accent: false },
+  { value: "8", label: "plateformes e-commerce scannées", accent: false },
+  { value: "5", label: "langues d'édition suivies", accent: false },
+  { value: "1 h", label: "entre deux scans en formule Gold", accent: true },
+];
+
+const FEATURES: { icon: IconName; title: string; desc: string }[] = [
   {
-    icon: "🔔",
+    icon: "bell",
     title: "Soyez le premier prévenu",
     desc: "Dès qu'un scellé revient en stock ou baisse de prix, l'alerte part aussitôt — e-mail, Discord ou Slack. Sur les boutiques à stock très limité, quelques minutes d'avance font toute la différence.",
   },
   {
-    icon: "⏱️",
+    icon: "timer",
     title: "Scans fréquents",
     desc: "Selon votre formule, le marché est rescanné chaque semaine, chaque jour ou chaque heure. Plus le scan est fréquent, plus vous êtes alerté tôt — et premier sur la file.",
   },
   {
-    icon: "🏪",
+    icon: "shop",
     title: "100+ boutiques françaises suivies",
     desc: "Nous surveillons automatiquement 100+ revendeurs français, des grandes enseignes aux petites boutiques spécialisées. Tout le marché au même endroit : qui a quoi, à quel prix officiel.",
   },
   {
-    icon: "🎮",
+    icon: "gamepad",
     title: "Plusieurs jeux",
     desc: "Pokémon, One Piece et d'autres TCG — un seul outil pour surveiller tous vos produits scellés, sans jongler entre vingt sites.",
   },
   {
-    icon: "📦",
+    icon: "box",
     title: "Tous les types de scellés",
     desc: "Displays, coffrets dresseur d'élite, coffrets, bundles, blisters, tri/duo-packs, mini-tins et boosters — classés automatiquement, cartes à l'unité exclues.",
   },
   {
-    icon: "🌍",
+    icon: "globe",
     title: "Multi-langues",
     desc: "Suivez les éditions française, anglaise, japonaise, coréenne et chinoise côte à côte. Filtrez exactement la langue que vous collectionnez.",
   },
   {
-    icon: "🗂️",
+    icon: "layers",
     title: "Classé par bloc & série",
     desc: "Naviguez visuellement par bloc — Méga-Évolution, Écarlate et Violet, Épée et Bouclier — puis explorez chaque série avec son visuel et son code officiel.",
   },
   {
-    icon: "💎",
+    icon: "gem",
     title: "Anciennes séries épuisées aussi suivies",
-    desc: "On surveille aussi les scellés de séries plus anciennes, non rééditées et épuisées en boutique — forcément vendues au-dessus du prix de sortie. Comparez les tarifs des boutiques TCG spécialisées qu'on suit avec ceux de Cardmarket ou eBay, et complétez vos vieilles séries au meilleur prix.",
+    desc: "On surveille aussi les scellés de séries non rééditées et épuisées en boutique. Comparez les tarifs des boutiques spécialisées avec Cardmarket ou eBay, et complétez vos vieilles séries au meilleur prix.",
   },
   {
-    icon: "🤝",
+    icon: "users",
     title: "Construit avec la communauté",
     desc: "Vous connaissez une boutique mal couverte ? Proposez-la : si elle est compatible, on l'ajoute — et on vous offre un mois d'accès.",
   },
 ];
 
-const STEPS = [
+const STEPS: { number: string; icon: IconName; title: string; desc: string; ok?: boolean }[] = [
   {
     number: "01",
+    icon: "eye",
     title: "Choisissez ce que vous surveillez",
     desc: "Ajoutez les articles, séries ou langues qui vous intéressent à votre liste de surveillance — selon votre formule.",
   },
   {
     number: "02",
+    icon: "search",
     title: "On scanne les boutiques",
-    desc: "Selon votre formule, nous récupérons le stock et les prix en direct de 100+ revendeurs français et associons chaque annonce à sa série.",
+    desc: "Nous récupérons le stock et les prix en direct de 100+ revendeurs français et associons chaque annonce à sa série.",
   },
   {
     number: "03",
+    icon: "bell",
     title: "Vous êtes alerté",
-    desc: "Réappro, baisse de prix, nouveau produit ? Une alerte arrive dans votre boîte mail ou sur Discord à l'instant où ça se produit.",
+    desc: "Réappro, baisse de prix, nouveau produit ? Une alerte arrive par e-mail ou sur Discord à l'instant où ça se produit.",
   },
   {
     number: "04",
+    icon: "cart",
     title: "Achetez au prix officiel",
     desc: "Accédez directement à l'annonce en stock la moins chère et attrapez-la avant les scalpers.",
+    ok: true,
   },
 ];
 
-const PERSONAS = [
-  {
-    icon: "🃏",
-    persona: "Collectionneurs",
-    text: "Complétez votre collection au prix boutique. Soyez prévenu dès qu'un display manquant réapparaît — avant qu'un scalper ne le rafle.",
-  },
-  {
-    icon: "🎮",
-    persona: "Joueurs",
-    text: "Trouvez vos boosters et displays pour jouer sans payer le double sur eBay. Le bon produit, au bon prix, au bon moment.",
-  },
-  {
-    icon: "👪",
-    persona: "Parents & familles",
-    text: "Offrez le cadeau parfait sans tomber sur une arnaque à prix gonflé — on vous montre où c'est disponible au tarif officiel.",
-  },
-];
-
-const BLOCKS = [
-  { code: "ME", sets: "5 séries", img: "/images/blocks/bloc-mega-evolution.png" },
-  { code: "EV", sets: "12 séries", img: "/images/blocks/bloc-ecarlate-et-violet.jpg" },
-  { code: "EB", sets: "14 séries", img: "/images/blocks/bloc-epee-et-bouclier.jpg" },
-];
-
-const SERIES_CARDS = [
-  { code: "PRE", kind: "Display", price: "164,90 €", status: "in", img: "/images/series/serie_evolutions_prismatiques.jpg" },
-  { code: "CRI", kind: "Coffret Élite", price: "59,90 €", status: "drop", img: "/images/series/serie_chaos_ascendant.jpg" },
-  { code: "OBF", kind: "Display", price: "—", status: "out", img: "/images/series/serie_flammes_obsidiennes.jpg" },
-  { code: "SSP", kind: "Coffret", price: "44,90 €", status: "in", img: "/images/series/serie_etincelles_deferlantes.jpg" },
+const CONTRIBUTION_STEPS = [
+  { step: "1", text: "Repérez une boutique avec du scellé mal couvert chez nous.", gold: false },
+  { step: "2", text: "Proposez-la en un clic depuis votre espace (ou par e-mail).", gold: false },
+  { step: "3", text: "Si elle est compatible et ajoutée : 1 mois offert.", gold: true },
 ];
 
 const PLANS = [
   {
     name: "Bronze",
-    accent: "text-amber-700",
-    ring: "border-gray-800",
+    nameClass: "text-[#C9853E]",
     price: "Gratuit",
-    items: "1 article suivi",
-    refresh: "Scan hebdomadaire",
+    period: false,
+    items: "1 article",
+    refresh: "Hebdomadaire",
     highlight: false,
     perks: [
       "Alertes par e-mail",
@@ -122,11 +118,11 @@ const PLANS = [
   },
   {
     name: "Silver",
-    accent: "text-gray-300",
-    ring: "border-gray-700",
+    nameClass: "text-[#B8C2CC]",
     price: "7,99 €",
-    items: "10 articles ou 1 set",
-    refresh: "Scan quotidien",
+    period: true,
+    items: "10 ou 1 set",
+    refresh: "Quotidienne",
     highlight: false,
     perks: [
       "Alertes e-mail + Discord",
@@ -137,11 +133,11 @@ const PLANS = [
   },
   {
     name: "Gold",
-    accent: "text-amber-400",
-    ring: "border-amber-500/60",
+    nameClass: "text-gold",
     price: "14,99 €",
-    items: "Articles illimités",
-    refresh: "Scan toutes les heures",
+    period: true,
+    items: "Illimités",
+    refresh: "Toutes les heures",
     highlight: true,
     perks: [
       "Alertes instantanées e-mail + Discord + Slack",
@@ -150,6 +146,31 @@ const PLANS = [
       "Toutes les fonctionnalités",
     ],
   },
+];
+
+const PERSONAS: { icon: IconName; title: string; desc: string }[] = [
+  {
+    icon: "gem",
+    title: "Collectionneurs",
+    desc: "Complétez votre collection au prix boutique. Soyez prévenu dès qu'un display manquant réapparaît — avant qu'un scalper ne le rafle.",
+  },
+  {
+    icon: "gamepad",
+    title: "Joueurs",
+    desc: "Trouvez vos boosters et displays pour jouer sans payer le double sur eBay. Le bon produit, au bon prix, au bon moment.",
+  },
+  {
+    icon: "heart",
+    title: "Parents & familles",
+    desc: "Offrez le cadeau parfait sans tomber sur une arnaque à prix gonflé — on vous montre où c'est disponible au tarif officiel.",
+  },
+];
+
+const FOOTER_LINKS = [
+  { href: "#features", label: "Fonctionnalités" },
+  { href: "#community", label: "Communauté" },
+  { href: "#pricing", label: "Tarifs" },
+  { href: "#waitlist", label: "Liste d'attente" },
 ];
 
 const jsonLd = {
@@ -163,24 +184,9 @@ const jsonLd = {
   url: SITE_URL,
 };
 
-function StatusBadge({ status }: { status: string }) {
-  const cfg =
-    status === "in"
-      ? "text-emerald-400 bg-emerald-950/60 border-emerald-800/60"
-      : status === "drop"
-      ? "text-amber-400 bg-amber-950/60 border-amber-800/60"
-      : "text-gray-400 bg-gray-900/80 border-gray-700/60";
-  const label = status === "in" ? "🟢 En stock" : status === "drop" ? "🔻 Baisse" : "⚪ Rupture";
-  return (
-    <span className={`text-[9px] font-medium px-1.5 py-0.5 rounded-full border whitespace-nowrap ${cfg}`}>
-      {label}
-    </span>
-  );
-}
-
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100">
+    <div className="min-h-screen bg-canvas text-ink font-sans [overflow-x:clip]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -188,186 +194,265 @@ export default function LandingPage() {
       <LandingNav />
 
       {/* ── Hero ── */}
-      <section className="pt-36 pb-24 px-6 text-center relative overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[450px]
-                          bg-red-600/10 blur-[140px] rounded-full" />
-        </div>
-
-        <div className="max-w-3xl mx-auto space-y-6">
-          <div className="flex items-center justify-center gap-2 flex-wrap">
-            <span className="inline-flex items-center gap-2 text-xs font-medium text-red-300
-                            border border-red-800/70 bg-red-950/40 px-3 py-1.5 rounded-full">
-              🛡️ Par des passionnés, contre les scalpers
-            </span>
-            <span className="inline-flex items-center gap-2 text-xs font-medium text-amber-400
-                            border border-amber-800/70 bg-amber-950/40 px-3 py-1.5 rounded-full">
-              🤝 Outil communautaire
-            </span>
-          </div>
-
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight">
-            Achetez vos scellés au{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-amber-400">
-              prix boutique
-            </span>
-            , avant les scalpers
-          </h1>
-
-          <p className="text-lg text-gray-400 max-w-xl mx-auto leading-relaxed">
-            {BRAND} surveille 100+ boutiques françaises et vous alerte dès qu&apos;un
-            scellé Pokémon ou One Piece est réapprovisionné ou baisse de prix — pour
-            l&apos;acheter au tarif officiel, sans payer les prix gonflés d&apos;eBay
-            ou Cardmarket.
-          </p>
-
-          <div className="flex items-center justify-center gap-4 pt-2">
-            <a
-              href="#waitlist"
-              className="bg-red-600 hover:bg-red-500 text-white font-semibold
-                         px-6 py-3 rounded-xl transition-colors text-sm"
-            >
-              Rejoindre la liste d&apos;attente
-            </a>
-            <a
-              href="#pricing"
-              className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1"
-            >
-              Voir les formules ↓
-            </a>
-          </div>
-        </div>
-
-        {/* Aperçu produit */}
-        <div className="mt-20 max-w-4xl mx-auto">
-          <div className="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden shadow-2xl shadow-black/40">
-            <div className="border-b border-gray-800 px-4 py-3 flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-red-500/60" />
-              <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-              <div className="w-3 h-3 rounded-full bg-green-500/60" />
-              <span className="ml-3 text-xs text-gray-600 font-mono">{BRAND.toLowerCase()}.app/series</span>
+      <section className="relative overflow-hidden pt-[clamp(48px,8vw,96px)] pb-[clamp(40px,6vw,72px)] px-[clamp(16px,4vw,32px)]">
+        <div
+          className="absolute -top-[180px] left-1/2 -translate-x-1/2 w-[min(900px,120vw)] h-[500px] pointer-events-none
+                     bg-[radial-gradient(ellipse_at_center,var(--color-accent-soft),transparent_65%)]"
+        />
+        <div
+          className={`${SHELL} relative grid gap-[clamp(32px,5vw,64px)] items-center
+                      grid-cols-[repeat(auto-fit,minmax(min(100%,480px),1fr))]`}
+        >
+          <div className="flex flex-col gap-[22px] items-start">
+            <div className="flex gap-2 flex-wrap">
+              <span className="inline-flex items-center gap-[7px] text-xs font-medium text-accent border border-accent-line bg-accent-soft px-3 py-1.5 rounded-full">
+                <Icon name="shield" size={13} strokeWidth={2} />
+                Par des passionnés, contre les scalpers
+              </span>
+              <span className="inline-flex items-center gap-[7px] text-xs font-medium text-gold border border-gold-line bg-gold-soft px-3 py-1.5 rounded-full">
+                <Icon name="users" size={13} strokeWidth={2} />
+                Outil communautaire
+              </span>
             </div>
-            <div className="p-6 space-y-5 text-left">
-              {/* blocs — visuels rectangulaires standardisés (image entière) */}
-              <div>
-                <p className="text-[11px] uppercase tracking-wide text-gray-500 mb-2">Blocs</p>
-                <div className="grid grid-cols-3 gap-3">
-                  {BLOCKS.map(({ code, sets, img }) => (
-                    <div key={code} className="bg-gray-800/60 border border-gray-700/50 rounded-xl p-2">
-                      <div className="relative w-full aspect-[16/10] rounded-md overflow-hidden bg-gray-950/40">
-                        <Image src={img} alt={code} fill sizes="(max-width:768px) 33vw, 220px" className="object-contain" />
-                      </div>
-                      <div className="px-1 pt-1.5 flex items-center justify-between">
-                        <span className="text-xs text-red-400 font-mono font-semibold">{code}</span>
-                        <span className="text-[11px] text-gray-500">{sets}</span>
-                      </div>
-                    </div>
-                  ))}
+
+            <h1 className="font-display text-[clamp(36px,5.4vw,62px)] font-extrabold tracking-[-0.03em] leading-[1.06] text-balance">
+              Achetez vos scellés au <span className="text-accent">prix boutique</span>, avant les
+              scalpers.
+            </h1>
+
+            <p className="text-[clamp(15px,1.5vw,18px)] text-muted leading-[1.65] max-w-[520px] text-pretty">
+              {BRAND} surveille 100+ boutiques françaises et vous alerte dès qu&apos;un scellé
+              Pokémon ou One Piece revient en stock ou baisse de prix — au tarif officiel, pas au
+              prix gonflé d&apos;eBay ou Cardmarket.
+            </p>
+
+            <div className="flex items-center gap-3.5 flex-wrap pt-1">
+              <a
+                href="#waitlist"
+                className="inline-flex items-center gap-2 bg-accent text-on-accent font-semibold px-6 py-3.5 rounded-xl text-[15px]
+                           shadow-[0_8px_28px_-8px_var(--color-accent-line)] hover:brightness-110 transition-[filter]"
+              >
+                Rejoindre la liste d&apos;attente
+                <Icon name="arrowRight" size={16} strokeWidth={2.2} />
+              </a>
+              <a
+                href="#pricing"
+                className="inline-flex items-center gap-2 border border-line-strong text-ink font-medium px-[22px] py-3.5 rounded-xl text-[15px]
+                           hover:border-dim transition-colors"
+              >
+                Voir les formules
+              </a>
+            </div>
+
+            <div className="flex items-center gap-2.5 text-[13px] text-dim flex-wrap">
+              <span className="inline-flex items-center gap-1.5">
+                <span className="w-[7px] h-[7px] rounded-full bg-ok animate-pulse-dot" />
+                Dernier scan il y a 18 min
+              </span>
+              <span className="text-line-strong">·</span>
+              <span>100+ boutiques</span>
+              <span className="text-line-strong">·</span>
+              <span>5 langues d&apos;édition</span>
+            </div>
+          </div>
+
+          {/* Collage produits + alertes */}
+          <div className="relative w-full max-w-[540px] mx-auto min-h-[clamp(360px,42vw,470px)]">
+            <div className="absolute inset-y-[10%] inset-x-[5%] pointer-events-none bg-[radial-gradient(ellipse_at_center,var(--color-gold-soft),transparent_70%)]" />
+
+            <div className="absolute top-[6%] left-[2%] w-[56%] bg-panel border border-line-strong rounded-[18px] p-3.5 -rotate-3 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]">
+              <div className="aspect-square flex items-center justify-center bg-panel-2 rounded-xl overflow-hidden">
+                <div className="relative w-[88%] h-[88%]">
+                  <Image
+                    src="/images/products/op17-display.webp"
+                    alt="Display One Piece OP-17"
+                    fill
+                    sizes="(max-width: 768px) 45vw, 300px"
+                    className="object-contain"
+                    priority
+                  />
                 </div>
               </div>
+              <div className="flex items-center justify-between gap-2 pt-2.5 px-1 pb-0.5">
+                <div className="min-w-0">
+                  <p className="text-xs font-semibold truncate">Display OP-17</p>
+                  <p className="text-[11px] text-dim mt-0.5">One Piece · EN</p>
+                </div>
+                <span className="font-display text-[15px] font-bold whitespace-nowrap">89,90 €</span>
+              </div>
+            </div>
 
-              {/* séries — mêmes cartes rectangulaires, code conservé, nom dans l'image */}
-              <div>
-                <p className="text-[11px] uppercase tracking-wide text-gray-500 mb-2">Séries</p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                  {SERIES_CARDS.map(({ code, kind, price, status, img }) => (
-                    <div key={code} className="bg-gray-800/50 border border-gray-700/40 rounded-xl p-2">
-                      <div className="relative w-full aspect-[16/10] rounded-md overflow-hidden bg-gray-950/40">
-                        <Image src={img} alt={code} fill sizes="(max-width:768px) 50vw, 200px" className="object-contain" />
-                        <span className="absolute top-1 left-1 text-[9px] font-mono font-semibold text-amber-300
-                                         bg-gray-950/80 px-1.5 py-0.5 rounded">
-                          {code}
-                        </span>
-                        <span className="absolute top-1 right-1">
-                          <StatusBadge status={status} />
-                        </span>
-                      </div>
-                      <div className="px-1 pt-1.5 flex items-center justify-between">
-                        <span className="text-[11px] text-gray-500">{kind}</span>
-                        <span className="text-xs font-bold text-white">{price}</span>
-                      </div>
-                    </div>
-                  ))}
+            <div className="absolute top-[18%] right-0 w-[46%] bg-panel border border-line-strong rounded-[18px] p-3 rotate-[3.5deg] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)] animate-float-y">
+              <div className="aspect-[4/5] flex items-center justify-center bg-panel-2 rounded-xl overflow-hidden">
+                <div className="relative w-[80%] h-[90%]">
+                  <Image
+                    src="/images/products/booster-evolutions-prismatiques.png"
+                    alt="Booster Évolutions Prismatiques"
+                    fill
+                    sizes="(max-width: 768px) 38vw, 250px"
+                    className="object-contain"
+                  />
                 </div>
               </div>
-
-              <div className="flex items-center gap-2">
-                <span className="inline-flex items-center gap-1.5 text-[10px] font-medium text-amber-400
-                                 border border-amber-800/60 bg-amber-950/40 px-2.5 py-1 rounded-full">
-                  <span className="w-1 h-1 bg-amber-400 rounded-full" />
-                  Scan auto · dernier passage il y a 18 min
-                </span>
-                <span className="inline-flex items-center gap-1.5 text-[10px] font-medium text-emerald-400
-                                 border border-emerald-800/60 bg-emerald-950/40 px-2.5 py-1 rounded-full">
-                  E-mail ✓ · Discord ✓
-                </span>
+              <div className="flex items-center justify-between gap-1.5 pt-2 px-0.5">
+                <div className="min-w-0">
+                  <p className="text-[11px] font-semibold truncate">Évolutions Prismatiques</p>
+                  <p className="text-[10px] text-dim mt-0.5">Pokémon · FR</p>
+                </div>
               </div>
+            </div>
+
+            <div
+              className="absolute bottom-[13%] left-[6%] right-[14%] rounded-[14px] px-3.5 py-3 flex items-center gap-3
+                         bg-[color-mix(in_srgb,var(--color-panel)_92%,transparent)] backdrop-blur-[8px]
+                         border border-ok-line shadow-[0_24px_48px_-16px_rgba(0,0,0,0.65)]"
+            >
+              <span className="flex items-center justify-center w-9 h-9 rounded-[10px] bg-ok-soft text-ok shrink-0">
+                <Icon name="bell" size={18} strokeWidth={2} />
+              </span>
+              <div className="min-w-0 flex-1">
+                <p className="text-xs font-semibold text-ok">Réappro détectée · il y a 2 min</p>
+                <p className="text-xs text-muted mt-[3px] truncate">
+                  Display Évolutions Prismatiques —{" "}
+                  <span className="text-ink font-semibold">164,90 €</span>
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="absolute bottom-0 right-[4%] rounded-[14px] px-3.5 py-2.5 flex items-center gap-2.5
+                         bg-[color-mix(in_srgb,var(--color-panel)_92%,transparent)] backdrop-blur-[8px]
+                         border border-gold-line shadow-[0_24px_48px_-16px_rgba(0,0,0,0.65)]"
+            >
+              <span className="text-gold flex">
+                <Icon name="trendingDown" size={16} strokeWidth={2} />
+              </span>
+              <p className="text-xs text-muted">
+                Baisse de prix <span className="text-gold font-bold">−18 %</span>
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Manifeste anti-scalper ── */}
-      <section id="manifesto" className="py-20 px-6 border-t border-gray-800/60">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <div className="space-y-5">
-            <h2 className="text-3xl font-bold text-white leading-tight">
-              Des passionnés. Pas des scalpers.
+      {/* ── Chiffres clés ── */}
+      <section className="px-[clamp(16px,4vw,32px)] pb-[clamp(48px,7vw,88px)]">
+        <div
+          className={`${SHELL} border border-line bg-panel rounded-[18px] overflow-hidden
+                      grid grid-cols-[repeat(auto-fit,minmax(min(100%,200px),1fr))]`}
+        >
+          {STATS.map(({ value, label, accent }) => (
+            <div
+              key={label}
+              className="p-[clamp(20px,3vw,30px)] border-r border-b border-line -mr-px -mb-px"
+            >
+              <p
+                className={`font-display text-[clamp(28px,3vw,38px)] font-extrabold tracking-[-0.02em] ${
+                  accent ? "text-accent" : ""
+                }`}
+              >
+                {value}
+              </p>
+              <p className="text-[13px] text-dim mt-1.5">{label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Manifeste ── */}
+      <section id="manifesto" className={SECTION}>
+        <div
+          className={`${SHELL} grid gap-[clamp(32px,5vw,64px)] items-center
+                      grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))]`}
+        >
+          <div className="flex flex-col gap-[18px]">
+            <p className={EYEBROW}>Le manifeste</p>
+            <h2 className={H2}>
+              Des passionnés.
+              <br />
+              Pas des scalpers.
             </h2>
-            <p className="text-gray-400 leading-relaxed">
-              Les éditions limitées partent en quelques minutes — rachetées en masse
-              pour être revendues bien plus cher sur eBay ou Cardmarket. {BRAND} remet
-              les passionnés en première ligne&nbsp;: on vous prévient dès qu&apos;un
-              produit est disponible en boutique, au prix officiel, pour que vous
-              l&apos;achetiez <span className="text-white font-medium">avant</span> les
-              revendeurs — pas après, au prix fort.
+            <p className="text-muted leading-[1.7] text-pretty">
+              Les éditions limitées partent en quelques minutes — rachetées en masse pour être
+              revendues bien plus cher sur eBay ou Cardmarket. {BRAND} remet les passionnés en
+              première ligne&nbsp;: on vous prévient dès qu&apos;un produit est disponible en
+              boutique, au prix officiel, pour que vous l&apos;achetiez{" "}
+              <span className="text-ink font-semibold">avant</span> les revendeurs — pas après, au
+              prix fort.
             </p>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-dim">
               Pas un outil de revente : un outil pour que la communauté paie le juste prix.
             </p>
           </div>
 
-          <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 space-y-3">
-            <p className="text-xs text-gray-500 mb-2">Un même display, deux mondes&nbsp;:</p>
-            <div className="flex items-center justify-between bg-emerald-950/30 border border-emerald-900/50 rounded-xl px-4 py-3">
-              <span className="text-sm text-gray-300">🏪 En boutique, avec {BRAND}</span>
-              <span className="text-lg font-bold text-emerald-400">59,90 €</span>
+          <div className="bg-panel border border-line rounded-[20px] p-[clamp(20px,3vw,28px)] flex flex-col gap-3.5">
+            <div className="flex items-center gap-3.5">
+              <div className="w-[74px] h-[74px] rounded-[14px] bg-panel-2 border border-line flex items-center justify-center shrink-0 overflow-hidden">
+                <div className="relative w-[86%] h-[86%]">
+                  <Image
+                    src="/images/products/op16-display.webp"
+                    alt="Display One Piece OP-16"
+                    fill
+                    sizes="74px"
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+              <div>
+                <p className="text-sm font-semibold">Un même display, deux mondes</p>
+                <p className="text-xs text-dim mt-[3px]">Exemple relevé sur un display One Piece</p>
+              </div>
             </div>
-            <div className="flex items-center justify-between bg-red-950/30 border border-red-900/50 rounded-xl px-4 py-3">
-              <span className="text-sm text-gray-300">📈 Chez un scalper (eBay / Cardmarket)</span>
-              <span className="text-lg font-bold text-red-400">≈ 119 €</span>
+
+            <div className="flex items-center justify-between gap-2.5 bg-ok-soft border border-ok-line rounded-[14px] px-4 py-3.5">
+              <span className="inline-flex items-center gap-2.5 text-sm text-ink">
+                <Icon name="shop" size={16} strokeWidth={2} className="text-ok" />
+                En boutique, avec {BRAND}
+              </span>
+              <span className="font-display text-xl font-extrabold text-ok whitespace-nowrap">
+                59,90 €
+              </span>
             </div>
-            <p className="text-center text-xs text-gray-500 pt-1">
-              Jusqu&apos;à <span className="text-red-400 font-semibold">+100 %</span> de plus.
-              Soyez là au bon moment.
+            <div className="flex items-center justify-between gap-2.5 bg-accent-soft border border-accent-line rounded-[14px] px-4 py-3.5">
+              <span className="inline-flex items-center gap-2.5 text-sm text-ink">
+                <Icon name="trendingUp" size={16} strokeWidth={2} className="text-accent" />
+                Chez un scalper (eBay / Cardmarket)
+              </span>
+              <span className="font-display text-xl font-extrabold text-accent whitespace-nowrap">
+                ≈ 119 €
+              </span>
+            </div>
+            <p className="text-center text-[13px] text-dim">
+              Jusqu&apos;à <span className="text-accent font-bold">+100 %</span> de surcote. Soyez là
+              au bon moment.
             </p>
           </div>
         </div>
       </section>
 
       {/* ── Fonctionnalités ── */}
-      <section id="features" className="py-24 px-6 border-t border-gray-800/60">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-white mb-3">
-              Tout le marché français, surveillé pour vous
-            </h2>
-            <p className="text-gray-400 max-w-xl mx-auto">
-              {BRAND} suit le stock et les prix des TCG scellés à votre place, pour que
-              vous achetiez au tarif officiel sans courir vingt sites.
+      <section id="features" className={SECTION}>
+        <div className={SHELL}>
+          <div className="max-w-[640px] mx-auto mb-[clamp(36px,5vw,56px)] text-center flex flex-col gap-3.5">
+            <p className={EYEBROW}>Fonctionnalités</p>
+            <h2 className={`${H2} text-balance`}>Tout le marché français, surveillé pour vous</h2>
+            <p className="text-muted leading-[1.65]">
+              {BRAND} suit le stock et les prix des TCG scellés à votre place, pour que vous
+              achetiez au tarif officiel sans courir vingt sites.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))]">
             {FEATURES.map(({ icon, title, desc }) => (
               <div
                 key={title}
-                className="bg-gray-900 border border-gray-800 rounded-2xl p-6
-                           hover:border-gray-700 transition-colors"
+                className={`${CARD} transition-[border-color,transform] duration-200 hover:border-line-strong hover:-translate-y-0.5`}
               >
-                <div className="text-2xl mb-4">{icon}</div>
-                <h3 className="text-white font-semibold mb-2">{title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
+                <span className={`${ICON_TILE} bg-accent-soft text-accent`}>
+                  <Icon name={icon} />
+                </span>
+                <h3 className="text-base font-semibold">{title}</h3>
+                <p className="text-sm text-muted leading-[1.65]">{desc}</p>
               </div>
             ))}
           </div>
@@ -375,24 +460,37 @@ export default function LandingPage() {
       </section>
 
       {/* ── Comment ça marche ── */}
-      <section id="how-it-works" className="py-24 px-6 border-t border-gray-800/60">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-white mb-3">Comment ça marche</h2>
-            <p className="text-gray-400">De votre liste de surveillance à l&apos;achat au prix officiel, en quatre étapes.</p>
+      <section id="how-it-works" className={SECTION}>
+        <div className={SHELL}>
+          <div className="max-w-[640px] mx-auto mb-[clamp(36px,5vw,56px)] text-center flex flex-col gap-3.5">
+            <p className={EYEBROW}>Comment ça marche</p>
+            <h2 className={H2}>Quatre étapes, zéro veille manuelle</h2>
+            <p className="text-muted leading-[1.65]">
+              De votre liste de surveillance à l&apos;achat au prix officiel.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8 relative">
-            <div className="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-red-800/0 via-red-700/50 to-red-800/0" />
-            {STEPS.map(({ number, title, desc }) => (
-              <div key={number} className="relative text-center space-y-3">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl
-                                bg-red-950 border border-red-800 text-red-400
-                                font-bold text-lg mx-auto">
+          <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(min(100%,250px),1fr))]">
+            {STEPS.map(({ number, icon, title, desc, ok }) => (
+              <div
+                key={number}
+                className="relative bg-panel border border-line rounded-[18px] px-[22px] py-[26px] overflow-hidden"
+              >
+                <span
+                  aria-hidden="true"
+                  className="absolute -top-3.5 right-1.5 font-display text-[88px] font-extrabold text-panel-2 select-none leading-none"
+                >
                   {number}
-                </div>
-                <h3 className="text-white font-semibold">{title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
+                </span>
+                <span
+                  className={`relative ${ICON_TILE} mb-4 ${
+                    ok ? "bg-ok-soft text-ok" : "bg-accent-soft text-accent"
+                  }`}
+                >
+                  <Icon name={icon} />
+                </span>
+                <h3 className="relative text-base font-semibold mb-2">{title}</h3>
+                <p className="relative text-sm text-muted leading-[1.65]">{desc}</p>
               </div>
             ))}
           </div>
@@ -400,110 +498,140 @@ export default function LandingPage() {
       </section>
 
       {/* ── Communauté ── */}
-      <section id="community" className="py-24 px-6 border-t border-gray-800/60">
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-br from-red-950/40 to-amber-950/20 border border-red-900/50 rounded-3xl p-10 md:p-14">
-            <div className="grid md:grid-cols-2 gap-10 items-center">
-              <div className="space-y-5">
-                <span className="inline-flex items-center gap-2 text-xs font-medium text-red-300
-                                border border-red-800/70 bg-red-950/50 px-3 py-1.5 rounded-full">
-                  🤝 Une communauté de passionnés
-                </span>
-                <h2 className="text-3xl font-bold text-white leading-tight">
-                  Vous connaissez une boutique qu&apos;on ne suit pas encore&nbsp;?
-                </h2>
-                <p className="text-gray-300 leading-relaxed">
-                  {BRAND} grandit grâce à sa communauté. Proposez un site avec des
-                  produits scellés peu ou pas listés chez nous — s&apos;il est
-                  compatible avec nos scrapers et qu&apos;on l&apos;ajoute, on vous
-                  offre <span className="text-amber-400 font-semibold">1 mois d&apos;accès</span> en
-                  remerciement.
-                </p>
-                <p className="text-sm text-gray-500">
-                  Plus la communauté contribue, plus on couvre le marché — et plus on
-                  garde une longueur d&apos;avance sur les scalpers.
-                </p>
-              </div>
+      <section id="community" className={SECTION}>
+        <div
+          className={`${SHELL} relative rounded-[24px] p-[clamp(28px,5vw,56px)] overflow-hidden
+                      bg-[linear-gradient(135deg,var(--color-accent-soft),var(--color-gold-soft))] border border-accent-line`}
+        >
+          <div className="grid gap-[clamp(28px,4vw,48px)] items-center grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))]">
+            <div className="flex flex-col gap-[18px] items-start">
+              <span className="inline-flex items-center gap-[7px] text-xs font-medium text-accent border border-accent-line bg-accent-soft px-3 py-1.5 rounded-full">
+                <Icon name="users" size={13} strokeWidth={2} />
+                Une communauté de passionnés
+              </span>
+              <h2 className={`font-display text-[clamp(26px,3.2vw,38px)] font-extrabold tracking-[-0.025em] leading-[1.12] text-balance`}>
+                Vous connaissez une boutique qu&apos;on ne suit pas encore&nbsp;?
+              </h2>
+              <p className="text-muted leading-[1.7]">
+                {BRAND} grandit grâce à sa communauté. Proposez un site avec des produits scellés
+                peu ou pas listés chez nous — s&apos;il est compatible avec nos scrapers et
+                qu&apos;on l&apos;ajoute, on vous offre{" "}
+                <span className="text-gold font-bold">1 mois d&apos;accès</span> en remerciement.
+              </p>
+              <p className="text-sm text-dim">
+                Plus la communauté contribue, plus on couvre le marché — et plus on garde une
+                longueur d&apos;avance sur les scalpers.
+              </p>
+            </div>
 
-              <div className="space-y-3">
-                {[
-                  { step: "1", text: "Repérez une boutique avec du scellé mal couvert chez nous." },
-                  { step: "2", text: "Proposez-la en un clic depuis votre espace (ou par e-mail)." },
-                  { step: "3", text: "Si elle est compatible et ajoutée : 1 mois offert." },
-                ].map(({ step, text }) => (
-                  <div key={step} className="flex items-start gap-3 bg-gray-900/60 border border-gray-800 rounded-xl p-4">
-                    <span className="flex items-center justify-center w-7 h-7 rounded-full bg-red-900/60 border border-red-700 text-red-300 text-sm font-bold shrink-0">
-                      {step}
-                    </span>
-                    <p className="text-sm text-gray-300 leading-relaxed">{text}</p>
-                  </div>
-                ))}
-              </div>
+            <div className="flex flex-col gap-3">
+              {CONTRIBUTION_STEPS.map(({ step, text, gold }) => (
+                <div
+                  key={step}
+                  className="flex items-start gap-3.5 rounded-[14px] px-[18px] py-4 border border-line-strong
+                             bg-[color-mix(in_srgb,var(--color-canvas)_75%,transparent)]"
+                >
+                  <span
+                    className={`font-display flex items-center justify-center w-[30px] h-[30px] rounded-full text-[13px] font-bold shrink-0 border ${
+                      gold
+                        ? "bg-gold-soft border-gold-line text-gold"
+                        : "bg-accent-soft border-accent-line text-accent"
+                    }`}
+                  >
+                    {step}
+                  </span>
+                  <p className="text-sm text-ink leading-[1.6]">
+                    {gold ? (
+                      <>
+                        Si elle est compatible et ajoutée :{" "}
+                        <span className="text-gold font-semibold">1 mois offert</span>.
+                      </>
+                    ) : (
+                      text
+                    )}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* ── Tarifs ── */}
-      <section id="pricing" className="py-24 px-6 border-t border-gray-800/60">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-white mb-3">Des formules simples</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Deux leviers à parts égales&nbsp;: <span className="text-white font-medium">combien
-              d&apos;articles</span> vous suivez, et <span className="text-white font-medium">à
-              quelle fréquence</span> on scanne le marché. Plus c&apos;est fréquent, plus vous
-              êtes prévenu tôt — décisif sur les boutiques à stock très limité, où tout part en
-              quelques minutes.
+      <section id="pricing" className={SECTION}>
+        <div className={SHELL}>
+          <div className="max-w-[700px] mx-auto mb-[clamp(36px,5vw,56px)] text-center flex flex-col gap-3.5">
+            <p className={EYEBROW}>Tarifs</p>
+            <h2 className={H2}>Des formules simples</h2>
+            <p className="text-muted leading-[1.65] text-pretty">
+              Deux leviers à parts égales&nbsp;:{" "}
+              <span className="text-ink font-semibold">combien d&apos;articles</span> vous suivez,
+              et <span className="text-ink font-semibold">à quelle fréquence</span> on scanne le
+              marché. Plus c&apos;est fréquent, plus vous êtes prévenu tôt — décisif sur les
+              boutiques où tout part en quelques minutes.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 items-stretch">
-            {PLANS.map(({ name, accent, ring, price, items, refresh, perks, highlight }) => (
+          <div className="grid gap-[18px] items-stretch grid-cols-[repeat(auto-fit,minmax(min(100%,280px),1fr))]">
+            {PLANS.map(({ name, nameClass, price, period, items, refresh, perks, highlight }) => (
               <div
                 key={name}
                 className={
-                  "relative bg-gray-900 border rounded-2xl p-7 flex flex-col " +
-                  (highlight ? "border-amber-500/60 shadow-xl shadow-amber-950/20" : ring)
+                  "relative rounded-[20px] p-7 flex flex-col " +
+                  (highlight
+                    ? "bg-[linear-gradient(180deg,var(--color-gold-soft),var(--color-panel)_40%)] border border-gold-line shadow-[0_24px_48px_-20px_var(--color-gold-line)]"
+                    : "bg-panel border border-line")
                 }
               >
                 {highlight && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-[11px] font-semibold
-                                   text-gray-950 bg-amber-400 px-3 py-1 rounded-full">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-[11px] font-bold text-on-gold bg-gold px-3.5 py-1 rounded-full whitespace-nowrap">
                     Le plus populaire
                   </span>
                 )}
-                <h3 className={`text-lg font-bold ${accent}`}>{name}</h3>
-                <div className="mt-3 mb-4 flex items-end gap-1">
-                  <span className="text-3xl font-bold text-white">{price}</span>
-                  {price !== "Gratuit" && <span className="text-sm text-gray-500 mb-1">/mois</span>}
+                <h3 className={`font-display text-[17px] font-bold ${nameClass}`}>{name}</h3>
+                <div className="mt-3.5 mb-[18px] flex items-end gap-1.5">
+                  <span className="font-display text-[34px] font-extrabold tracking-[-0.02em]">
+                    {price}
+                  </span>
+                  {period && <span className="text-sm text-dim mb-1.5">/mois</span>}
                 </div>
-                {/* Les deux axes mis sur un pied d'égalité : combien de suivi, et à quelle fréquence */}
+
                 <div className="grid grid-cols-2 gap-2 mb-5">
-                  <div className="bg-gray-800/60 border border-gray-700/50 rounded-lg p-2.5 text-center">
-                    <p className="text-[10px] text-gray-500 mb-0.5">📦 Articles suivis</p>
-                    <p className="text-xs font-bold text-white leading-tight">{items}</p>
+                  <div className="bg-panel-2 border border-line rounded-[10px] px-2 py-[11px] text-center">
+                    <p className="text-[10px] text-dim uppercase tracking-[0.06em] mb-[3px]">
+                      Articles suivis
+                    </p>
+                    <p className="text-[13px] font-bold">{items}</p>
                   </div>
-                  <div className="bg-gray-800/60 border border-gray-700/50 rounded-lg p-2.5 text-center">
-                    <p className="text-[10px] text-gray-500 mb-0.5">⏱️ Rafraîchissement</p>
-                    <p className="text-xs font-bold text-amber-400 leading-tight">{refresh}</p>
+                  <div className="bg-panel-2 border border-line rounded-[10px] px-2 py-[11px] text-center">
+                    <p className="text-[10px] text-dim uppercase tracking-[0.06em] mb-[3px]">
+                      Fréquence
+                    </p>
+                    <p className="text-[13px] font-bold text-gold">{refresh}</p>
                   </div>
                 </div>
-                <ul className="space-y-2.5 flex-1">
+
+                <ul className="flex flex-col gap-[11px] flex-1">
                   {perks.map((perk) => (
-                    <li key={perk} className="flex items-start gap-2 text-sm text-gray-300">
-                      <span className="text-emerald-400 mt-0.5">✓</span>
+                    <li key={perk} className="flex items-start gap-2.5 text-sm text-muted">
+                      <Icon
+                        name="check"
+                        size={15}
+                        strokeWidth={2.4}
+                        className={`shrink-0 mt-[3px] ${highlight ? "text-gold" : "text-ok"}`}
+                      />
                       <span>{perk}</span>
                     </li>
                   ))}
                 </ul>
+
                 <a
                   href="#waitlist"
                   className={
-                    "mt-6 text-center font-semibold px-5 py-2.5 rounded-xl transition-colors text-sm " +
+                    "mt-[26px] text-center px-5 py-3.5 rounded-xl text-sm " +
                     (highlight
-                      ? "bg-amber-500 hover:bg-amber-400 text-gray-950"
-                      : "bg-gray-800 hover:bg-gray-700 text-white")
+                      ? "font-bold bg-gold text-on-gold hover:brightness-110 transition-[filter]"
+                      : "font-semibold bg-panel-2 border border-line-strong text-ink hover:border-dim transition-colors")
                   }
                 >
                   Choisir {name}
@@ -512,87 +640,99 @@ export default function LandingPage() {
             ))}
           </div>
 
-          {/* Bandeau communautaire */}
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 text-center
-                          bg-red-950/30 border border-red-900/50 rounded-2xl px-6 py-4">
-            <span className="text-lg">🤝</span>
-            <p className="text-sm text-gray-300">
-              <span className="font-semibold text-white">Contribuez, c&apos;est gratuit&nbsp;:</span>{" "}
-              proposez une boutique compatible avec des produits peu listés et recevez{" "}
-              <span className="text-amber-400 font-semibold">1 mois de Gold offert</span>.
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-center bg-panel border border-line rounded-2xl px-6 py-4">
+            <span className="text-gold flex">
+              <Icon name="users" size={18} strokeWidth={2} />
+            </span>
+            <p className="text-sm text-muted">
+              <span className="font-semibold text-ink">Contribuez, c&apos;est gratuit&nbsp;:</span>{" "}
+              proposez une boutique compatible et recevez{" "}
+              <span className="text-gold font-semibold">1 mois de Gold offert</span>.
             </p>
           </div>
 
-          <p className="text-center text-xs text-gray-600 mt-6">
+          <p className="text-center text-xs text-dim mt-5">
             Tarifs indicatifs — la facturation et les abonnements arrivent au lancement.
           </p>
         </div>
       </section>
 
       {/* ── Personas ── */}
-      <section className="py-16 px-6 border-t border-gray-800/60">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-6">
-            {PERSONAS.map(({ persona, icon, text }) => (
-              <div key={persona} className="bg-gray-900/60 border border-gray-800 rounded-2xl p-6 space-y-3">
-                <div className="text-2xl">{icon}</div>
-                <h3 className="text-white font-semibold">{persona}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{text}</p>
-              </div>
-            ))}
-          </div>
+      <section className="py-[clamp(48px,6vw,72px)] px-[clamp(16px,4vw,32px)] border-t border-line">
+        <div className={`${SHELL} grid gap-4 grid-cols-[repeat(auto-fit,minmax(min(100%,280px),1fr))]`}>
+          {PERSONAS.map(({ icon, title, desc }) => (
+            <div key={title} className={`${CARD} gap-3`}>
+              <span className={`${ICON_TILE} bg-gold-soft text-gold`}>
+                <Icon name={icon} />
+              </span>
+              <h3 className="text-base font-semibold">{title}</h3>
+              <p className="text-sm text-muted leading-[1.65]">{desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* ── Liste d'attente ── */}
-      <section className="py-24 px-6 border-t border-gray-800/60">
-        <div id="waitlist" className="max-w-2xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl font-bold text-white">
-            Rejoignez la communauté {BRAND}.
-          </h2>
-          <p className="text-gray-400">
-            Nous ouvrons bientôt l&apos;accès anticipé — alertes personnalisées, suivi
-            d&apos;articles et formules d&apos;abonnement. Laissez votre e-mail et on vous prévient.
-          </p>
-          <form
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto"
-            action="#"
-          >
-            <input
-              type="email"
-              required
-              placeholder="vous@exemple.com"
-              className="w-full sm:flex-1 bg-gray-900 border border-gray-700 rounded-xl
-                         px-4 py-3 text-sm text-white placeholder-gray-500
-                         focus:outline-none focus:border-red-500"
-            />
-            <button
-              type="submit"
-              className="bg-red-600 hover:bg-red-500 text-white font-semibold
-                         px-6 py-3 rounded-xl transition-colors text-sm whitespace-nowrap"
+      <section className={SECTION}>
+        <div
+          id="waitlist"
+          className={`${SHELL} scroll-mt-20 relative bg-panel border border-line-strong rounded-[24px] p-[clamp(32px,6vw,64px)] text-center overflow-hidden`}
+        >
+          <div className="absolute -top-[120px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] pointer-events-none bg-[radial-gradient(ellipse_at_center,var(--color-accent-soft),transparent_70%)]" />
+          <div className="relative max-w-[560px] mx-auto flex flex-col gap-5 items-center">
+            <h2 className="font-display text-[clamp(26px,3.4vw,40px)] font-extrabold tracking-[-0.025em] leading-[1.12] text-balance">
+              Rejoignez la communauté {BRAND}
+            </h2>
+            <p className="text-muted leading-[1.65]">
+              Nous ouvrons bientôt l&apos;accès anticipé — alertes personnalisées, suivi
+              d&apos;articles et formules d&apos;abonnement. Laissez votre e-mail et on vous
+              prévient.
+            </p>
+            <form
+              action="#"
+              className="flex flex-wrap items-center justify-center gap-2.5 w-full max-w-[460px]"
             >
-              Prévenez-moi →
-            </button>
-          </form>
-          <p className="text-xs text-gray-600 pt-2">
-            Pas de spam — juste un e-mail à l&apos;ouverture.
-          </p>
+              <label htmlFor="waitlist-email" className="sr-only">
+                Adresse e-mail
+              </label>
+              <input
+                id="waitlist-email"
+                name="email"
+                type="email"
+                required
+                placeholder="vous@exemple.com"
+                className="flex-1 min-w-[220px] bg-canvas border border-line-strong rounded-xl px-4 py-3.5
+                           text-sm text-ink placeholder-dim outline-none focus:border-accent transition-colors"
+              />
+              <button
+                type="submit"
+                className="bg-accent text-on-accent font-semibold px-[22px] py-3.5 rounded-xl text-sm whitespace-nowrap
+                           cursor-pointer hover:brightness-110 transition-[filter]"
+              >
+                Prévenez-moi
+              </button>
+            </form>
+            <p className="text-xs text-dim">Pas de spam — juste un e-mail à l&apos;ouverture.</p>
+          </div>
         </div>
       </section>
 
       {/* ── Footer ── */}
-      <footer className="border-t border-gray-800/60 py-8 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <span>🎴</span>
-            <span className="font-semibold text-gray-500">{BRAND}</span>
+      <footer className="border-t border-line py-8 px-[clamp(16px,4vw,32px)]">
+        <div className={`${SHELL} flex flex-wrap items-center justify-between gap-4`}>
+          <div className="flex items-center gap-2.5 text-[13px] text-dim">
+            <span className="flex items-center justify-center w-6 h-6 rounded-[7px] bg-accent text-on-accent">
+              <Icon name="cards" size={13} strokeWidth={2} />
+            </span>
+            <span className="font-semibold text-muted">{BRAND}</span>
             <span>— la communauté qui achète au prix boutique</span>
           </div>
-          <div className="flex items-center gap-6 text-xs text-gray-600">
-            <a href="#features" className="hover:text-gray-400 transition-colors">Fonctionnalités</a>
-            <a href="#community" className="hover:text-gray-400 transition-colors">Communauté</a>
-            <a href="#pricing" className="hover:text-gray-400 transition-colors">Tarifs</a>
-            <a href="#waitlist" className="hover:text-gray-400 transition-colors">Liste d&apos;attente</a>
+          <div className="flex flex-wrap items-center gap-[22px] text-xs">
+            {FOOTER_LINKS.map(({ href, label }) => (
+              <a key={href} href={href} className="text-dim hover:text-muted transition-colors">
+                {label}
+              </a>
+            ))}
           </div>
         </div>
       </footer>

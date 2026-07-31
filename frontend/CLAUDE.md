@@ -6,7 +6,7 @@ site is **in French** (target audience is the French market). Styling via Tailwi
 CSS v4. Same stack & deploy target
 as the sibling project **Vigilyx** (`C:\Users\mathi\vigilyx\frontend`): Vercel
 for the frontend, FastAPI on Railway + Supabase Postgres + Cloudflare R2 for the
-backend (backend not built yet).
+backend. L'API FastAPI existe (`api/`) et tourne en local sur `:8000`.
 
 ## Run
 - Dev:    `npm run dev`
@@ -14,15 +14,20 @@ backend (backend not built yet).
 - Lint:   `npm run lint`   (ESLint, `eslint-config-next`)
 
 ## Layout
-- `app/page.tsx`    — public landing page, **French** (hero, features, how-it-works, waitlist).
-- `app/layout.tsx`  — root layout + SEO metadata (Geist font, dark theme).
-- `app/globals.css` — Tailwind v4 entry + theme tokens.
-- `app/dashboard`   — product table (filters, favorites). Reads `set_code`/`language`/`kind`
-  from the URL so `/sets` can deep-link into a pre-filtered view.
-- `app/sets`        — **Catalogue**: block > set > article-type drill-down (`fetchBlocks`
-  → `GET /sets/blocks`). Clicking an article type links to the dashboard filtered on that set.
-- `components/`      — `LandingNav`, `AppNav` (auth header, links Dashboard/Catalogue/Favoris/Alertes),
-  `Protected` (auth gate + renders `AppNav`).
+- `app/page.tsx`    — public landing page, **French** (hero + collage produits, chiffres clés,
+  manifeste, fonctionnalités, comment ça marche, communauté, tarifs, personas, waitlist).
+  Portage de la maquette Claude Design « Landing v2 » (projet *Refonte landing TCG Scrapper*).
+- `app/layout.tsx`  — root layout + SEO metadata (Geist corps + Bricolage Grotesque titres, dark theme).
+- `app/globals.css` — Tailwind v4 entry + theme tokens (palette « neon-violet », breakpoint `wide:`).
+- `app/dashboard`   — portage de la maquette « Dashboard v2 » : table ≥ 860px, cartes en
+  dessous (variant `wide:`), vignette produit, badge statut, delta de prix et sparkline
+  30 j. Lit `set_code`/`language`/`kind` depuis l'URL pour le deep-link du catalogue.
+- `app/catalog`     — **Catalogue**: block > set > article-type drill-down (`fetchCatalog`
+  → `GET /catalog`). Clicking an article type links to the dashboard filtered on that set.
+- `components/`      — `LandingNav` (client : nav sticky + menu mobile), `Icons`
+  (jeu d'icônes SVG inline partagé landing + app, pas de dépendance externe),
+  `AppNav` (header applicatif : pastilles de nav, pastilles scrollables en mobile),
+  `Protected` (auth gate + `AppNav` + le `<main>` de toutes les pages applicatives).
 - `lib/api.ts`       — typed fetch wrappers. `imageUrl(path)` turns a root-relative reference
   image path (`images/Pokemon/...` from the API) into an absolute, URL-encoded `${API}/…` URL;
   the backend serves these via a `/images` static mount (Cloudflare R2 in prod).
@@ -31,9 +36,21 @@ backend (backend not built yet).
 ## Conventions
 - App Router, server components by default — only add `"use client"` when a
   component needs hooks/state/effects.
-- Backend calls (once the API exists) go through a single `lib/api.ts` wrapper —
-  don't scatter raw `fetch` in components (mirrors Vigilyx).
-- Keep the dark theme: `bg-gray-950` base, red/amber accents for this project.
+- Backend calls go through a single `lib/api.ts` wrapper — don't scatter raw
+  `fetch` in components (mirrors Vigilyx).
+- Une seule palette pour **tout** le projet : les tokens « neon-violet » de
+  `globals.css` (`bg-canvas`, `bg-panel`, `bg-panel-2`, `border-line`/`line-strong`,
+  `text-ink/muted/dim`, `accent`/`gold`/`ok`). Plus aucune classe `gray-*`/`red-*`/
+  `amber-*` dans `app/` ni `components/` — un `grep` doit rester vide.
+- Texte sur un aplat `bg-accent`/`bg-gold` : utiliser `text-on-accent`/`text-on-gold`.
+  L'accent est **clair** dans cette palette, du blanc dessus tomberait à ~2:1.
+- Les variantes « braise » et « nuit-dorée » des maquettes sont documentées en
+  commentaire dans `globals.css` : changer les `--color-*` bascule tout d'un coup.
+- Titres de la landing en `font-display` (Bricolage Grotesque), corps en `font-sans` (Geist).
+- Le dashboard bascule table ↔ cartes au variant **`wide:`** (860px, défini dans
+  `globals.css`) — ce n'est pas un breakpoint Tailwind standard.
+- Les vignettes servies par l'API passent par `imageUrl()` + un `<img>` simple
+  (l'hôte est l'API, pas le pipeline `next/image`) — même convention que `/catalog`.
 - Public-facing copy is **French**. `BRAND`/`TAGLINE` live in `lib/brand.ts` ("TCGWatch").
 
 ## Deployment (planned, same as Vigilyx)

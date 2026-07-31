@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Bricolage_Grotesque, Geist } from "next/font/google";
 import "./globals.css";
 import { BRAND, TAGLINE, SITE_URL } from "@/lib/brand";
 import { AuthProvider } from "@/lib/auth";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
+// Police d'affichage des titres (landing v2)
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
+});
 
 const title = `${BRAND} — ${TAGLINE}`;
 const description =
@@ -38,7 +44,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body className={`${geist.variable} antialiased bg-gray-950 text-gray-100 min-h-screen`}>
+      <body
+        className={`${geist.variable} ${bricolage.variable} antialiased bg-canvas text-ink min-h-screen`}
+      >
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>

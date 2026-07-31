@@ -1,0 +1,3035 @@
+{
+  "EB01-002": {
+    "code": "EB01-002",
+    "exp_copies": 0.0072,
+    "n_archetypes": 1,
+    "play_score": 0.012,
+    "top_archetype": "Red Ace",
+    "top_count": 1.0,
+    "top_share": 0.0072
+  },
+  "EB01-015": {
+    "code": "EB01-015",
+    "exp_copies": 0.0289,
+    "n_archetypes": 1,
+    "play_score": 0.049,
+    "top_archetype": "Green Mihawk",
+    "top_count": 3.75,
+    "top_share": 0.0077
+  },
+  "EB01-028": {
+    "code": "EB01-028",
+    "exp_copies": 0.0356,
+    "n_archetypes": 1,
+    "play_score": 0.06,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 0.16,
+    "top_share": 0.2223
+  },
+  "EB01-056": {
+    "code": "EB01-056",
+    "exp_copies": 0.009,
+    "n_archetypes": 1,
+    "play_score": 0.015,
+    "top_archetype": "Yellow Enel",
+    "top_count": 2.5,
+    "top_share": 0.0036
+  },
+  "EB01-059": {
+    "code": "EB01-059",
+    "exp_copies": 0.023,
+    "n_archetypes": 3,
+    "play_score": 0.039,
+    "top_archetype": "Yellow Enel",
+    "top_count": 4.0,
+    "top_share": 0.0036
+  },
+  "EB01-061": {
+    "code": "EB01-061",
+    "exp_copies": 0.0126,
+    "n_archetypes": 1,
+    "play_score": 0.021,
+    "top_archetype": "Purple Sengoku",
+    "top_count": 3.0,
+    "top_share": 0.0042
+  },
+  "EB02-010": {
+    "code": "EB02-010",
+    "exp_copies": 0.0042,
+    "n_archetypes": 1,
+    "play_score": 0.007,
+    "top_archetype": "Green/Purple Luffy",
+    "top_count": 1.0,
+    "top_share": 0.0042
+  },
+  "EB02-017": {
+    "code": "EB02-017",
+    "exp_copies": 0.021,
+    "n_archetypes": 2,
+    "play_score": 0.036,
+    "top_archetype": "Green/Purple Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "EB02-019": {
+    "code": "EB02-019",
+    "exp_copies": 0.0084,
+    "n_archetypes": 1,
+    "play_score": 0.014,
+    "top_archetype": "Green/Purple Luffy",
+    "top_count": 2.0,
+    "top_share": 0.0042
+  },
+  "EB02-035": {
+    "code": "EB02-035",
+    "exp_copies": 0.0168,
+    "n_archetypes": 1,
+    "play_score": 0.028,
+    "top_archetype": "Green/Purple Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "EB02-041": {
+    "code": "EB02-041",
+    "exp_copies": 0.0105,
+    "n_archetypes": 1,
+    "play_score": 0.018,
+    "top_archetype": "Green/Purple Luffy",
+    "top_count": 2.5,
+    "top_share": 0.0042
+  },
+  "EB02-052": {
+    "code": "EB02-052",
+    "exp_copies": 0.0126,
+    "n_archetypes": 1,
+    "play_score": 0.021,
+    "top_archetype": "Yellow Enel",
+    "top_count": 3.5,
+    "top_share": 0.0036
+  },
+  "EB02-061": {
+    "code": "EB02-061",
+    "exp_copies": 0.0042,
+    "n_archetypes": 1,
+    "play_score": 0.007,
+    "top_archetype": "Green/Purple Luffy",
+    "top_count": 1.0,
+    "top_share": 0.0042
+  },
+  "EB03-008": {
+    "code": "EB03-008",
+    "exp_copies": 0.0264,
+    "n_archetypes": 1,
+    "play_score": 0.045,
+    "top_archetype": "Red/Black Koby",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  },
+  "EB03-024": {
+    "code": "EB03-024",
+    "exp_copies": 0.0273,
+    "n_archetypes": 1,
+    "play_score": 0.046,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 0.11,
+    "top_share": 0.2479
+  },
+  "EB03-041": {
+    "code": "EB03-041",
+    "exp_copies": 0.0198,
+    "n_archetypes": 1,
+    "play_score": 0.034,
+    "top_archetype": "Red/Black Koby",
+    "top_count": 3.0,
+    "top_share": 0.0066
+  },
+  "EB03-053": {
+    "code": "EB03-053",
+    "exp_copies": 1.0083,
+    "n_archetypes": 2,
+    "play_score": 1.711,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 4.0,
+    "top_share": 0.0048
+  },
+  "EB03-055": {
+    "code": "EB03-055",
+    "exp_copies": 0.974,
+    "n_archetypes": 2,
+    "play_score": 1.652,
+    "top_archetype": "Purple/Yellow Robin",
+    "top_count": 4.0,
+    "top_share": 0.0018
+  },
+  "EB03-060": {
+    "code": "EB03-060",
+    "exp_copies": 0.0149,
+    "n_archetypes": 1,
+    "play_score": 0.025,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 0.06,
+    "top_share": 0.2479
+  },
+  "EB03-062": {
+    "code": "EB03-062",
+    "exp_copies": 0.0536,
+    "n_archetypes": 1,
+    "play_score": 0.091,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 0.62,
+    "top_share": 0.0864
+  },
+  "EB04-002": {
+    "code": "EB04-002",
+    "exp_copies": 0.0168,
+    "n_archetypes": 1,
+    "play_score": 0.028,
+    "top_archetype": "Red/Green Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "EB04-003": {
+    "code": "EB04-003",
+    "exp_copies": 0.0132,
+    "n_archetypes": 1,
+    "play_score": 0.022,
+    "top_archetype": "Red/Black Koby",
+    "top_count": 2.0,
+    "top_share": 0.0066
+  },
+  "EB04-007": {
+    "code": "EB04-007",
+    "exp_copies": 0.0631,
+    "n_archetypes": 4,
+    "play_score": 0.107,
+    "top_archetype": "Red/Green Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "EB04-038": {
+    "code": "EB04-038",
+    "exp_copies": 0.3361,
+    "n_archetypes": 1,
+    "play_score": 0.57,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 3.89,
+    "top_share": 0.0864
+  },
+  "EB04-044": {
+    "code": "EB04-044",
+    "exp_copies": 0.0264,
+    "n_archetypes": 1,
+    "play_score": 0.045,
+    "top_archetype": "Red/Black Koby",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  },
+  "EB04-047": {
+    "code": "EB04-047",
+    "exp_copies": 0.0264,
+    "n_archetypes": 1,
+    "play_score": 0.045,
+    "top_archetype": "Red/Black Koby",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  },
+  "EB04-053": {
+    "code": "EB04-053",
+    "exp_copies": 0.0126,
+    "n_archetypes": 1,
+    "play_score": 0.021,
+    "top_archetype": "Yellow Enel",
+    "top_count": 3.5,
+    "top_share": 0.0036
+  },
+  "EB04-058": {
+    "code": "EB04-058",
+    "exp_copies": 1.7321,
+    "n_archetypes": 7,
+    "play_score": 2.938,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 4.0,
+    "top_share": 0.0864
+  },
+  "EB04-059": {
+    "code": "EB04-059",
+    "exp_copies": 0.0569,
+    "n_archetypes": 1,
+    "play_score": 0.097,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 0.65,
+    "top_share": 0.0876
+  },
+  "EB04-061": {
+    "code": "EB04-061",
+    "exp_copies": 0.021,
+    "n_archetypes": 2,
+    "play_score": 0.036,
+    "top_archetype": "Purple/Yellow Robin",
+    "top_count": 2.0,
+    "top_share": 0.0018
+  },
+  "OP02-068": {
+    "code": "OP02-068",
+    "exp_copies": 0.189,
+    "n_archetypes": 1,
+    "play_score": 0.321,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 0.85,
+    "top_share": 0.2223
+  },
+  "OP03-048": {
+    "code": "OP03-048",
+    "exp_copies": 0.005,
+    "n_archetypes": 1,
+    "play_score": 0.008,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 0.02,
+    "top_share": 0.2479
+  },
+  "OP05-015": {
+    "code": "OP05-015",
+    "exp_copies": 0.0315,
+    "n_archetypes": 1,
+    "play_score": 0.053,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 1.1,
+    "top_share": 0.0286
+  },
+  "OP05-019": {
+    "code": "OP05-019",
+    "exp_copies": 0.0601,
+    "n_archetypes": 1,
+    "play_score": 0.102,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 2.1,
+    "top_share": 0.0286
+  },
+  "OP05-038": {
+    "code": "OP05-038",
+    "exp_copies": 0.0147,
+    "n_archetypes": 1,
+    "play_score": 0.025,
+    "top_archetype": "Red/Green Luffy",
+    "top_count": 3.5,
+    "top_share": 0.0042
+  },
+  "OP05-076": {
+    "code": "OP05-076",
+    "exp_copies": 0.0021,
+    "n_archetypes": 1,
+    "play_score": 0.004,
+    "top_archetype": "Green/Purple Luffy",
+    "top_count": 0.5,
+    "top_share": 0.0042
+  },
+  "OP05-077": {
+    "code": "OP05-077",
+    "exp_copies": 0.6972,
+    "n_archetypes": 1,
+    "play_score": 1.183,
+    "top_archetype": "Purple Enel",
+    "top_count": 3.0,
+    "top_share": 0.2324
+  },
+  "OP05-087": {
+    "code": "OP05-087",
+    "exp_copies": 0.0059,
+    "n_archetypes": 1,
+    "play_score": 0.01,
+    "top_archetype": "Black Yamato",
+    "top_count": 0.5,
+    "top_share": 0.0119
+  },
+  "OP05-091": {
+    "code": "OP05-091",
+    "exp_copies": 0.0099,
+    "n_archetypes": 1,
+    "play_score": 0.017,
+    "top_archetype": "Black Yamato",
+    "top_count": 0.83,
+    "top_share": 0.0119
+  },
+  "OP05-094": {
+    "code": "OP05-094",
+    "exp_copies": 0.0144,
+    "n_archetypes": 1,
+    "play_score": 0.024,
+    "top_archetype": "Black Crocodile",
+    "top_count": 2.0,
+    "top_share": 0.0072
+  },
+  "OP05-098": {
+    "code": "OP05-098",
+    "exp_copies": 0.0036,
+    "n_archetypes": 1,
+    "play_score": 0.006,
+    "top_archetype": "Yellow Enel",
+    "top_count": 1.0,
+    "top_share": 0.0036
+  },
+  "OP05-105": {
+    "code": "OP05-105",
+    "exp_copies": 0.0043,
+    "n_archetypes": 1,
+    "play_score": 0.007,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 0.05,
+    "top_share": 0.0864
+  },
+  "OP05-106": {
+    "code": "OP05-106",
+    "exp_copies": 0.0191,
+    "n_archetypes": 2,
+    "play_score": 0.032,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 2.0,
+    "top_share": 0.0048
+  },
+  "OP05-117": {
+    "code": "OP05-117",
+    "exp_copies": 0.0144,
+    "n_archetypes": 1,
+    "play_score": 0.024,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 3.0,
+    "top_share": 0.0048
+  },
+  "OP06-007": {
+    "code": "OP06-007",
+    "exp_copies": 0.0166,
+    "n_archetypes": 1,
+    "play_score": 0.028,
+    "top_archetype": "Red Shanks",
+    "top_count": 2.0,
+    "top_share": 0.0083
+  },
+  "OP06-038": {
+    "code": "OP06-038",
+    "exp_copies": 0.031,
+    "n_archetypes": 2,
+    "play_score": 0.053,
+    "top_archetype": "Green Mihawk",
+    "top_count": 2.0,
+    "top_share": 0.0077
+  },
+  "OP06-058": {
+    "code": "OP06-058",
+    "exp_copies": 0.6833,
+    "n_archetypes": 5,
+    "play_score": 1.159,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 1.55,
+    "top_share": 0.2223
+  },
+  "OP06-104": {
+    "code": "OP06-104",
+    "exp_copies": 0.5875,
+    "n_archetypes": 1,
+    "play_score": 0.997,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 2.37,
+    "top_share": 0.2479
+  },
+  "OP06-106": {
+    "code": "OP06-106",
+    "exp_copies": 0.1857,
+    "n_archetypes": 2,
+    "play_score": 0.315,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 1.5,
+    "top_share": 0.0048
+  },
+  "OP06-115": {
+    "code": "OP06-115",
+    "exp_copies": 0.0126,
+    "n_archetypes": 2,
+    "play_score": 0.021,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 1.5,
+    "top_share": 0.0048
+  },
+  "OP06-117": {
+    "code": "OP06-117",
+    "exp_copies": 0.0036,
+    "n_archetypes": 1,
+    "play_score": 0.006,
+    "top_archetype": "Yellow Enel",
+    "top_count": 1.0,
+    "top_share": 0.0036
+  },
+  "OP07-026": {
+    "code": "OP07-026",
+    "exp_copies": 0.0297,
+    "n_archetypes": 2,
+    "play_score": 0.05,
+    "top_archetype": "Green Mihawk",
+    "top_count": 3.0,
+    "top_share": 0.0077
+  },
+  "OP07-051": {
+    "code": "OP07-051",
+    "exp_copies": 0.0066,
+    "n_archetypes": 2,
+    "play_score": 0.011,
+    "top_archetype": "Red/Blue Ace",
+    "top_count": 0.5,
+    "top_share": 0.0083
+  },
+  "OP07-056": {
+    "code": "OP07-056",
+    "exp_copies": 0.0144,
+    "n_archetypes": 1,
+    "play_score": 0.024,
+    "top_archetype": "Blue Buggy",
+    "top_count": 4.0,
+    "top_share": 0.0036
+  },
+  "OP07-057": {
+    "code": "OP07-057",
+    "exp_copies": 0.0048,
+    "n_archetypes": 1,
+    "play_score": 0.008,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 1.0,
+    "top_share": 0.0048
+  },
+  "OP07-064": {
+    "code": "OP07-064",
+    "exp_copies": 0.04,
+    "n_archetypes": 2,
+    "play_score": 0.068,
+    "top_archetype": "Green/Purple Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP07-076": {
+    "code": "OP07-076",
+    "exp_copies": 0.0397,
+    "n_archetypes": 1,
+    "play_score": 0.067,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 0.46,
+    "top_share": 0.0864
+  },
+  "OP07-107": {
+    "code": "OP07-107",
+    "exp_copies": 0.0074,
+    "n_archetypes": 1,
+    "play_score": 0.013,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 0.03,
+    "top_share": 0.2479
+  },
+  "OP08-036": {
+    "code": "OP08-036",
+    "exp_copies": 0.1482,
+    "n_archetypes": 5,
+    "play_score": 0.251,
+    "top_archetype": "Red/Green Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP08-043": {
+    "code": "OP08-043",
+    "exp_copies": 0.0042,
+    "n_archetypes": 1,
+    "play_score": 0.007,
+    "top_archetype": "Red/Blue Ace",
+    "top_count": 0.5,
+    "top_share": 0.0083
+  },
+  "OP08-047": {
+    "code": "OP08-047",
+    "exp_copies": 0.0904,
+    "n_archetypes": 2,
+    "play_score": 0.153,
+    "top_archetype": "Red/Blue Ace",
+    "top_count": 4.0,
+    "top_share": 0.0083
+  },
+  "OP08-050": {
+    "code": "OP08-050",
+    "exp_copies": 0.0146,
+    "n_archetypes": 2,
+    "play_score": 0.025,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 2.0,
+    "top_share": 0.0048
+  },
+  "OP08-098": {
+    "code": "OP08-098",
+    "exp_copies": 0.0048,
+    "n_archetypes": 1,
+    "play_score": 0.008,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 1.0,
+    "top_share": 0.0048
+  },
+  "OP08-099": {
+    "code": "OP08-099",
+    "exp_copies": 0.012,
+    "n_archetypes": 1,
+    "play_score": 0.02,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 2.5,
+    "top_share": 0.0048
+  },
+  "OP08-109": {
+    "code": "OP08-109",
+    "exp_copies": 0.0192,
+    "n_archetypes": 1,
+    "play_score": 0.033,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 4.0,
+    "top_share": 0.0048
+  },
+  "OP08-110": {
+    "code": "OP08-110",
+    "exp_copies": 0.0072,
+    "n_archetypes": 1,
+    "play_score": 0.012,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 1.5,
+    "top_share": 0.0048
+  },
+  "OP08-115": {
+    "code": "OP08-115",
+    "exp_copies": 0.0192,
+    "n_archetypes": 1,
+    "play_score": 0.033,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 4.0,
+    "top_share": 0.0048
+  },
+  "OP09-001": {
+    "code": "OP09-001",
+    "exp_copies": 0.0083,
+    "n_archetypes": 1,
+    "play_score": 0.014,
+    "top_archetype": "Red Shanks",
+    "top_count": 1.0,
+    "top_share": 0.0083
+  },
+  "OP09-002": {
+    "code": "OP09-002",
+    "exp_copies": 0.0305,
+    "n_archetypes": 1,
+    "play_score": 0.052,
+    "top_archetype": "Red Shanks",
+    "top_count": 3.67,
+    "top_share": 0.0083
+  },
+  "OP09-004": {
+    "code": "OP09-004",
+    "exp_copies": 0.0332,
+    "n_archetypes": 1,
+    "play_score": 0.056,
+    "top_archetype": "Red Shanks",
+    "top_count": 4.0,
+    "top_share": 0.0083
+  },
+  "OP09-009": {
+    "code": "OP09-009",
+    "exp_copies": 0.0332,
+    "n_archetypes": 1,
+    "play_score": 0.056,
+    "top_archetype": "Red Shanks",
+    "top_count": 4.0,
+    "top_share": 0.0083
+  },
+  "OP09-011": {
+    "code": "OP09-011",
+    "exp_copies": 0.0332,
+    "n_archetypes": 1,
+    "play_score": 0.056,
+    "top_archetype": "Red Shanks",
+    "top_count": 4.0,
+    "top_share": 0.0083
+  },
+  "OP09-015": {
+    "code": "OP09-015",
+    "exp_copies": 0.0305,
+    "n_archetypes": 1,
+    "play_score": 0.052,
+    "top_archetype": "Red Shanks",
+    "top_count": 3.67,
+    "top_share": 0.0083
+  },
+  "OP09-018": {
+    "code": "OP09-018",
+    "exp_copies": 0.0057,
+    "n_archetypes": 1,
+    "play_score": 0.01,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 0.2,
+    "top_share": 0.0286
+  },
+  "OP09-020": {
+    "code": "OP09-020",
+    "exp_copies": 0.0193,
+    "n_archetypes": 1,
+    "play_score": 0.033,
+    "top_archetype": "Red Shanks",
+    "top_count": 2.33,
+    "top_share": 0.0083
+  },
+  "OP09-062": {
+    "code": "OP09-062",
+    "exp_copies": 0.0018,
+    "n_archetypes": 1,
+    "play_score": 0.003,
+    "top_archetype": "Purple/Yellow Robin",
+    "top_count": 1.0,
+    "top_share": 0.0018
+  },
+  "OP09-072": {
+    "code": "OP09-072",
+    "exp_copies": 0.5368,
+    "n_archetypes": 1,
+    "play_score": 0.911,
+    "top_archetype": "Purple Enel",
+    "top_count": 2.31,
+    "top_share": 0.2324
+  },
+  "OP09-077": {
+    "code": "OP09-077",
+    "exp_copies": 0.1996,
+    "n_archetypes": 3,
+    "play_score": 0.339,
+    "top_archetype": "Purple Sengoku",
+    "top_count": 2.0,
+    "top_share": 0.0042
+  },
+  "OP09-078": {
+    "code": "OP09-078",
+    "exp_copies": 0.024,
+    "n_archetypes": 2,
+    "play_score": 0.041,
+    "top_archetype": "Green/Purple Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP09-086": {
+    "code": "OP09-086",
+    "exp_copies": 0.2855,
+    "n_archetypes": 2,
+    "play_score": 0.484,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 3.18,
+    "top_share": 0.0876
+  },
+  "OP09-093": {
+    "code": "OP09-093",
+    "exp_copies": 0.3188,
+    "n_archetypes": 2,
+    "play_score": 0.541,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 3.56,
+    "top_share": 0.0876
+  },
+  "OP09-095": {
+    "code": "OP09-095",
+    "exp_copies": 0.1225,
+    "n_archetypes": 2,
+    "play_score": 0.208,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 1.29,
+    "top_share": 0.0876
+  },
+  "OP09-096": {
+    "code": "OP09-096",
+    "exp_copies": 0.2829,
+    "n_archetypes": 2,
+    "play_score": 0.48,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 3.15,
+    "top_share": 0.0876
+  },
+  "OP09-097": {
+    "code": "OP09-097",
+    "exp_copies": 0.0026,
+    "n_archetypes": 1,
+    "play_score": 0.004,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 0.03,
+    "top_share": 0.0876
+  },
+  "OP09-099": {
+    "code": "OP09-099",
+    "exp_copies": 0.3319,
+    "n_archetypes": 2,
+    "play_score": 0.563,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 3.68,
+    "top_share": 0.0876
+  },
+  "OP09-104": {
+    "code": "OP09-104",
+    "exp_copies": 0.0072,
+    "n_archetypes": 1,
+    "play_score": 0.012,
+    "top_archetype": "Purple/Yellow Robin",
+    "top_count": 4.0,
+    "top_share": 0.0018
+  },
+  "OP09-106": {
+    "code": "OP09-106",
+    "exp_copies": 0.0072,
+    "n_archetypes": 1,
+    "play_score": 0.012,
+    "top_archetype": "Purple/Yellow Robin",
+    "top_count": 4.0,
+    "top_share": 0.0018
+  },
+  "OP09-118": {
+    "code": "OP09-118",
+    "exp_copies": 0.0364,
+    "n_archetypes": 3,
+    "play_score": 0.062,
+    "top_archetype": "Red/Blue Ace",
+    "top_count": 1.0,
+    "top_share": 0.0083
+  },
+  "OP10-005": {
+    "code": "OP10-005",
+    "exp_copies": 0.0144,
+    "n_archetypes": 1,
+    "play_score": 0.024,
+    "top_archetype": "Red Ace",
+    "top_count": 2.0,
+    "top_share": 0.0072
+  },
+  "OP10-019": {
+    "code": "OP10-019",
+    "exp_copies": 0.0027,
+    "n_archetypes": 1,
+    "play_score": 0.005,
+    "top_archetype": "Red Shanks",
+    "top_count": 0.33,
+    "top_share": 0.0083
+  },
+  "OP10-030": {
+    "code": "OP10-030",
+    "exp_copies": 0.0019,
+    "n_archetypes": 1,
+    "play_score": 0.003,
+    "top_archetype": "Green Mihawk",
+    "top_count": 0.25,
+    "top_share": 0.0077
+  },
+  "OP10-045": {
+    "code": "OP10-045",
+    "exp_copies": 0.0944,
+    "n_archetypes": 1,
+    "play_score": 0.16,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 3.3,
+    "top_share": 0.0286
+  },
+  "OP10-049": {
+    "code": "OP10-049",
+    "exp_copies": 0.0273,
+    "n_archetypes": 1,
+    "play_score": 0.046,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 0.11,
+    "top_share": 0.2479
+  },
+  "OP10-058": {
+    "code": "OP10-058",
+    "exp_copies": 0.0029,
+    "n_archetypes": 1,
+    "play_score": 0.005,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 0.1,
+    "top_share": 0.0286
+  },
+  "OP10-059": {
+    "code": "OP10-059",
+    "exp_copies": 0.0114,
+    "n_archetypes": 1,
+    "play_score": 0.019,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 0.4,
+    "top_share": 0.0286
+  },
+  "OP10-060": {
+    "code": "OP10-060",
+    "exp_copies": 0.1115,
+    "n_archetypes": 1,
+    "play_score": 0.189,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 3.9,
+    "top_share": 0.0286
+  },
+  "OP10-067": {
+    "code": "OP10-067",
+    "exp_copies": 0.3742,
+    "n_archetypes": 1,
+    "play_score": 0.635,
+    "top_archetype": "Purple Enel",
+    "top_count": 1.61,
+    "top_share": 0.2324
+  },
+  "OP10-114": {
+    "code": "OP10-114",
+    "exp_copies": 0.1123,
+    "n_archetypes": 1,
+    "play_score": 0.191,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 1.3,
+    "top_share": 0.0864
+  },
+  "OP11-001": {
+    "code": "OP11-001",
+    "exp_copies": 0.0066,
+    "n_archetypes": 1,
+    "play_score": 0.011,
+    "top_archetype": "Red/Black Koby",
+    "top_count": 1.0,
+    "top_share": 0.0066
+  },
+  "OP11-004": {
+    "code": "OP11-004",
+    "exp_copies": 0.0264,
+    "n_archetypes": 1,
+    "play_score": 0.045,
+    "top_archetype": "Red/Black Koby",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  },
+  "OP11-008": {
+    "code": "OP11-008",
+    "exp_copies": 0.0264,
+    "n_archetypes": 1,
+    "play_score": 0.045,
+    "top_archetype": "Red/Black Koby",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  },
+  "OP11-041": {
+    "code": "OP11-041",
+    "exp_copies": 0.2479,
+    "n_archetypes": 1,
+    "play_score": 0.421,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 1.0,
+    "top_share": 0.2479
+  },
+  "OP11-048": {
+    "code": "OP11-048",
+    "exp_copies": 0.0099,
+    "n_archetypes": 1,
+    "play_score": 0.017,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 0.04,
+    "top_share": 0.2479
+  },
+  "OP11-049": {
+    "code": "OP11-049",
+    "exp_copies": 0.0044,
+    "n_archetypes": 1,
+    "play_score": 0.008,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 0.02,
+    "top_share": 0.2223
+  },
+  "OP11-053": {
+    "code": "OP11-053",
+    "exp_copies": 0.0025,
+    "n_archetypes": 1,
+    "play_score": 0.004,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 0.01,
+    "top_share": 0.2479
+  },
+  "OP11-054": {
+    "code": "OP11-054",
+    "exp_copies": 0.0048,
+    "n_archetypes": 1,
+    "play_score": 0.008,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 1.0,
+    "top_share": 0.0048
+  },
+  "OP11-060": {
+    "code": "OP11-060",
+    "exp_copies": 0.005,
+    "n_archetypes": 1,
+    "play_score": 0.008,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 0.02,
+    "top_share": 0.2479
+  },
+  "OP11-061": {
+    "code": "OP11-061",
+    "exp_copies": 0.0756,
+    "n_archetypes": 1,
+    "play_score": 0.128,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 0.34,
+    "top_share": 0.2223
+  },
+  "OP11-082": {
+    "code": "OP11-082",
+    "exp_copies": 0.0264,
+    "n_archetypes": 1,
+    "play_score": 0.045,
+    "top_archetype": "Red/Black Koby",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  },
+  "OP11-092": {
+    "code": "OP11-092",
+    "exp_copies": 0.0264,
+    "n_archetypes": 1,
+    "play_score": 0.045,
+    "top_archetype": "Red/Black Koby",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  },
+  "OP11-096": {
+    "code": "OP11-096",
+    "exp_copies": 0.0264,
+    "n_archetypes": 1,
+    "play_score": 0.045,
+    "top_archetype": "Red/Black Koby",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  },
+  "OP11-097": {
+    "code": "OP11-097",
+    "exp_copies": 0.0059,
+    "n_archetypes": 1,
+    "play_score": 0.01,
+    "top_archetype": "Black Yamato",
+    "top_count": 0.5,
+    "top_share": 0.0119
+  },
+  "OP11-099": {
+    "code": "OP11-099",
+    "exp_copies": 0.0264,
+    "n_archetypes": 1,
+    "play_score": 0.045,
+    "top_archetype": "Red/Black Koby",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  },
+  "OP11-106": {
+    "code": "OP11-106",
+    "exp_copies": 0.9119,
+    "n_archetypes": 4,
+    "play_score": 1.547,
+    "top_archetype": "Purple/Yellow Robin",
+    "top_count": 4.0,
+    "top_share": 0.0018
+  },
+  "OP12-002": {
+    "code": "OP12-002",
+    "exp_copies": 0.0099,
+    "n_archetypes": 1,
+    "play_score": 0.017,
+    "top_archetype": "Red/Green Luffy &amp; Ace",
+    "top_count": 1.5,
+    "top_share": 0.0066
+  },
+  "OP12-008": {
+    "code": "OP12-008",
+    "exp_copies": 0.0222,
+    "n_archetypes": 1,
+    "play_score": 0.038,
+    "top_archetype": "Red Shanks",
+    "top_count": 2.67,
+    "top_share": 0.0083
+  },
+  "OP12-018": {
+    "code": "OP12-018",
+    "exp_copies": 0.0066,
+    "n_archetypes": 1,
+    "play_score": 0.011,
+    "top_archetype": "Red/Green Luffy &amp; Ace",
+    "top_count": 1.0,
+    "top_share": 0.0066
+  },
+  "OP12-029": {
+    "code": "OP12-029",
+    "exp_copies": 0.0058,
+    "n_archetypes": 1,
+    "play_score": 0.01,
+    "top_archetype": "Green Mihawk",
+    "top_count": 0.75,
+    "top_share": 0.0077
+  },
+  "OP12-031": {
+    "code": "OP12-031",
+    "exp_copies": 0.0192,
+    "n_archetypes": 1,
+    "play_score": 0.033,
+    "top_archetype": "Green Mihawk",
+    "top_count": 2.5,
+    "top_share": 0.0077
+  },
+  "OP12-034": {
+    "code": "OP12-034",
+    "exp_copies": 0.0308,
+    "n_archetypes": 1,
+    "play_score": 0.052,
+    "top_archetype": "Green Mihawk",
+    "top_count": 4.0,
+    "top_share": 0.0077
+  },
+  "OP12-037": {
+    "code": "OP12-037",
+    "exp_copies": 0.1883,
+    "n_archetypes": 3,
+    "play_score": 0.319,
+    "top_archetype": "Green Mihawk",
+    "top_count": 2.0,
+    "top_share": 0.0077
+  },
+  "OP12-038": {
+    "code": "OP12-038",
+    "exp_copies": 0.0044,
+    "n_archetypes": 1,
+    "play_score": 0.008,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 0.02,
+    "top_share": 0.2223
+  },
+  "OP12-061": {
+    "code": "OP12-061",
+    "exp_copies": 0.0864,
+    "n_archetypes": 1,
+    "play_score": 0.147,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 1.0,
+    "top_share": 0.0864
+  },
+  "OP12-063": {
+    "code": "OP12-063",
+    "exp_copies": 0.7553,
+    "n_archetypes": 1,
+    "play_score": 1.281,
+    "top_archetype": "Purple Enel",
+    "top_count": 3.25,
+    "top_share": 0.2324
+  },
+  "OP12-071": {
+    "code": "OP12-071",
+    "exp_copies": 0.8924,
+    "n_archetypes": 1,
+    "play_score": 1.514,
+    "top_archetype": "Purple Enel",
+    "top_count": 3.84,
+    "top_share": 0.2324
+  },
+  "OP12-099": {
+    "code": "OP12-099",
+    "exp_copies": 0.0192,
+    "n_archetypes": 1,
+    "play_score": 0.033,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 4.0,
+    "top_share": 0.0048
+  },
+  "OP12-108": {
+    "code": "OP12-108",
+    "exp_copies": 0.2713,
+    "n_archetypes": 1,
+    "play_score": 0.46,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 3.14,
+    "top_share": 0.0864
+  },
+  "OP12-112": {
+    "code": "OP12-112",
+    "exp_copies": 0.6996,
+    "n_archetypes": 4,
+    "play_score": 1.187,
+    "top_archetype": "Purple/Yellow Robin",
+    "top_count": 4.0,
+    "top_share": 0.0018
+  },
+  "OP12-114": {
+    "code": "OP12-114",
+    "exp_copies": 0.012,
+    "n_archetypes": 1,
+    "play_score": 0.02,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 2.5,
+    "top_share": 0.0048
+  },
+  "OP12-115": {
+    "code": "OP12-115",
+    "exp_copies": 0.3223,
+    "n_archetypes": 1,
+    "play_score": 0.547,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 3.73,
+    "top_share": 0.0864
+  },
+  "OP12-118": {
+    "code": "OP12-118",
+    "exp_copies": 0.0421,
+    "n_archetypes": 2,
+    "play_score": 0.071,
+    "top_archetype": "Green Mihawk",
+    "top_count": 3.75,
+    "top_share": 0.0077
+  },
+  "OP12-119": {
+    "code": "OP12-119",
+    "exp_copies": 0.0219,
+    "n_archetypes": 2,
+    "play_score": 0.037,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 2.5,
+    "top_share": 0.0048
+  },
+  "OP13-001": {
+    "code": "OP13-001",
+    "exp_copies": 0.0042,
+    "n_archetypes": 1,
+    "play_score": 0.007,
+    "top_archetype": "Red/Green Luffy",
+    "top_count": 1.0,
+    "top_share": 0.0042
+  },
+  "OP13-002": {
+    "code": "OP13-002",
+    "exp_copies": 0.0083,
+    "n_archetypes": 1,
+    "play_score": 0.014,
+    "top_archetype": "Red/Blue Ace",
+    "top_count": 1.0,
+    "top_share": 0.0083
+  },
+  "OP13-007": {
+    "code": "OP13-007",
+    "exp_copies": 0.0468,
+    "n_archetypes": 3,
+    "play_score": 0.079,
+    "top_archetype": "Red/Black Koby",
+    "top_count": 3.0,
+    "top_share": 0.0066
+  },
+  "OP13-016": {
+    "code": "OP13-016",
+    "exp_copies": 0.0788,
+    "n_archetypes": 3,
+    "play_score": 0.134,
+    "top_archetype": "Red/Blue Ace",
+    "top_count": 4.0,
+    "top_share": 0.0083
+  },
+  "OP13-027": {
+    "code": "OP13-027",
+    "exp_copies": 0.021,
+    "n_archetypes": 2,
+    "play_score": 0.036,
+    "top_archetype": "Red/Green Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP13-028": {
+    "code": "OP13-028",
+    "exp_copies": 0.0084,
+    "n_archetypes": 1,
+    "play_score": 0.014,
+    "top_archetype": "Red/Green Luffy",
+    "top_count": 2.0,
+    "top_share": 0.0042
+  },
+  "OP13-031": {
+    "code": "OP13-031",
+    "exp_copies": 0.0553,
+    "n_archetypes": 2,
+    "play_score": 0.094,
+    "top_archetype": "Red/Green Luffy &amp; Ace",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  },
+  "OP13-037": {
+    "code": "OP13-037",
+    "exp_copies": 0.0084,
+    "n_archetypes": 1,
+    "play_score": 0.014,
+    "top_archetype": "Red/Green Luffy",
+    "top_count": 2.0,
+    "top_share": 0.0042
+  },
+  "OP13-040": {
+    "code": "OP13-040",
+    "exp_copies": 0.1574,
+    "n_archetypes": 4,
+    "play_score": 0.267,
+    "top_archetype": "Green Mihawk",
+    "top_count": 3.5,
+    "top_share": 0.0077
+  },
+  "OP13-042": {
+    "code": "OP13-042",
+    "exp_copies": 0.7649,
+    "n_archetypes": 3,
+    "play_score": 1.298,
+    "top_archetype": "Red/Blue Ace",
+    "top_count": 4.0,
+    "top_share": 0.0083
+  },
+  "OP13-043": {
+    "code": "OP13-043",
+    "exp_copies": 0.0332,
+    "n_archetypes": 1,
+    "play_score": 0.056,
+    "top_archetype": "Red/Blue Ace",
+    "top_count": 4.0,
+    "top_share": 0.0083
+  },
+  "OP13-054": {
+    "code": "OP13-054",
+    "exp_copies": 0.0332,
+    "n_archetypes": 1,
+    "play_score": 0.056,
+    "top_archetype": "Red/Blue Ace",
+    "top_count": 4.0,
+    "top_share": 0.0083
+  },
+  "OP13-076": {
+    "code": "OP13-076",
+    "exp_copies": 0.4059,
+    "n_archetypes": 3,
+    "play_score": 0.689,
+    "top_archetype": "Purple/Yellow Robin",
+    "top_count": 2.0,
+    "top_share": 0.0018
+  },
+  "OP13-093": {
+    "code": "OP13-093",
+    "exp_copies": 0.0119,
+    "n_archetypes": 1,
+    "play_score": 0.02,
+    "top_archetype": "Black Yamato",
+    "top_count": 1.0,
+    "top_share": 0.0119
+  },
+  "OP13-102": {
+    "code": "OP13-102",
+    "exp_copies": 0.0036,
+    "n_archetypes": 1,
+    "play_score": 0.006,
+    "top_archetype": "Purple/Yellow Robin",
+    "top_count": 2.0,
+    "top_share": 0.0018
+  },
+  "OP13-113": {
+    "code": "OP13-113",
+    "exp_copies": 0.021,
+    "n_archetypes": 1,
+    "play_score": 0.036,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 0.24,
+    "top_share": 0.0876
+  },
+  "OP13-118": {
+    "code": "OP13-118",
+    "exp_copies": 0.021,
+    "n_archetypes": 2,
+    "play_score": 0.036,
+    "top_archetype": "Red/Green Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP14-018": {
+    "code": "OP14-018",
+    "exp_copies": 0.0137,
+    "n_archetypes": 2,
+    "play_score": 0.023,
+    "top_archetype": "Red Ace",
+    "top_count": 1.33,
+    "top_share": 0.0072
+  },
+  "OP14-020": {
+    "code": "OP14-020",
+    "exp_copies": 0.0077,
+    "n_archetypes": 1,
+    "play_score": 0.013,
+    "top_archetype": "Green Mihawk",
+    "top_count": 1.0,
+    "top_share": 0.0077
+  },
+  "OP14-022": {
+    "code": "OP14-022",
+    "exp_copies": 0.0168,
+    "n_archetypes": 1,
+    "play_score": 0.028,
+    "top_archetype": "Red/Green Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP14-031": {
+    "code": "OP14-031",
+    "exp_copies": 0.0318,
+    "n_archetypes": 3,
+    "play_score": 0.054,
+    "top_archetype": "Red/Green Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP14-032": {
+    "code": "OP14-032",
+    "exp_copies": 0.0039,
+    "n_archetypes": 1,
+    "play_score": 0.007,
+    "top_archetype": "Green Mihawk",
+    "top_count": 0.5,
+    "top_share": 0.0077
+  },
+  "OP14-033": {
+    "code": "OP14-033",
+    "exp_copies": 0.0272,
+    "n_archetypes": 2,
+    "play_score": 0.046,
+    "top_archetype": "Green Mihawk",
+    "top_count": 2.25,
+    "top_share": 0.0077
+  },
+  "OP14-039": {
+    "code": "OP14-039",
+    "exp_copies": 0.0135,
+    "n_archetypes": 1,
+    "play_score": 0.023,
+    "top_archetype": "Green Mihawk",
+    "top_count": 1.75,
+    "top_share": 0.0077
+  },
+  "OP14-041": {
+    "code": "OP14-041",
+    "exp_copies": 0.0048,
+    "n_archetypes": 1,
+    "play_score": 0.008,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 1.0,
+    "top_share": 0.0048
+  },
+  "OP14-069": {
+    "code": "OP14-069",
+    "exp_copies": 0.0043,
+    "n_archetypes": 1,
+    "play_score": 0.007,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 0.05,
+    "top_share": 0.0864
+  },
+  "OP14-079": {
+    "code": "OP14-079",
+    "exp_copies": 0.0072,
+    "n_archetypes": 1,
+    "play_score": 0.012,
+    "top_archetype": "Black Crocodile",
+    "top_count": 1.0,
+    "top_share": 0.0072
+  },
+  "OP14-083": {
+    "code": "OP14-083",
+    "exp_copies": 0.0288,
+    "n_archetypes": 1,
+    "play_score": 0.049,
+    "top_archetype": "Black Crocodile",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP14-084": {
+    "code": "OP14-084",
+    "exp_copies": 0.0288,
+    "n_archetypes": 1,
+    "play_score": 0.049,
+    "top_archetype": "Black Crocodile",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP14-085": {
+    "code": "OP14-085",
+    "exp_copies": 0.0192,
+    "n_archetypes": 1,
+    "play_score": 0.033,
+    "top_archetype": "Black Crocodile",
+    "top_count": 2.67,
+    "top_share": 0.0072
+  },
+  "OP14-086": {
+    "code": "OP14-086",
+    "exp_copies": 0.0024,
+    "n_archetypes": 1,
+    "play_score": 0.004,
+    "top_archetype": "Black Crocodile",
+    "top_count": 0.33,
+    "top_share": 0.0072
+  },
+  "OP14-087": {
+    "code": "OP14-087",
+    "exp_copies": 0.0288,
+    "n_archetypes": 1,
+    "play_score": 0.049,
+    "top_archetype": "Black Crocodile",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP14-088": {
+    "code": "OP14-088",
+    "exp_copies": 0.0288,
+    "n_archetypes": 1,
+    "play_score": 0.049,
+    "top_archetype": "Black Crocodile",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP14-090": {
+    "code": "OP14-090",
+    "exp_copies": 0.0264,
+    "n_archetypes": 1,
+    "play_score": 0.045,
+    "top_archetype": "Black Crocodile",
+    "top_count": 3.67,
+    "top_share": 0.0072
+  },
+  "OP14-091": {
+    "code": "OP14-091",
+    "exp_copies": 0.0288,
+    "n_archetypes": 1,
+    "play_score": 0.049,
+    "top_archetype": "Black Crocodile",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP14-093": {
+    "code": "OP14-093",
+    "exp_copies": 0.0144,
+    "n_archetypes": 1,
+    "play_score": 0.024,
+    "top_archetype": "Black Crocodile",
+    "top_count": 2.0,
+    "top_share": 0.0072
+  },
+  "OP14-094": {
+    "code": "OP14-094",
+    "exp_copies": 0.024,
+    "n_archetypes": 1,
+    "play_score": 0.041,
+    "top_archetype": "Black Crocodile",
+    "top_count": 3.33,
+    "top_share": 0.0072
+  },
+  "OP14-096": {
+    "code": "OP14-096",
+    "exp_copies": 0.0619,
+    "n_archetypes": 3,
+    "play_score": 0.105,
+    "top_archetype": "Black Crocodile",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP14-099": {
+    "code": "OP14-099",
+    "exp_copies": 0.0288,
+    "n_archetypes": 1,
+    "play_score": 0.049,
+    "top_archetype": "Black Crocodile",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP14-102": {
+    "code": "OP14-102",
+    "exp_copies": 0.9316,
+    "n_archetypes": 2,
+    "play_score": 1.58,
+    "top_archetype": "Yellow Enel",
+    "top_count": 4.0,
+    "top_share": 0.0036
+  },
+  "OP14-103": {
+    "code": "OP14-103",
+    "exp_copies": 0.0144,
+    "n_archetypes": 1,
+    "play_score": 0.024,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 3.0,
+    "top_share": 0.0048
+  },
+  "OP14-104": {
+    "code": "OP14-104",
+    "exp_copies": 0.9416,
+    "n_archetypes": 3,
+    "play_score": 1.597,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 4.0,
+    "top_share": 0.0048
+  },
+  "OP14-105": {
+    "code": "OP14-105",
+    "exp_copies": 0.0192,
+    "n_archetypes": 1,
+    "play_score": 0.033,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 4.0,
+    "top_share": 0.0048
+  },
+  "OP14-107": {
+    "code": "OP14-107",
+    "exp_copies": 0.0192,
+    "n_archetypes": 1,
+    "play_score": 0.033,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 4.0,
+    "top_share": 0.0048
+  },
+  "OP14-108": {
+    "code": "OP14-108",
+    "exp_copies": 0.1783,
+    "n_archetypes": 2,
+    "play_score": 0.302,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 0.79,
+    "top_share": 0.0876
+  },
+  "OP14-110": {
+    "code": "OP14-110",
+    "exp_copies": 0.8681,
+    "n_archetypes": 2,
+    "play_score": 1.473,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 3.48,
+    "top_share": 0.2479
+  },
+  "OP14-111": {
+    "code": "OP14-111",
+    "exp_copies": 0.8969,
+    "n_archetypes": 2,
+    "play_score": 1.522,
+    "top_archetype": "Yellow Enel",
+    "top_count": 4.0,
+    "top_share": 0.0036
+  },
+  "OP14-112": {
+    "code": "OP14-112",
+    "exp_copies": 0.086,
+    "n_archetypes": 2,
+    "play_score": 0.146,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 3.5,
+    "top_share": 0.0048
+  },
+  "OP14-114": {
+    "code": "OP14-114",
+    "exp_copies": 0.0192,
+    "n_archetypes": 1,
+    "play_score": 0.033,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 4.0,
+    "top_share": 0.0048
+  },
+  "OP14-118": {
+    "code": "OP14-118",
+    "exp_copies": 0.0233,
+    "n_archetypes": 3,
+    "play_score": 0.039,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 0.5,
+    "top_share": 0.0048
+  },
+  "OP14-119": {
+    "code": "OP14-119",
+    "exp_copies": 0.0192,
+    "n_archetypes": 1,
+    "play_score": 0.033,
+    "top_archetype": "Green Mihawk",
+    "top_count": 2.5,
+    "top_share": 0.0077
+  },
+  "OP14-120": {
+    "code": "OP14-120",
+    "exp_copies": 0.0288,
+    "n_archetypes": 1,
+    "play_score": 0.049,
+    "top_archetype": "Black Crocodile",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP15-002": {
+    "code": "OP15-002",
+    "exp_copies": 0.0286,
+    "n_archetypes": 1,
+    "play_score": 0.049,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 1.0,
+    "top_share": 0.0286
+  },
+  "OP15-014": {
+    "code": "OP15-014",
+    "exp_copies": 0.0658,
+    "n_archetypes": 1,
+    "play_score": 0.112,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 2.3,
+    "top_share": 0.0286
+  },
+  "OP15-019": {
+    "code": "OP15-019",
+    "exp_copies": 0.0029,
+    "n_archetypes": 1,
+    "play_score": 0.005,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 0.1,
+    "top_share": 0.0286
+  },
+  "OP15-020": {
+    "code": "OP15-020",
+    "exp_copies": 0.1115,
+    "n_archetypes": 1,
+    "play_score": 0.189,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 3.9,
+    "top_share": 0.0286
+  },
+  "OP15-021": {
+    "code": "OP15-021",
+    "exp_copies": 0.0829,
+    "n_archetypes": 1,
+    "play_score": 0.141,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 2.9,
+    "top_share": 0.0286
+  },
+  "OP15-032": {
+    "code": "OP15-032",
+    "exp_copies": 0.2814,
+    "n_archetypes": 4,
+    "play_score": 0.477,
+    "top_archetype": "Red/Green Luffy",
+    "top_count": 2.5,
+    "top_share": 0.0042
+  },
+  "OP15-035": {
+    "code": "OP15-035",
+    "exp_copies": 0.0206,
+    "n_archetypes": 2,
+    "play_score": 0.035,
+    "top_archetype": "Red/Green Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP15-040": {
+    "code": "OP15-040",
+    "exp_copies": 0.1144,
+    "n_archetypes": 1,
+    "play_score": 0.194,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 4.0,
+    "top_share": 0.0286
+  },
+  "OP15-046": {
+    "code": "OP15-046",
+    "exp_copies": 0.1144,
+    "n_archetypes": 1,
+    "play_score": 0.194,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 4.0,
+    "top_share": 0.0286
+  },
+  "OP15-047": {
+    "code": "OP15-047",
+    "exp_copies": 0.0606,
+    "n_archetypes": 2,
+    "play_score": 0.103,
+    "top_archetype": "Blue Buggy",
+    "top_count": 1.0,
+    "top_share": 0.0036
+  },
+  "OP15-048": {
+    "code": "OP15-048",
+    "exp_copies": 0.0029,
+    "n_archetypes": 1,
+    "play_score": 0.005,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 0.1,
+    "top_share": 0.0286
+  },
+  "OP15-052": {
+    "code": "OP15-052",
+    "exp_copies": 0.1144,
+    "n_archetypes": 1,
+    "play_score": 0.194,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 4.0,
+    "top_share": 0.0286
+  },
+  "OP15-053": {
+    "code": "OP15-053",
+    "exp_copies": 0.1144,
+    "n_archetypes": 1,
+    "play_score": 0.194,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 4.0,
+    "top_share": 0.0286
+  },
+  "OP15-054": {
+    "code": "OP15-054",
+    "exp_copies": 0.1144,
+    "n_archetypes": 1,
+    "play_score": 0.194,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 4.0,
+    "top_share": 0.0286
+  },
+  "OP15-055": {
+    "code": "OP15-055",
+    "exp_copies": 0.0858,
+    "n_archetypes": 1,
+    "play_score": 0.146,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 3.0,
+    "top_share": 0.0286
+  },
+  "OP15-056": {
+    "code": "OP15-056",
+    "exp_copies": 0.0114,
+    "n_archetypes": 1,
+    "play_score": 0.019,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 0.4,
+    "top_share": 0.0286
+  },
+  "OP15-057": {
+    "code": "OP15-057",
+    "exp_copies": 0.0429,
+    "n_archetypes": 1,
+    "play_score": 0.073,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 1.5,
+    "top_share": 0.0286
+  },
+  "OP15-058": {
+    "code": "OP15-058",
+    "exp_copies": 0.2324,
+    "n_archetypes": 1,
+    "play_score": 0.394,
+    "top_archetype": "Purple Enel",
+    "top_count": 1.0,
+    "top_share": 0.2324
+  },
+  "OP15-060": {
+    "code": "OP15-060",
+    "exp_copies": 0.0767,
+    "n_archetypes": 1,
+    "play_score": 0.13,
+    "top_archetype": "Purple Enel",
+    "top_count": 0.33,
+    "top_share": 0.2324
+  },
+  "OP15-061": {
+    "code": "OP15-061",
+    "exp_copies": 0.9296,
+    "n_archetypes": 1,
+    "play_score": 1.577,
+    "top_archetype": "Purple Enel",
+    "top_count": 4.0,
+    "top_share": 0.2324
+  },
+  "OP15-066": {
+    "code": "OP15-066",
+    "exp_copies": 0.2905,
+    "n_archetypes": 1,
+    "play_score": 0.493,
+    "top_archetype": "Purple Enel",
+    "top_count": 1.25,
+    "top_share": 0.2324
+  },
+  "OP15-067": {
+    "code": "OP15-067",
+    "exp_copies": 0.9296,
+    "n_archetypes": 1,
+    "play_score": 1.577,
+    "top_archetype": "Purple Enel",
+    "top_count": 4.0,
+    "top_share": 0.2324
+  },
+  "OP15-071": {
+    "code": "OP15-071",
+    "exp_copies": 0.3393,
+    "n_archetypes": 1,
+    "play_score": 0.576,
+    "top_archetype": "Purple Enel",
+    "top_count": 1.46,
+    "top_share": 0.2324
+  },
+  "OP15-074": {
+    "code": "OP15-074",
+    "exp_copies": 0.7274,
+    "n_archetypes": 1,
+    "play_score": 1.234,
+    "top_archetype": "Purple Enel",
+    "top_count": 3.13,
+    "top_share": 0.2324
+  },
+  "OP15-075": {
+    "code": "OP15-075",
+    "exp_copies": 0.9296,
+    "n_archetypes": 1,
+    "play_score": 1.577,
+    "top_archetype": "Purple Enel",
+    "top_count": 4.0,
+    "top_share": 0.2324
+  },
+  "OP15-076": {
+    "code": "OP15-076",
+    "exp_copies": 0.9296,
+    "n_archetypes": 1,
+    "play_score": 1.577,
+    "top_archetype": "Purple Enel",
+    "top_count": 4.0,
+    "top_share": 0.2324
+  },
+  "OP15-077": {
+    "code": "OP15-077",
+    "exp_copies": 0.9417,
+    "n_archetypes": 2,
+    "play_score": 1.597,
+    "top_archetype": "Purple Enel",
+    "top_count": 4.0,
+    "top_share": 0.2324
+  },
+  "OP15-078": {
+    "code": "OP15-078",
+    "exp_copies": 1.2993,
+    "n_archetypes": 4,
+    "play_score": 2.204,
+    "top_archetype": "Purple Enel",
+    "top_count": 4.0,
+    "top_share": 0.2324
+  },
+  "OP15-083": {
+    "code": "OP15-083",
+    "exp_copies": 0.0039,
+    "n_archetypes": 1,
+    "play_score": 0.007,
+    "top_archetype": "Black Yamato",
+    "top_count": 0.33,
+    "top_share": 0.0119
+  },
+  "OP15-090": {
+    "code": "OP15-090",
+    "exp_copies": 0.0059,
+    "n_archetypes": 1,
+    "play_score": 0.01,
+    "top_archetype": "Black Yamato",
+    "top_count": 0.5,
+    "top_share": 0.0119
+  },
+  "OP15-092": {
+    "code": "OP15-092",
+    "exp_copies": 0.0264,
+    "n_archetypes": 1,
+    "play_score": 0.045,
+    "top_archetype": "Black Crocodile",
+    "top_count": 3.67,
+    "top_share": 0.0072
+  },
+  "OP15-101": {
+    "code": "OP15-101",
+    "exp_copies": 0.0192,
+    "n_archetypes": 1,
+    "play_score": 0.033,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 4.0,
+    "top_share": 0.0048
+  },
+  "OP15-108": {
+    "code": "OP15-108",
+    "exp_copies": 0.0386,
+    "n_archetypes": 3,
+    "play_score": 0.066,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 4.0,
+    "top_share": 0.0048
+  },
+  "OP15-109": {
+    "code": "OP15-109",
+    "exp_copies": 0.062,
+    "n_archetypes": 1,
+    "play_score": 0.105,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 0.25,
+    "top_share": 0.2479
+  },
+  "OP15-110": {
+    "code": "OP15-110",
+    "exp_copies": 0.0072,
+    "n_archetypes": 1,
+    "play_score": 0.012,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 1.5,
+    "top_share": 0.0048
+  },
+  "OP15-111": {
+    "code": "OP15-111",
+    "exp_copies": 0.0072,
+    "n_archetypes": 1,
+    "play_score": 0.012,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 1.5,
+    "top_share": 0.0048
+  },
+  "OP15-113": {
+    "code": "OP15-113",
+    "exp_copies": 0.2847,
+    "n_archetypes": 3,
+    "play_score": 0.483,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 4.0,
+    "top_share": 0.0048
+  },
+  "OP15-114": {
+    "code": "OP15-114",
+    "exp_copies": 0.2424,
+    "n_archetypes": 6,
+    "play_score": 0.411,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 4.0,
+    "top_share": 0.0048
+  },
+  "OP15-116": {
+    "code": "OP15-116",
+    "exp_copies": 0.0135,
+    "n_archetypes": 2,
+    "play_score": 0.023,
+    "top_archetype": "Purple/Yellow Robin",
+    "top_count": 2.0,
+    "top_share": 0.0018
+  },
+  "OP15-117": {
+    "code": "OP15-117",
+    "exp_copies": 0.0054,
+    "n_archetypes": 1,
+    "play_score": 0.009,
+    "top_archetype": "Yellow Enel",
+    "top_count": 1.5,
+    "top_share": 0.0036
+  },
+  "OP15-118": {
+    "code": "OP15-118",
+    "exp_copies": 0.9296,
+    "n_archetypes": 1,
+    "play_score": 1.577,
+    "top_archetype": "Purple Enel",
+    "top_count": 4.0,
+    "top_share": 0.2324
+  },
+  "OP15-119": {
+    "code": "OP15-119",
+    "exp_copies": 0.1659,
+    "n_archetypes": 2,
+    "play_score": 0.281,
+    "top_archetype": "Yellow Kalgara",
+    "top_count": 1.0,
+    "top_share": 0.0048
+  },
+  "OP16-001": {
+    "code": "OP16-001",
+    "exp_copies": 0.0072,
+    "n_archetypes": 1,
+    "play_score": 0.012,
+    "top_archetype": "Red Ace",
+    "top_count": 1.0,
+    "top_share": 0.0072
+  },
+  "OP16-003": {
+    "code": "OP16-003",
+    "exp_copies": 0.0288,
+    "n_archetypes": 1,
+    "play_score": 0.049,
+    "top_archetype": "Red Ace",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP16-004": {
+    "code": "OP16-004",
+    "exp_copies": 0.0537,
+    "n_archetypes": 2,
+    "play_score": 0.091,
+    "top_archetype": "Red Ace",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP16-005": {
+    "code": "OP16-005",
+    "exp_copies": 0.0288,
+    "n_archetypes": 1,
+    "play_score": 0.049,
+    "top_archetype": "Red Ace",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP16-010": {
+    "code": "OP16-010",
+    "exp_copies": 0.0144,
+    "n_archetypes": 1,
+    "play_score": 0.024,
+    "top_archetype": "Red Ace",
+    "top_count": 2.0,
+    "top_share": 0.0072
+  },
+  "OP16-011": {
+    "code": "OP16-011",
+    "exp_copies": 0.0288,
+    "n_archetypes": 1,
+    "play_score": 0.049,
+    "top_archetype": "Red Ace",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP16-012": {
+    "code": "OP16-012",
+    "exp_copies": 0.0332,
+    "n_archetypes": 1,
+    "play_score": 0.056,
+    "top_archetype": "Red Shanks",
+    "top_count": 4.0,
+    "top_share": 0.0083
+  },
+  "OP16-014": {
+    "code": "OP16-014",
+    "exp_copies": 0.0288,
+    "n_archetypes": 1,
+    "play_score": 0.049,
+    "top_archetype": "Red Ace",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP16-015": {
+    "code": "OP16-015",
+    "exp_copies": 0.0486,
+    "n_archetypes": 2,
+    "play_score": 0.082,
+    "top_archetype": "Red Ace",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP16-017": {
+    "code": "OP16-017",
+    "exp_copies": 0.0288,
+    "n_archetypes": 1,
+    "play_score": 0.049,
+    "top_archetype": "Red Ace",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP16-018": {
+    "code": "OP16-018",
+    "exp_copies": 0.011,
+    "n_archetypes": 1,
+    "play_score": 0.019,
+    "top_archetype": "Red Shanks",
+    "top_count": 1.33,
+    "top_share": 0.0083
+  },
+  "OP16-020": {
+    "code": "OP16-020",
+    "exp_copies": 0.0048,
+    "n_archetypes": 1,
+    "play_score": 0.008,
+    "top_archetype": "Red Ace",
+    "top_count": 0.67,
+    "top_share": 0.0072
+  },
+  "OP16-021": {
+    "code": "OP16-021",
+    "exp_copies": 0.0561,
+    "n_archetypes": 3,
+    "play_score": 0.095,
+    "top_archetype": "Red Ace",
+    "top_count": 4.0,
+    "top_share": 0.0072
+  },
+  "OP16-022": {
+    "code": "OP16-022",
+    "exp_copies": 0.2223,
+    "n_archetypes": 1,
+    "play_score": 0.377,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 1.0,
+    "top_share": 0.2223
+  },
+  "OP16-026": {
+    "code": "OP16-026",
+    "exp_copies": 0.4691,
+    "n_archetypes": 1,
+    "play_score": 0.796,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 2.11,
+    "top_share": 0.2223
+  },
+  "OP16-027": {
+    "code": "OP16-027",
+    "exp_copies": 0.1045,
+    "n_archetypes": 1,
+    "play_score": 0.177,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 0.47,
+    "top_share": 0.2223
+  },
+  "OP16-030": {
+    "code": "OP16-030",
+    "exp_copies": 0.0019,
+    "n_archetypes": 1,
+    "play_score": 0.003,
+    "top_archetype": "Green Mihawk",
+    "top_count": 0.25,
+    "top_share": 0.0077
+  },
+  "OP16-032": {
+    "code": "OP16-032",
+    "exp_copies": 0.5958,
+    "n_archetypes": 1,
+    "play_score": 1.011,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 2.68,
+    "top_share": 0.2223
+  },
+  "OP16-034": {
+    "code": "OP16-034",
+    "exp_copies": 0.8892,
+    "n_archetypes": 1,
+    "play_score": 1.508,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 4.0,
+    "top_share": 0.2223
+  },
+  "OP16-037": {
+    "code": "OP16-037",
+    "exp_copies": 0.0534,
+    "n_archetypes": 1,
+    "play_score": 0.091,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 0.24,
+    "top_share": 0.2223
+  },
+  "OP16-038": {
+    "code": "OP16-038",
+    "exp_copies": 0.4824,
+    "n_archetypes": 1,
+    "play_score": 0.818,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 2.17,
+    "top_share": 0.2223
+  },
+  "OP16-041": {
+    "code": "OP16-041",
+    "exp_copies": 0.0036,
+    "n_archetypes": 1,
+    "play_score": 0.006,
+    "top_archetype": "Blue Buggy",
+    "top_count": 1.0,
+    "top_share": 0.0036
+  },
+  "OP16-042": {
+    "code": "OP16-042",
+    "exp_copies": 0.9036,
+    "n_archetypes": 2,
+    "play_score": 1.533,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 4.0,
+    "top_share": 0.2223
+  },
+  "OP16-044": {
+    "code": "OP16-044",
+    "exp_copies": 0.0072,
+    "n_archetypes": 1,
+    "play_score": 0.012,
+    "top_archetype": "Blue Buggy",
+    "top_count": 2.0,
+    "top_share": 0.0036
+  },
+  "OP16-045": {
+    "code": "OP16-045",
+    "exp_copies": 0.8347,
+    "n_archetypes": 2,
+    "play_score": 1.416,
+    "top_archetype": "Blue Buggy",
+    "top_count": 4.0,
+    "top_share": 0.0036
+  },
+  "OP16-048": {
+    "code": "OP16-048",
+    "exp_copies": 0.9036,
+    "n_archetypes": 2,
+    "play_score": 1.533,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 4.0,
+    "top_share": 0.2223
+  },
+  "OP16-050": {
+    "code": "OP16-050",
+    "exp_copies": 0.0183,
+    "n_archetypes": 2,
+    "play_score": 0.031,
+    "top_archetype": "Blue Buggy",
+    "top_count": 2.0,
+    "top_share": 0.0036
+  },
+  "OP16-052": {
+    "code": "OP16-052",
+    "exp_copies": 0.0645,
+    "n_archetypes": 1,
+    "play_score": 0.109,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 0.26,
+    "top_share": 0.2479
+  },
+  "OP16-054": {
+    "code": "OP16-054",
+    "exp_copies": 0.9036,
+    "n_archetypes": 2,
+    "play_score": 1.533,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 4.0,
+    "top_share": 0.2223
+  },
+  "OP16-055": {
+    "code": "OP16-055",
+    "exp_copies": 0.9036,
+    "n_archetypes": 2,
+    "play_score": 1.533,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 4.0,
+    "top_share": 0.2223
+  },
+  "OP16-056": {
+    "code": "OP16-056",
+    "exp_copies": 1.7685,
+    "n_archetypes": 5,
+    "play_score": 3.0,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 4.0,
+    "top_share": 0.2223
+  },
+  "OP16-060": {
+    "code": "OP16-060",
+    "exp_copies": 0.0042,
+    "n_archetypes": 1,
+    "play_score": 0.007,
+    "top_archetype": "Purple Sengoku",
+    "top_count": 1.0,
+    "top_share": 0.0042
+  },
+  "OP16-062": {
+    "code": "OP16-062",
+    "exp_copies": 0.0084,
+    "n_archetypes": 1,
+    "play_score": 0.014,
+    "top_archetype": "Purple Sengoku",
+    "top_count": 2.0,
+    "top_share": 0.0042
+  },
+  "OP16-063": {
+    "code": "OP16-063",
+    "exp_copies": 0.0168,
+    "n_archetypes": 1,
+    "play_score": 0.028,
+    "top_archetype": "Purple Sengoku",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP16-064": {
+    "code": "OP16-064",
+    "exp_copies": 0.3486,
+    "n_archetypes": 2,
+    "play_score": 0.591,
+    "top_archetype": "Purple Sengoku",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP16-065": {
+    "code": "OP16-065",
+    "exp_copies": 0.3529,
+    "n_archetypes": 2,
+    "play_score": 0.599,
+    "top_archetype": "Purple Sengoku",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP16-066": {
+    "code": "OP16-066",
+    "exp_copies": 0.0168,
+    "n_archetypes": 1,
+    "play_score": 0.028,
+    "top_archetype": "Purple Sengoku",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP16-067": {
+    "code": "OP16-067",
+    "exp_copies": 0.0911,
+    "n_archetypes": 2,
+    "play_score": 0.155,
+    "top_archetype": "Purple Sengoku",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP16-068": {
+    "code": "OP16-068",
+    "exp_copies": 0.1002,
+    "n_archetypes": 1,
+    "play_score": 0.17,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 1.16,
+    "top_share": 0.0864
+  },
+  "OP16-070": {
+    "code": "OP16-070",
+    "exp_copies": 0.0168,
+    "n_archetypes": 1,
+    "play_score": 0.028,
+    "top_archetype": "Purple Sengoku",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP16-073": {
+    "code": "OP16-073",
+    "exp_copies": 0.0168,
+    "n_archetypes": 1,
+    "play_score": 0.028,
+    "top_archetype": "Purple Sengoku",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP16-076": {
+    "code": "OP16-076",
+    "exp_copies": 0.0168,
+    "n_archetypes": 1,
+    "play_score": 0.028,
+    "top_archetype": "Purple Sengoku",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP16-077": {
+    "code": "OP16-077",
+    "exp_copies": 0.0194,
+    "n_archetypes": 2,
+    "play_score": 0.033,
+    "top_archetype": "Purple Sengoku",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "OP16-078": {
+    "code": "OP16-078",
+    "exp_copies": 0.3046,
+    "n_archetypes": 2,
+    "play_score": 0.517,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 3.38,
+    "top_share": 0.0864
+  },
+  "OP16-079": {
+    "code": "OP16-079",
+    "exp_copies": 0.0119,
+    "n_archetypes": 1,
+    "play_score": 0.02,
+    "top_archetype": "Black Yamato",
+    "top_count": 1.0,
+    "top_share": 0.0119
+  },
+  "OP16-080": {
+    "code": "OP16-080",
+    "exp_copies": 0.174,
+    "n_archetypes": 2,
+    "play_score": 0.295,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 1.0,
+    "top_share": 0.0876
+  },
+  "OP16-081": {
+    "code": "OP16-081",
+    "exp_copies": 0.0238,
+    "n_archetypes": 1,
+    "play_score": 0.04,
+    "top_archetype": "Black Yamato",
+    "top_count": 2.0,
+    "top_share": 0.0119
+  },
+  "OP16-082": {
+    "code": "OP16-082",
+    "exp_copies": 0.0456,
+    "n_archetypes": 1,
+    "play_score": 0.077,
+    "top_archetype": "Black Yamato",
+    "top_count": 3.83,
+    "top_share": 0.0119
+  },
+  "OP16-084": {
+    "code": "OP16-084",
+    "exp_copies": 0.0476,
+    "n_archetypes": 1,
+    "play_score": 0.081,
+    "top_archetype": "Black Yamato",
+    "top_count": 4.0,
+    "top_share": 0.0119
+  },
+  "OP16-085": {
+    "code": "OP16-085",
+    "exp_copies": 0.0476,
+    "n_archetypes": 1,
+    "play_score": 0.081,
+    "top_archetype": "Black Yamato",
+    "top_count": 4.0,
+    "top_share": 0.0119
+  },
+  "OP16-086": {
+    "code": "OP16-086",
+    "exp_copies": 0.008,
+    "n_archetypes": 1,
+    "play_score": 0.014,
+    "top_archetype": "Black Yamato",
+    "top_count": 0.67,
+    "top_share": 0.0119
+  },
+  "OP16-087": {
+    "code": "OP16-087",
+    "exp_copies": 0.0476,
+    "n_archetypes": 1,
+    "play_score": 0.081,
+    "top_archetype": "Black Yamato",
+    "top_count": 4.0,
+    "top_share": 0.0119
+  },
+  "OP16-088": {
+    "code": "OP16-088",
+    "exp_copies": 0.0218,
+    "n_archetypes": 1,
+    "play_score": 0.037,
+    "top_archetype": "Black Yamato",
+    "top_count": 1.83,
+    "top_share": 0.0119
+  },
+  "OP16-091": {
+    "code": "OP16-091",
+    "exp_copies": 0.0476,
+    "n_archetypes": 1,
+    "play_score": 0.081,
+    "top_archetype": "Black Yamato",
+    "top_count": 4.0,
+    "top_share": 0.0119
+  },
+  "OP16-092": {
+    "code": "OP16-092",
+    "exp_copies": 0.0456,
+    "n_archetypes": 1,
+    "play_score": 0.077,
+    "top_archetype": "Black Yamato",
+    "top_count": 3.83,
+    "top_share": 0.0119
+  },
+  "OP16-095": {
+    "code": "OP16-095",
+    "exp_copies": 0.0139,
+    "n_archetypes": 1,
+    "play_score": 0.024,
+    "top_archetype": "Black Yamato",
+    "top_count": 1.17,
+    "top_share": 0.0119
+  },
+  "OP16-096": {
+    "code": "OP16-096",
+    "exp_copies": 0.0476,
+    "n_archetypes": 1,
+    "play_score": 0.081,
+    "top_archetype": "Black Yamato",
+    "top_count": 4.0,
+    "top_share": 0.0119
+  },
+  "OP16-097": {
+    "code": "OP16-097",
+    "exp_copies": 0.0456,
+    "n_archetypes": 1,
+    "play_score": 0.077,
+    "top_archetype": "Black Yamato",
+    "top_count": 3.83,
+    "top_share": 0.0119
+  },
+  "OP16-098": {
+    "code": "OP16-098",
+    "exp_copies": 0.0476,
+    "n_archetypes": 1,
+    "play_score": 0.081,
+    "top_archetype": "Black Yamato",
+    "top_count": 4.0,
+    "top_share": 0.0119
+  },
+  "OP16-099": {
+    "code": "OP16-099",
+    "exp_copies": 0.0416,
+    "n_archetypes": 1,
+    "play_score": 0.071,
+    "top_archetype": "Black Yamato",
+    "top_count": 3.5,
+    "top_share": 0.0119
+  },
+  "OP16-102": {
+    "code": "OP16-102",
+    "exp_copies": 0.0771,
+    "n_archetypes": 1,
+    "play_score": 0.131,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 0.88,
+    "top_share": 0.0876
+  },
+  "OP16-103": {
+    "code": "OP16-103",
+    "exp_copies": 0.1305,
+    "n_archetypes": 2,
+    "play_score": 0.221,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 1.44,
+    "top_share": 0.0876
+  },
+  "OP16-104": {
+    "code": "OP16-104",
+    "exp_copies": 0.3673,
+    "n_archetypes": 3,
+    "play_score": 0.623,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 4.0,
+    "top_share": 0.0876
+  },
+  "OP16-106": {
+    "code": "OP16-106",
+    "exp_copies": 0.2075,
+    "n_archetypes": 2,
+    "play_score": 0.352,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 2.29,
+    "top_share": 0.0876
+  },
+  "OP16-108": {
+    "code": "OP16-108",
+    "exp_copies": 0.3717,
+    "n_archetypes": 4,
+    "play_score": 0.631,
+    "top_archetype": "Purple/Yellow Robin",
+    "top_count": 4.0,
+    "top_share": 0.0018
+  },
+  "OP16-109": {
+    "code": "OP16-109",
+    "exp_copies": 0.2907,
+    "n_archetypes": 2,
+    "play_score": 0.493,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 3.21,
+    "top_share": 0.0876
+  },
+  "OP16-110": {
+    "code": "OP16-110",
+    "exp_copies": 0.3627,
+    "n_archetypes": 3,
+    "play_score": 0.615,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 3.97,
+    "top_share": 0.0876
+  },
+  "OP16-111": {
+    "code": "OP16-111",
+    "exp_copies": 0.0072,
+    "n_archetypes": 1,
+    "play_score": 0.012,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 1.5,
+    "top_share": 0.0048
+  },
+  "OP16-113": {
+    "code": "OP16-113",
+    "exp_copies": 0.0192,
+    "n_archetypes": 1,
+    "play_score": 0.033,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 4.0,
+    "top_share": 0.0048
+  },
+  "OP16-114": {
+    "code": "OP16-114",
+    "exp_copies": 0.0053,
+    "n_archetypes": 1,
+    "play_score": 0.009,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 0.06,
+    "top_share": 0.0876
+  },
+  "OP16-115": {
+    "code": "OP16-115",
+    "exp_copies": 0.0307,
+    "n_archetypes": 1,
+    "play_score": 0.052,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 0.35,
+    "top_share": 0.0876
+  },
+  "OP16-116": {
+    "code": "OP16-116",
+    "exp_copies": 0.1976,
+    "n_archetypes": 3,
+    "play_score": 0.335,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 2.15,
+    "top_share": 0.0876
+  },
+  "OP16-118": {
+    "code": "OP16-118",
+    "exp_copies": 0.0456,
+    "n_archetypes": 2,
+    "play_score": 0.077,
+    "top_archetype": "Red/Green Luffy &amp; Ace",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  },
+  "OP16-119": {
+    "code": "OP16-119",
+    "exp_copies": 0.6866,
+    "n_archetypes": 7,
+    "play_score": 1.165,
+    "top_archetype": "Black/Yellow Blackbeard",
+    "top_count": 4.0,
+    "top_share": 0.0876
+  },
+  "P-088": {
+    "code": "P-088",
+    "exp_copies": 0.3266,
+    "n_archetypes": 1,
+    "play_score": 0.554,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 3.78,
+    "top_share": 0.0864
+  },
+  "P-093": {
+    "code": "P-093",
+    "exp_copies": 0.3361,
+    "n_archetypes": 1,
+    "play_score": 0.57,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 3.89,
+    "top_share": 0.0864
+  },
+  "P-096": {
+    "code": "P-096",
+    "exp_copies": 0.1711,
+    "n_archetypes": 1,
+    "play_score": 0.29,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 0.69,
+    "top_share": 0.2479
+  },
+  "P-100": {
+    "code": "P-100",
+    "exp_copies": 0.0024,
+    "n_archetypes": 1,
+    "play_score": 0.004,
+    "top_archetype": "Black Crocodile",
+    "top_count": 0.33,
+    "top_share": 0.0072
+  },
+  "P-119": {
+    "code": "P-119",
+    "exp_copies": 0.0099,
+    "n_archetypes": 1,
+    "play_score": 0.017,
+    "top_archetype": "Red/Green Luffy &amp; Ace",
+    "top_count": 1.5,
+    "top_share": 0.0066
+  },
+  "PRB02-001": {
+    "code": "PRB02-001",
+    "exp_copies": 0.0403,
+    "n_archetypes": 2,
+    "play_score": 0.068,
+    "top_archetype": "Red/Black Koby",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  },
+  "PRB02-002": {
+    "code": "PRB02-002",
+    "exp_copies": 0.0249,
+    "n_archetypes": 1,
+    "play_score": 0.042,
+    "top_archetype": "Red Shanks",
+    "top_count": 3.0,
+    "top_share": 0.0083
+  },
+  "PRB02-003": {
+    "code": "PRB02-003",
+    "exp_copies": 0.0222,
+    "n_archetypes": 1,
+    "play_score": 0.038,
+    "top_archetype": "Red Shanks",
+    "top_count": 2.67,
+    "top_share": 0.0083
+  },
+  "PRB02-006": {
+    "code": "PRB02-006",
+    "exp_copies": 0.0154,
+    "n_archetypes": 1,
+    "play_score": 0.026,
+    "top_archetype": "Green Mihawk",
+    "top_count": 2.0,
+    "top_share": 0.0077
+  },
+  "PRB02-008": {
+    "code": "PRB02-008",
+    "exp_copies": 0.3778,
+    "n_archetypes": 2,
+    "play_score": 0.641,
+    "top_archetype": "Red/Blue Ace",
+    "top_count": 4.0,
+    "top_share": 0.0083
+  },
+  "PRB02-012": {
+    "code": "PRB02-012",
+    "exp_copies": 0.0168,
+    "n_archetypes": 1,
+    "play_score": 0.028,
+    "top_archetype": "Green/Purple Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "ST02-007": {
+    "code": "ST02-007",
+    "exp_copies": 0.0154,
+    "n_archetypes": 1,
+    "play_score": 0.026,
+    "top_archetype": "Green Mihawk",
+    "top_count": 2.0,
+    "top_share": 0.0077
+  },
+  "ST10-010": {
+    "code": "ST10-010",
+    "exp_copies": 0.322,
+    "n_archetypes": 2,
+    "play_score": 0.546,
+    "top_archetype": "Purple/Yellow Rosinante",
+    "top_count": 2.92,
+    "top_share": 0.0864
+  },
+  "ST10-015": {
+    "code": "ST10-015",
+    "exp_copies": 0.0229,
+    "n_archetypes": 1,
+    "play_score": 0.039,
+    "top_archetype": "Red/Blue Lucy",
+    "top_count": 0.8,
+    "top_share": 0.0286
+  },
+  "ST12-010": {
+    "code": "ST12-010",
+    "exp_copies": 0.2957,
+    "n_archetypes": 1,
+    "play_score": 0.502,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 1.33,
+    "top_share": 0.2223
+  },
+  "ST15-002": {
+    "code": "ST15-002",
+    "exp_copies": 0.0048,
+    "n_archetypes": 1,
+    "play_score": 0.008,
+    "top_archetype": "Red Ace",
+    "top_count": 0.67,
+    "top_share": 0.0072
+  },
+  "ST17-004": {
+    "code": "ST17-004",
+    "exp_copies": 0.0048,
+    "n_archetypes": 1,
+    "play_score": 0.008,
+    "top_archetype": "Blue/Yellow Hancock",
+    "top_count": 1.0,
+    "top_share": 0.0048
+  },
+  "ST18-001": {
+    "code": "ST18-001",
+    "exp_copies": 0.0168,
+    "n_archetypes": 1,
+    "play_score": 0.028,
+    "top_archetype": "Green/Purple Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "ST18-004": {
+    "code": "ST18-004",
+    "exp_copies": 0.0168,
+    "n_archetypes": 1,
+    "play_score": 0.028,
+    "top_archetype": "Green/Purple Luffy",
+    "top_count": 4.0,
+    "top_share": 0.0042
+  },
+  "ST21-003": {
+    "code": "ST21-003",
+    "exp_copies": 0.0084,
+    "n_archetypes": 1,
+    "play_score": 0.014,
+    "top_archetype": "Red/Green Luffy",
+    "top_count": 2.0,
+    "top_share": 0.0042
+  },
+  "ST21-014": {
+    "code": "ST21-014",
+    "exp_copies": 0.0099,
+    "n_archetypes": 1,
+    "play_score": 0.017,
+    "top_archetype": "Red/Green Luffy &amp; Ace",
+    "top_count": 1.5,
+    "top_share": 0.0066
+  },
+  "ST22-002": {
+    "code": "ST22-002",
+    "exp_copies": 0.0311,
+    "n_archetypes": 1,
+    "play_score": 0.053,
+    "top_archetype": "Red/Blue Ace",
+    "top_count": 3.75,
+    "top_share": 0.0083
+  },
+  "ST22-015": {
+    "code": "ST22-015",
+    "exp_copies": 0.0332,
+    "n_archetypes": 1,
+    "play_score": 0.056,
+    "top_archetype": "Red/Blue Ace",
+    "top_count": 4.0,
+    "top_share": 0.0083
+  },
+  "ST23-001": {
+    "code": "ST23-001",
+    "exp_copies": 0.0621,
+    "n_archetypes": 3,
+    "play_score": 0.105,
+    "top_archetype": "Red Shanks",
+    "top_count": 3.33,
+    "top_share": 0.0083
+  },
+  "ST23-002": {
+    "code": "ST23-002",
+    "exp_copies": 0.0332,
+    "n_archetypes": 1,
+    "play_score": 0.056,
+    "top_archetype": "Red Shanks",
+    "top_count": 4.0,
+    "top_share": 0.0083
+  },
+  "ST24-002": {
+    "code": "ST24-002",
+    "exp_copies": 0.0308,
+    "n_archetypes": 1,
+    "play_score": 0.052,
+    "top_archetype": "Green Mihawk",
+    "top_count": 4.0,
+    "top_share": 0.0077
+  },
+  "ST24-004": {
+    "code": "ST24-004",
+    "exp_copies": 0.0231,
+    "n_archetypes": 1,
+    "play_score": 0.039,
+    "top_archetype": "Green Mihawk",
+    "top_count": 3.0,
+    "top_share": 0.0077
+  },
+  "ST29-004": {
+    "code": "ST29-004",
+    "exp_copies": 0.0099,
+    "n_archetypes": 1,
+    "play_score": 0.017,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 0.04,
+    "top_share": 0.2479
+  },
+  "ST29-010": {
+    "code": "ST29-010",
+    "exp_copies": 0.0025,
+    "n_archetypes": 1,
+    "play_score": 0.004,
+    "top_archetype": "Blue/Yellow Nami",
+    "top_count": 0.01,
+    "top_share": 0.2479
+  },
+  "ST30-001": {
+    "code": "ST30-001",
+    "exp_copies": 0.0066,
+    "n_archetypes": 1,
+    "play_score": 0.011,
+    "top_archetype": "Red/Green Luffy &amp; Ace",
+    "top_count": 1.0,
+    "top_share": 0.0066
+  },
+  "ST30-002": {
+    "code": "ST30-002",
+    "exp_copies": 0.0264,
+    "n_archetypes": 1,
+    "play_score": 0.045,
+    "top_archetype": "Red/Green Luffy &amp; Ace",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  },
+  "ST30-003": {
+    "code": "ST30-003",
+    "exp_copies": 0.0066,
+    "n_archetypes": 1,
+    "play_score": 0.011,
+    "top_archetype": "Red/Green Luffy &amp; Ace",
+    "top_count": 1.0,
+    "top_share": 0.0066
+  },
+  "ST30-004": {
+    "code": "ST30-004",
+    "exp_copies": 0.0264,
+    "n_archetypes": 1,
+    "play_score": 0.045,
+    "top_archetype": "Red/Green Luffy &amp; Ace",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  },
+  "ST30-005": {
+    "code": "ST30-005",
+    "exp_copies": 0.0231,
+    "n_archetypes": 1,
+    "play_score": 0.039,
+    "top_archetype": "Red/Green Luffy &amp; Ace",
+    "top_count": 3.5,
+    "top_share": 0.0066
+  },
+  "ST30-012": {
+    "code": "ST30-012",
+    "exp_copies": 0.074,
+    "n_archetypes": 3,
+    "play_score": 0.126,
+    "top_archetype": "Red/Green Luffy &amp; Ace",
+    "top_count": 3.5,
+    "top_share": 0.0066
+  },
+  "ST30-014": {
+    "code": "ST30-014",
+    "exp_copies": 0.6167,
+    "n_archetypes": 2,
+    "play_score": 1.046,
+    "top_archetype": "Green/Blue Luffy",
+    "top_count": 2.7,
+    "top_share": 0.2223
+  },
+  "ST30-016": {
+    "code": "ST30-016",
+    "exp_copies": 0.0264,
+    "n_archetypes": 1,
+    "play_score": 0.045,
+    "top_archetype": "Red/Green Luffy &amp; Ace",
+    "top_count": 4.0,
+    "top_share": 0.0066
+  }
+}

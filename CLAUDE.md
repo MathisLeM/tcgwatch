@@ -32,6 +32,13 @@ dashboard, superseded by `frontend/` but kept for quick local inspection.
 - Rebuild Pokemon set reference: `python -m scraper.games.build_pokemon_sets`
 - Build Pokemon navigation tree (block > set > type): `python -m scraper.games.pokemon_hierarchy`
 - Fill missing set images (TCGdex CDN): `python -m scraper.fetch_set_images`
+- Cardmarket price trends (OPTCG): seed `python -m scraper.cardmarket.track seed`,
+  ingest `python -m scraper.cardmarket.ingest`, add a single
+  `python -m scraper.cardmarket.track add-single <cardmarket-url>` (all honour `DATABASE_URL`).
+- Card valuation (OPTCG over/under-valued): build the card source
+  `python -m scraper.valuation.cards_limitless OP15 OP16 EB03`, refresh the meta
+  `python -m scraper.valuation.playability`, then rank
+  `python -m scraper.valuation.rank --all` (all keyless, HTML cached under `data/valuation/`).
 - Legacy Streamlit dashboard: `streamlit run app.py` (or `launch_dashboard.bat`)
 - Migrate old OPTCG DB: `python -m scraper.migrate_from_optcg`
 - Migrate SQLite → Postgres (one-time, only needed once actually deploying): `python -m scripts.migrate_sqlite_to_postgres`
@@ -61,7 +68,9 @@ dashboard, superseded by `frontend/` but kept for quick local inspection.
   column-for-column so both layers read/write the same tables; `user.py`, `favorite.py`,
   `alert.py` are API-only, new tables), `routers/` (`auth`, `products`, `sets`,
   `retailers`, `favorites`, `alerts`), `services/` (`email_service.py`, `discord_service.py`,
-  `notify.py` = channel dispatch, `r2.py` = image upload, `listings.py`, `store_inventory.py`),
+  `notify.py` = channel dispatch, `r2.py` = image upload, `listings.py`, `store_inventory.py`,
+  `images.py` = vignette par (game, set, kind) réutilisant l'art du catalogue,
+  `kinds.py` = kind effectif + libellé lisible),
   `retailers.py` = curated registry of big retail chains (live/soon/blocked, for the
   "grandes enseignes" UI overlay — separate from the scraped `sites` table).
 - `frontend/`       — Next.js 16 / React 19 / TypeScript app (see `frontend/CLAUDE.md`;
@@ -98,6 +107,54 @@ drops cross-game contamination (Lorcana / Yu-Gi-Oh / Weiss Schwarz / Dragon Ball
 cross-listed in a shop's "Pokemon" collection) via `pokemon.is_other_tcg`, and stores
 the canonical **block id** (JP era ids `SV`/`S`/`M` → `sv`/`swsh`/`me`) in `products.series`
 so blocks group consistently across languages. Browse the result via `GET /sets/blocks`.
+
+## Dashboard trend sparklines
+`GET /products/history?product_id=…&days=30` returns a **batched** price series per
+product, read from `snapshots` (indexed on `(product_id, observed_at)`) and reduced to
+one point per day — the last observation of that day, since a day can hold several
+scrape runs. Requested products with no priced snapshot in the window come back as an
+empty list, never absent. The dashboard asks for every row of the current page in one
+call. Distinct from `GET /trends`, which is Cardmarket market value keyed by
+`id_product` — this one is *shop* prices keyed by `products.id`.
+
+## Cardmarket price trends (OPTCG)
+`scraper/cardmarket/` ingests Cardmarket `price_guide_*.json` market-value snapshots
+(EUR) into two **isolated** tables — `cm_tracked` (sealed SKUs + singles to follow)
+and `cm_prices` (time-series) — separate from the shop-scraped `products`/`snapshots`.
+`track.py` = seed/add tracked items (singles resolved from a Cardmarket URL via
+`resolver.py`, no scraping); `ingest.py` = idempotent upsert per `(id_product, day)`.
+Inputs live in `data/cardmarket/` (raw price guides + catalogues gitignored; the small
+`tracked_*.json` seed lists kept). Exposed by `GET /trends` (latest price, Δ% since
+first, sparkline series) + `GET /trends/{id_product}`; the frontend **Tendances** tab
+renders sealed + singles with mini-charts. Market value, **not** shop availability.
+
+## Card valuation / speculation (OPTCG)
+`scraper/valuation/` flags whether a single card is over- or under-valued.
+Everything is **keyless** (apitcg was dropped — signup was broken):
+- `cards_limitless.py` — the unified source: scrapes **Limitless** for rarity,
+  per-**version** EUR market price (base / `aa` parallel / `manga` / `fa` / `special`),
+  and alt identity, for *any* set incl. recent ones → `data/valuation/optcg_cards_limitless.json`.
+  Cross-product reprints (promo/collection) are tagged `other` and excluded (not booster pulls).
+  Limitless mislabels a few versions (e.g. a SEC parallel tagged `manga`, or an OP13
+  god-pack red-letter print looking like a normal `aa`); `data/valuation/version_overrides.json`
+  ({code:{v-number:kind}}, kinds incl. `godpack`) hand-corrects those and is applied by `load_cards`.
+- `playability.py` — share-weighted card usage from the Limitless metagame
+  (copies capped at 4) → `playability.json`, a 0-3 play score.
+- `odds.py` — user-sourced approximate pull rates (packs per card, classic sets):
+  SR 1/3 · alt 1/8 · SEC 1/30 · SP 1/144 · Event-Manga 1/288 · Manga 1/864 · godpack;
+  C/UC and classic (non-parallel) leaders are not tracked. `version_tier` uses the
+  card **type** (Character vs Event/Stage) so an event's parallel routes to the
+  event-manga tier (1/288) rather than a character parallel (1/8). `R` uses a placeholder rate.
+- `popularity.py` — character popularity from the official **WT100** reader poll
+  (Shueisha 2021); a card's character name is matched to a poll rank by token
+  overlap (tolerates "Monkey.D.Luffy" ↔ "Monkey D. Luffy") → a 0-1 score.
+- `rank.py` — one row per tracked printing (base + each alt version); fits
+  `ln(price) ~ tier + set + play + pop` (numpy OLS, R²≈0.92). The **residual is the
+  mispricing signal** (over/under vs comparable cards). Displays cards ≥ a price floor.
+- `model.py` — the standalone hand-weighted fair-value model (demand/supply, kept
+  as an explainable reference; the ranking uses the regression instead).
+Raw scraped HTML/JSON caches (`data/valuation/{limitless,apitcg}/`) are gitignored;
+the small consolidated JSON is committed so `rank` runs offline.
 
 ## Data model
 Core scraper tables — `sites`, `sets`, `catalog`, `products`, `snapshots` — exist

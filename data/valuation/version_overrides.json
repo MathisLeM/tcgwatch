@@ -1,0 +1,9 @@
+{
+  "_doc": "Curated fixes for versions Limitless mislabels. {CODE: {v-number: kind}}. kinds: base|aa|manga|fa|special|godpack|other. godpack = OP13 red-letter god-pack print (ultra-rare).",
+  "OP13-080": { "2": "godpack" },
+  "OP13-083": { "2": "godpack" },
+  "OP13-084": { "2": "godpack" },
+  "OP13-089": { "2": "godpack" },
+  "OP13-091": { "2": "godpack" },
+  "OP13-119": { "2": "aa" }
+}

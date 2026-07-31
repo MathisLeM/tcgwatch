@@ -15,14 +15,14 @@ export default function Protected({ children }: { children: React.ReactNode }) {
   }, [loaded, isAuthenticated, router]);
 
   if (!loaded) {
-    return <div className="min-h-screen flex items-center justify-center text-gray-500">Chargement…</div>;
+    return <div className="min-h-screen flex items-center justify-center text-dim">Chargement…</div>;
   }
   if (!isAuthenticated) return null;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-canvas text-ink">
       <AppNav />
-      <main className="max-w-7xl mx-auto px-6 py-6">{children}</main>
+      <main className="max-w-[1280px] mx-auto p-[clamp(16px,3vw,24px)]">{children}</main>
     </div>
   );
 }

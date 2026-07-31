@@ -80,6 +80,16 @@ def _setup_db():
         db.flush()
         db.add(Snapshot(product_id=op.id, observed_at="2026-06-02T10:00:00", price_eur=89.9,
                         available=1, stock_remaining=2))
+        # Cardmarket trend tracking: one sealed product with 2 price points (for the
+        # /trends API), and one with none (for the ingestion idempotency test).
+        from api.models.cardmarket import CmPrice, CmTracked
+        db.add(CmTracked(id_product=768727, game="optcg", category="sealed",
+                         set_code="OP09", kind="Booster Box",
+                         name="Emperors in the New World Booster Box"))
+        db.add(CmPrice(id_product=768727, observed_on="2026-05-01", trend=333.0, low=333.0, avg=357.0))
+        db.add(CmPrice(id_product=768727, observed_on="2026-07-01", trend=431.0, low=340.0, avg=428.0))
+        db.add(CmTracked(id_product=802153, game="optcg", category="sealed",
+                         set_code="OP10", kind="Booster Box", name="Royal Blood Booster Box"))
         db.commit()
     finally:
         db.close()

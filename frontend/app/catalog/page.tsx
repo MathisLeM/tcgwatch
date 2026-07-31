@@ -43,11 +43,11 @@ function Stock({ avail, total, minPrice }: { avail: number; total: number; minPr
   return (
     <span className="inline-flex items-center gap-1.5 text-xs">
       <span className={`px-1.5 py-0.5 rounded-full font-medium ${
-        avail > 0 ? "bg-green-500/15 text-green-400" : "bg-gray-500/10 text-gray-500"
+        avail > 0 ? "bg-ok-soft text-ok" : "bg-panel-2 text-dim"
       }`}>
         {avail}/{total} dispo
       </span>
-      {price && <span className="text-gray-300">dès {price}</span>}
+      {price && <span className="text-muted">dès {price}</span>}
     </span>
   );
 }
@@ -57,7 +57,7 @@ function GameChooser({ games, onSelect }: { games: CatalogGame[]; onSelect: (g: 
   return (
     <div>
       <h1 className="text-xl font-semibold mb-1">Catalogue</h1>
-      <p className="text-sm text-gray-400 mb-6">Choisis un jeu pour parcourir ses sets et types d&apos;articles.</p>
+      <p className="text-sm text-muted mb-6">Choisis un jeu pour parcourir ses sets et types d&apos;articles.</p>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {games.map((g) => {
           const img = imageUrl(g.image);
@@ -65,8 +65,8 @@ function GameChooser({ games, onSelect }: { games: CatalogGame[]; onSelect: (g: 
             <button
               key={g.game}
               onClick={() => onSelect(g)}
-              className="text-left rounded-2xl border border-white/10 bg-gray-900 p-5
-                         hover:border-red-500 transition-colors"
+              className="text-left rounded-2xl border border-line-strong bg-panel p-5
+                         hover:border-accent transition-colors"
             >
               <div className="h-24 flex items-center justify-center mb-3">
                 {img ? (
@@ -80,7 +80,7 @@ function GameChooser({ games, onSelect }: { games: CatalogGame[]; onSelect: (g: 
                 <span className="text-lg">{GAME_EMOJI[g.game] ?? "🎴"}</span>
                 <span className="text-lg font-semibold">{g.label}</span>
               </div>
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-dim mt-1">
                 {g.set_count} sets · {g.product_count} fiches
               </p>
               <div className="mt-2">
@@ -98,32 +98,32 @@ function GameChooser({ games, onSelect }: { games: CatalogGame[]; onSelect: (g: 
 function SetCard({ game, set }: { game: string; set: CatalogSet }) {
   const img = imageUrl(set.image);
   return (
-    <div className="rounded-xl border border-white/5 bg-gray-900 p-4 flex flex-col">
+    <div className="rounded-xl border border-line bg-panel p-4 flex flex-col">
       <div className="flex gap-3">
-        <div className="w-16 h-16 shrink-0 flex items-center justify-center rounded-lg bg-white/5 overflow-hidden">
+        <div className="w-16 h-16 shrink-0 flex items-center justify-center rounded-lg bg-panel-2 overflow-hidden">
           {img ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={img} alt={set.name} className="max-h-16 max-w-16 object-contain" />
           ) : (
-            <span className="text-xl text-gray-600">🃏</span>
+            <span className="text-xl text-dim">🃏</span>
           )}
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-1.5 flex-wrap">
             {set.abbreviation && (
-              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/10 text-gray-300">
+              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-panel-2 text-muted">
                 {set.abbreviation}
               </span>
             )}
-            <span className="text-[11px] text-gray-500">{LANG_FLAG[set.language] ?? set.language}</span>
+            <span className="text-[11px] text-dim">{LANG_FLAG[set.language] ?? set.language}</span>
           </div>
           <Link
             href={dashHref(game, { set_code: set.set_code, language: set.language })}
-            className="block mt-0.5 font-medium leading-snug hover:text-red-400"
+            className="block mt-0.5 font-medium leading-snug hover:text-accent"
           >
             {set.name}
           </Link>
-          <p className="text-xs text-gray-500 mt-0.5">
+          <p className="text-xs text-dim mt-0.5">
             {year(set.release_date)}
             {set.card_count ? ` · ${set.card_count} cartes` : ""}
             {` · ${set.product_count} fiche${set.product_count > 1 ? "s" : ""}`}
@@ -143,11 +143,11 @@ function SetCard({ game, set }: { game: string; set: CatalogSet }) {
                 key={k.kind}
                 href={dashHref(game, { set_code: set.set_code, language: set.language, kind: k.kind })}
                 title={`${k.label} — ${av}/${k.product_count} en stock${price ? ` · dès ${price}` : ""}`}
-                className="text-xs px-2 py-0.5 rounded-full bg-white/5 border border-white/10
-                           text-gray-300 hover:border-red-500 hover:text-white transition-colors"
+                className="text-xs px-2 py-0.5 rounded-full bg-panel-2 border border-line-strong
+                           text-muted hover:border-accent hover:text-ink transition-colors"
               >
                 {k.label}{" "}
-                <span className={av > 0 ? "text-green-400" : "text-gray-500"}>{av}/{k.product_count}</span>
+                <span className={av > 0 ? "text-ok" : "text-dim"}>{av}/{k.product_count}</span>
               </Link>
             );
           })}
@@ -158,7 +158,7 @@ function SetCard({ game, set }: { game: string; set: CatalogSet }) {
 }
 
 function SetsGrid({ game, sets }: { game: string; sets: CatalogSet[] }) {
-  if (sets.length === 0) return <p className="text-gray-500">Aucun set avec des annonces.</p>;
+  if (sets.length === 0) return <p className="text-dim">Aucun set avec des annonces.</p>;
   return (
     <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
       {sets.map((s) => <SetCard key={`${s.language}:${s.set_code}`} game={game} set={s} />)}
@@ -201,7 +201,7 @@ function BlocksView({ data }: { data: Catalog }) {
               key={b.block}
               onClick={() => setSelected(b.block)}
               className={`shrink-0 w-44 text-left rounded-xl border p-3 transition-colors ${
-                active ? "border-red-500 bg-red-500/10" : "border-white/5 bg-gray-900 hover:border-white/20"
+                active ? "border-accent bg-accent-soft" : "border-line bg-panel hover:border-line-strong"
               }`}
             >
               <div className="h-16 flex items-center justify-center mb-2">
@@ -213,12 +213,12 @@ function BlocksView({ data }: { data: Catalog }) {
                 )}
               </div>
               <div className="flex items-center gap-1.5">
-                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/10 text-gray-300">
+                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-panel-2 text-muted">
                   {b.block_code}
                 </span>
                 <span className="text-sm font-medium leading-tight truncate">{b.name.fr}</span>
               </div>
-              <p className="text-xs text-gray-500 mt-1">{b.set_count} sets · {b.product_count} fiches</p>
+              <p className="text-xs text-dim mt-1">{b.set_count} sets · {b.product_count} fiches</p>
               <div className="mt-1">
                 <Stock avail={b.available_count} total={b.product_count} minPrice={b.min_price} />
               </div>
@@ -232,13 +232,13 @@ function BlocksView({ data }: { data: Catalog }) {
           <div className="flex items-center justify-between gap-3 mb-3">
             <h2 className="text-lg font-medium">
               {block.name.fr}
-              <span className="ml-2 text-sm text-gray-500">
+              <span className="ml-2 text-sm text-dim">
                 {block.product_count} annonce{block.product_count > 1 ? "s" : ""}
               </span>
             </h2>
-            <label className="text-xs text-gray-400 flex items-center gap-1.5 cursor-pointer">
+            <label className="text-xs text-muted flex items-center gap-1.5 cursor-pointer">
               <input type="checkbox" checked={showEmpty} onChange={(e) => setShowEmpty(e.target.checked)}
-                className="accent-red-600" />
+                className="accent-[var(--color-accent)]" />
               Sets sans annonce
             </label>
           </div>
@@ -274,7 +274,7 @@ function CatalogInner() {
 
   if (!game) {
     return games.length === 0
-      ? <p className="text-gray-500">Chargement…</p>
+      ? <p className="text-dim">Chargement…</p>
       : <GameChooser games={games} onSelect={setGame} />;
   }
 
@@ -284,42 +284,42 @@ function CatalogInner() {
       <div className="flex items-center justify-between gap-3 mb-5 flex-wrap">
         <div className="flex items-center gap-2 text-sm">
           <button onClick={() => { setGame(null); setData(null); }}
-            className="text-gray-400 hover:text-white">Catalogue</button>
-          <span className="text-gray-600">/</span>
+            className="text-muted hover:text-ink">Catalogue</button>
+          <span className="text-dim">/</span>
           <span className="font-semibold">{GAME_EMOJI[game.game]} {game.label}</span>
         </div>
         <div className="flex items-center gap-2">
           {game.mode === "blocks" && (
             <select value={language} onChange={(e) => setLanguage(e.target.value)}
-              className="rounded-lg bg-gray-900 border border-white/10 px-3 py-1.5 text-sm">
+              className="rounded-lg bg-panel border border-line-strong px-3 py-1.5 text-sm">
               {Object.keys(LANG_FLAG).map((l) => <option key={l} value={l}>{LANG_FLAG[l]}</option>)}
             </select>
           )}
           <Link href={dashHref(game.game)}
-            className="text-sm px-3 py-1.5 rounded-lg bg-gray-900 border border-white/10
-                       text-gray-300 hover:border-red-500 hover:text-white transition-colors">
+            className="text-sm px-3 py-1.5 rounded-lg bg-panel border border-line-strong
+                       text-muted hover:border-accent hover:text-ink transition-colors">
             Voir tous les items →
           </Link>
         </div>
       </div>
 
-      {loading && <p className="text-gray-500">Chargement…</p>}
+      {loading && <p className="text-dim">Chargement…</p>}
       {!loading && data && data.mode === "blocks" && <BlocksView data={data} />}
       {!loading && data && data.mode === "sets" && <SetsGrid game={game.game} sets={data.sets ?? []} />}
 
       {!loading && data && data.unassigned.product_count > 0 && (
-        <div className="mt-8 rounded-xl border border-white/5 bg-gray-900 p-4">
+        <div className="mt-8 rounded-xl border border-line bg-panel p-4">
           <h3 className="text-sm font-medium">
             Sans set identifié
-            <span className="ml-2 text-xs text-gray-500">
+            <span className="ml-2 text-xs text-dim">
               {data.unassigned.product_count} annonce(s)
             </span>
           </h3>
           <div className="flex flex-wrap gap-1.5 mt-2">
             {data.unassigned.kinds.map((k) => (
               <span key={k.kind}
-                className="text-xs px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-gray-400">
-                {k.label} <span className="text-gray-600">·{k.product_count}</span>
+                className="text-xs px-2 py-0.5 rounded-full bg-panel-2 border border-line-strong text-muted">
+                {k.label} <span className="text-dim">·{k.product_count}</span>
               </span>
             ))}
           </div>

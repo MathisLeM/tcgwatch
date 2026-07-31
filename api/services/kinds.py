@@ -24,3 +24,14 @@ def effective_kind(game: str, stored_kind: Optional[str], title: str) -> Optiona
         from scraper.games import optcg
         return optcg.classify_kind(title or "")
     return stored_kind
+
+
+def kind_label(game: str, kind: str, language: str = "fr") -> str:
+    """Human-readable article type ("display" -> "Display", "etb" -> "Coffret
+    Élite"). Same labels the catalogue shows, so the two views agree; falls back
+    to the raw slug for anything not curated."""
+    if game in DERIVED_KIND_GAMES:
+        from scraper.games import optcg
+        return optcg.kind_label(kind, language) or kind
+    from scraper.games import pokemon
+    return pokemon.kind_label(kind, language) or kind

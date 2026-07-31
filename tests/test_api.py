@@ -1,5 +1,9 @@
 """End-to-end API tests against the seeded temp DB."""
 
+import json
+
+import pytest
+
 from api.config import settings
 
 
@@ -84,6 +88,42 @@ def test_facets(client):
     assert "sv08.5" in f["set_codes"]
 
 
+def test_price_history_one_point_per_day(client):
+    pid = client.get("/products", params={"shop": "exampleshop.fr"}).json()["items"][0]["product_id"]
+
+    # The seeded snapshots are from June 2026, so a wide window is needed to see
+    # them; each is on its own day, newest last.
+    h = client.get("/products/history", params={"product_id": pid, "days": 365}).json()
+    assert h[str(pid)] == [
+        {"d": "2026-06-01", "p": 69.9},
+        {"d": "2026-06-02", "p": 59.9},
+    ]
+
+    # Requested products with nothing in the window still get a key, so the
+    # dashboard never has to tell "no data" apart from "not asked for".
+    narrow = client.get("/products/history", params={"product_id": pid, "days": 1}).json()
+    assert narrow == {str(pid): []}
+
+
+def test_price_history_batches_and_ignores_unknown_ids(client):
+    items = client.get("/products").json()["items"]
+    ids = [i["product_id"] for i in items[:2]]
+    h = client.get(
+        "/products/history",
+        params=[("product_id", i) for i in ids + [999_999]] + [("days", 365)],
+    ).json()
+    assert set(h) == {str(i) for i in ids} | {"999999"}
+    assert h["999999"] == []
+
+
+def test_listing_carries_a_root_relative_image_or_none(client):
+    for item in client.get("/products").json()["items"]:
+        assert "image" in item
+        if item["image"] is not None:
+            assert not item["image"].startswith("/")
+            assert item["image"].startswith("images/")
+
+
 def test_sets(client):
     s = client.get("/sets", params={"game": "pokemon"}).json()
     assert any(x["abbreviation"] == "PRE" for x in s)
@@ -122,6 +162,35 @@ def test_optcg_kind_derived_without_stored_column(client):
 
     # facet dropdown is populated for OPTCG too
     assert "display" in client.get("/products/facets", params={"game": "optcg"}).json()["kinds"]
+
+
+# ── Trends (Cardmarket price history) ────────────────────────────────────────
+def test_trends_lists_sealed_with_delta_and_series(client):
+    d = client.get("/trends", params={"category": "sealed"}).json()
+    op09 = next(i for i in d if i["set_code"] == "OP09" and i["id_product"] == 768727)
+    assert op09["latest"]["trend"] == 431.0
+    assert op09["first_trend"] == 333.0
+    assert op09["delta_pct"] == pytest.approx(29.4, abs=0.15)   # (431-333)/333*100
+    assert len(op09["points"]) == 2 and op09["points"][0]["d"] == "2026-05-01"
+
+
+def test_trend_detail_returns_full_history(client):
+    d = client.get("/trends/768727").json()
+    assert d["name"].startswith("Emperors")
+    assert [p["trend"] for p in d["points"]] == [333.0, 431.0]
+    assert client.get("/trends/1").status_code == 404
+
+
+def test_cm_ingest_is_idempotent(tmp_path):
+    # Ingest a tiny price guide targeting a tracked-but-empty product (802153).
+    from scraper.cardmarket.ingest import ingest
+    pg = tmp_path / "price_guide_0101.json"
+    pg.write_text(json.dumps({"createdAt": "2026-01-01T00:00:00+0000", "priceGuides": [
+        {"idProduct": 802153, "avg": 150.0, "low": 134.0, "trend": 140.0, "avg7": None, "avg30": None},
+        {"idProduct": 999999, "avg": 1.0},   # not tracked -> ignored
+    ]}), encoding="utf-8")
+    assert ingest([pg])["inserted"] == 1
+    assert ingest([pg])["inserted"] == 0     # re-ingest = no duplicate
 
 
 # ── Favorites ───────────────────────────────────────────────────────────────

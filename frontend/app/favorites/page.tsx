@@ -44,32 +44,32 @@ function FavoritesInner() {
   return (
     <div>
       <h1 className="text-xl font-semibold mb-1">Mes favoris</h1>
-      <p className="text-sm text-gray-400 mb-5">
+      <p className="text-sm text-muted mb-5">
         {loading ? "Chargement…" : `${items.length} produit(s) suivi(s)`}
       </p>
 
       {!loading && items.length === 0 && (
-        <p className="text-gray-500">
+        <p className="text-dim">
           Aucun favori. Ajoutez-en avec l&apos;étoile ☆ depuis le dashboard.
         </p>
       )}
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((p) => (
-          <div key={p.product_id} className="bg-gray-900 border border-white/5 rounded-xl p-4">
+          <div key={p.product_id} className="bg-panel border border-line rounded-xl p-4">
             <div className="flex items-start justify-between gap-2">
               <p className="text-sm font-medium leading-snug">{p.title}</p>
               <button onClick={() => remove(p.product_id)} title="Retirer"
-                className="text-amber-400 hover:text-amber-300 shrink-0">★</button>
+                className="text-gold hover:text-gold shrink-0">★</button>
             </div>
-            <p className="text-xs text-gray-500 mt-1">
+            <p className="text-xs text-dim mt-1">
               {p.set_code || "?"} · {LANG_FLAG[p.language] ?? p.language} · {p.kind ?? "—"}
             </p>
             <div className="flex items-center justify-between mt-3">
               <span className={`text-xs px-2 py-0.5 rounded-full ${
-                p.status === "In Stock" ? "bg-green-500/15 text-green-400"
-                : p.status === "Out" ? "bg-red-500/15 text-red-400"
-                : "bg-gray-500/15 text-gray-400"}`}>
+                p.status === "In Stock" ? "bg-ok-soft text-ok"
+                : p.status === "Out" ? "bg-accent-soft text-accent"
+                : "bg-panel-2 text-muted"}`}>
                 {p.status === "In Stock" ? "En stock" : p.status === "Out" ? "Épuisé" : "?"}
               </span>
               <span className="text-sm font-semibold">
@@ -77,7 +77,7 @@ function FavoritesInner() {
               </span>
             </div>
             <a href={p.url} target="_blank" rel="noreferrer"
-              className="block mt-2 text-xs text-red-400 hover:text-red-300">{p.shop} ↗</a>
+              className="block mt-2 text-xs text-accent hover:text-ink">{p.shop} ↗</a>
           </div>
         ))}
       </div>

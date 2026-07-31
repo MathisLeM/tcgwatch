@@ -1,14 +1,96 @@
 @import "tailwindcss";
 
 :root {
-  --background: #030712;
-  --foreground: #ededed;
+  /* Aligné sur canvas/ink : sert de repli hors des composants (overscroll,
+     marges du navigateur). Voir la palette dans @theme ci-dessous. */
+  --background: #0b0714;
+  --foreground: #f1edf9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist);
+
+  /* Police d'affichage (titres) — landing v2 */
+  --font-display: var(--font-bricolage), var(--font-geist), sans-serif;
+
+  /* ── Palette « neon-violet » — direction visuelle des maquettes v2 ──
+     Partagée par la landing et les pages applicatives (AppNav / Protected /
+     dashboard). Les maquettes livrent aussi « braise » et « nuit-dorée » : voir
+     le commentaire sous ce bloc pour basculer. */
+  --color-canvas: #0b0714;
+  --color-panel: #141021;
+  --color-panel-2: #1b1530;
+  --color-line: #261e3e;
+  --color-line-strong: #372c58;
+  --color-ink: #f1edf9;
+  --color-muted: #a49bc2;
+  --color-dim: #6a6187;
+  --color-accent: #a78bfa;
+  --color-accent-soft: rgb(167 139 250 / 0.13);
+  --color-accent-line: rgb(167 139 250 / 0.38);
+  --color-gold: #f472b6;
+  --color-gold-soft: rgb(244 114 182 / 0.12);
+  --color-gold-line: rgb(244 114 182 / 0.35);
+  --color-ok: #4cc38a;
+  --color-ok-soft: rgb(76 195 138 / 0.12);
+  --color-ok-line: rgb(76 195 138 / 0.35);
+
+  /* Texte posé SUR un aplat accent/gold. `accent` et `gold` sont clairs dans
+     cette palette : du blanc dessus tomberait à ~2:1 de contraste, d'où un
+     encre sombre. À réviser en même temps que la palette. */
+  --color-on-accent: #14091f;
+  --color-on-gold: #2a0a18;
+
+  /* Bascule table ↔ cartes du dashboard (valeur reprise de la maquette v2).
+     Utiliser le variant `wide:` — il ne correspond à aucun breakpoint Tailwind. */
+  --breakpoint-wide: 860px;
+
+  --animate-float-y: float-y 7s ease-in-out infinite;
+  --animate-pulse-dot: pulse-dot 2.2s ease-in-out infinite;
+}
+
+/* Autres variantes livrées avec les maquettes v2 : remplacer les valeurs
+   `--color-*` ci-dessus par celles-ci pour basculer toute l'interface d'un coup.
+   Penser à repasser `--color-on-accent` / `--color-on-gold` en clair (#fff)
+   pour « braise », dont l'accent est sombre.
+
+   « braise » (rouge/or, accent sombre -> texte blanc dessus) :
+     canvas #0B0908  panel #141110  panel-2 #1C1715  line #282019
+     line-strong #3A2E24  ink #F5F1EA  muted #A89E90  dim #6F6659
+     accent #E5484D (soft .12 / line .35)  gold #F0B24A (soft .12 / line .35)
+
+   « nuit-dorée » (or/bleu, accent clair -> garder une encre sombre) :
+     canvas #070A12  panel #0D1220  panel-2 #131A2C  line #1B2338
+     line-strong #2A3550  ink #EDF1F9  muted #96A1B8  dim #5E6981
+     accent #E8B84B (soft .12 / line .35)  gold #8FB7FF (soft .12 / line .35) */
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-y,
+  .animate-pulse-dot {
+    animation: none;
+  }
 }
 
 body {

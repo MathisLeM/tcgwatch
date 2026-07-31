@@ -72,7 +72,26 @@ export interface ProductListing {
   observed_at: string | null;
   price_prev: number | null;
   avail_prev: number | null;
+  image: string | null;   // root-relative, e.g. "images/Pokemon/..." — see imageUrl()
 }
+
+/** One day of a product's price history (last observation of that day). */
+export interface PricePoint {
+  d: string;   // ISO date, YYYY-MM-DD
+  p: number;   // EUR
+}
+
+/**
+ * Price series for several products in one call — the dashboard asks for every
+ * row on the current page at once. Products with no data in the window come back
+ * as an empty array, never absent.
+ */
+export const fetchProductHistory = (productIds: number[], days = 30) => {
+  const p = new URLSearchParams();
+  productIds.forEach((id) => p.append("product_id", String(id)));
+  p.set("days", String(days));
+  return request<Record<string, PricePoint[]>>(`/products/history?${p.toString()}`);
+};
 
 export interface ProductPage {
   total: number;
@@ -122,6 +141,8 @@ export interface Facets {
   languages: string[];
   series: string[];
   kinds: string[];
+  /** Readable label per kind slug ("etb" -> "Coffret Dresseur d'Élite (ETB)"). */
+  kind_labels: Record<string, string>;
   shops: string[];
   set_codes: string[];
 }
@@ -273,6 +294,34 @@ export const fetchCatalog = (game: string, language?: string) => {
   const p = new URLSearchParams({ game });
   if (language) p.set("language", language);
   return request<Catalog>(`/catalog?${p.toString()}`);
+};
+
+// ── Cardmarket price trends (sealed + singles) ───────────────────────────────
+export interface TrendPoint {
+  d: string;        // ISO date
+  t: number | null; // trend price
+}
+
+export interface TrendItem {
+  id_product: number;
+  category: "sealed" | "single";
+  name: string;
+  set_code: string | null;
+  kind: string | null;
+  card_code: string | null;
+  card_set: string | null;
+  image: string | null;
+  latest: { observed_on: string; trend: number | null; low: number | null; avg: number | null } | null;
+  first_on: string | null;
+  first_trend: number | null;
+  delta_pct: number | null;
+  points: TrendPoint[];
+}
+
+export const fetchTrends = (category?: "sealed" | "single", game = "optcg") => {
+  const p = new URLSearchParams({ game });
+  if (category) p.set("category", category);
+  return request<TrendItem[]>(`/trends?${p.toString()}`);
 };
 
 // ── Favorites ───────────────────────────────────────────────────────────────

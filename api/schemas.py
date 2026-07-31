@@ -44,6 +44,7 @@ class ProductListing(BaseModel):
     observed_at: Optional[str] = None
     price_prev: Optional[float] = None
     avail_prev: Optional[int] = None
+    image: Optional[str] = None              # root-relative, e.g. "images/Pokemon/..."
 
 
 class ProductPage(BaseModel):
@@ -51,6 +52,12 @@ class ProductPage(BaseModel):
     limit: int
     offset: int
     items: list[ProductListing]
+
+
+class PricePoint(BaseModel):
+    """One day of a product's price history (last observation of that day)."""
+    d: str                                   # ISO date, YYYY-MM-DD
+    p: float                                 # EUR
 
 
 # ── Sets reference ──────────────────────────────────────────────────────────

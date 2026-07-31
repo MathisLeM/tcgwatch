@@ -1,0 +1,21 @@
+[
+  {"code": "OP09",  "kind": "Booster Box",       "kind_short": "BB", "idProduct": 768727, "name": "Emperors in the New World Booster Box"},
+  {"code": "OP09",  "kind": "Sleeved Pack Case", "kind_short": "SL", "idProduct": 863581, "name": "Emperors in the New World Sleeved Booster Pack Case (24x Packs)"},
+  {"code": "OP10",  "kind": "Booster Box",       "kind_short": "BB", "idProduct": 802153, "name": "Royal Blood Booster Box"},
+  {"code": "OP10",  "kind": "Sleeved Pack Case", "kind_short": "SL", "idProduct": 863582, "name": "Royal Blood Sleeved Booster Pack Case (24x Packs)"},
+  {"code": "OP11",  "kind": "Booster Box",       "kind_short": "BB", "idProduct": 812462, "name": "A Fist of Divine Speed Booster Box"},
+  {"code": "OP11",  "kind": "Sleeved Pack Case", "kind_short": "SL", "idProduct": 863583, "name": "A Fist of Divine Speed Sleeved Booster Pack Case (24x Packs)"},
+  {"code": "OP12",  "kind": "Booster Box",       "kind_short": "BB", "idProduct": 830647, "name": "Legacy of the Master Booster Box"},
+  {"code": "OP12",  "kind": "Sleeved Pack Case", "kind_short": "SL", "idProduct": 863584, "name": "Legacy of the Master Sleeved Booster Pack Case (24x Packs)"},
+  {"code": "OP13",  "kind": "Booster Box",       "kind_short": "BB", "idProduct": 830651, "name": "Carrying on his Will Booster Box"},
+  {"code": "OP13",  "kind": "Sleeved Pack Case", "kind_short": "SL", "idProduct": 863585, "name": "Carrying on his Will Sleeved Booster Pack Case (24x Packs)"},
+  {"code": "OP14",  "kind": "Booster Box",       "kind_short": "BB", "idProduct": 864452, "name": "The Azure Sea's Seven Booster Box"},
+  {"code": "OP14",  "kind": "Sleeved Pack Case", "kind_short": "SL", "idProduct": 874420, "name": "The Azure's Sea Seven Sleeved Booster Pack Case (24x Packs)"},
+  {"code": "OP15",  "kind": "Booster Box",       "kind_short": "BB", "idProduct": 867939, "name": "OP15 Booster Box"},
+  {"code": "OP16",  "kind": "Booster Box",       "kind_short": "BB", "idProduct": 867938, "name": "OP16 Booster Box"},
+  {"code": "EB02",  "kind": "Booster Box",       "kind_short": "BB", "idProduct": 809496, "name": "Anime 25th Collection Booster Box"},
+  {"code": "EB03",  "kind": "Booster Box",       "kind_short": "BB", "idProduct": 867331, "name": "Heroines Edition Booster Box"},
+  {"code": "PRB01", "kind": "Booster Box",       "kind_short": "BB", "idProduct": 776438, "name": "The Best Booster Box"},
+  {"code": "PRB02", "kind": "Booster Box",       "kind_short": "BB", "idProduct": 840415, "name": "The Best Vol.2 Booster Box"},
+  {"code": "PRB02", "kind": "Sleeved Pack Case", "kind_short": "SL", "idProduct": 863588, "name": "The Best Vol.2 Sleeved Booster Pack Case (20x Packs)"}
+]
