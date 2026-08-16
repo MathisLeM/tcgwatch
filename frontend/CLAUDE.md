@@ -53,9 +53,17 @@ backend. L'API FastAPI existe (`api/`) et tourne en local sur `:8000`.
   (l'hôte est l'API, pas le pipeline `next/image`) — même convention que `/catalog`.
 - Public-facing copy is **French**. `BRAND`/`TAGLINE` live in `lib/brand.ts` ("TCGWatch").
 
-## Deployment (planned, same as Vigilyx)
-- **Frontend** → Vercel (Next.js auto-detected, no `vercel.json`). Push = deploy.
-- **Backend** → Railway (FastAPI/uvicorn). **DB** → Supabase Postgres.
-  **Object storage** → Cloudflare R2. **Secrets** live in dashboards, never the repo.
+## Deployment (en ligne depuis fin juillet 2026)
+- **Frontend** → Vercel, **déployé** : https://tcgwatch.vercel.app (Next.js
+  auto-détecté, pas de `vercel.json`). Push sur `main` = deploy.
+- **Backend** → Railway, **déployé** : https://tcgwatch-production.up.railway.app.
+  `NEXT_PUBLIC_API_URL` est réglée sur cette URL côté Vercel (en local, `.env.local`
+  pointe sur `http://localhost:8000`). **DB** → Supabase Postgres (free tier : se met
+  en pause après ~7 j sans trafic → toutes les pages app cassent, il faut la réveiller).
+- **Object storage** → Cloudflare R2 **pas encore branché** : les images de référence
+  sont servies par le mount `/images` de Railway. **Secrets** dans les dashboards,
+  jamais dans le repo.
+- ⚠️ Le formulaire waitlist de `app/page.tsx` est en `action="#"` — il ne collecte
+  rien. À brancher avant toute campagne d'acquisition.
 - **Git workflow:** feature branch → PR → merge to `main`. Show commit messages
   before pushing; no Co-Authored-By trailers (matches Vigilyx).

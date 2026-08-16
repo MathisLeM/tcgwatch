@@ -8,18 +8,37 @@ as the sibling project **Vigilyx** (`C:\Users\mathi\vigilyx`): **Next.js**
 (frontend) · **FastAPI** (API + worker) · **SQLAlchemy/Postgres-compatible DB**
 · S3-compatible image storage.
 
-**Nothing is deployed yet — the project runs entirely locally.** Railway
-(API + worker) / Vercel (frontend) / Supabase (Postgres) / Cloudflare R2
-(images) are the *planned* production targets (see `DEPLOYMENT.md`), not a
-live environment: there's no prod DB, no deployed API, no domain. Local dev
-uses SQLite (`data/tcg_stock.sqlite`) end-to-end and `uvicorn --reload` /
-`npm run dev`. Treat `DEPLOYMENT.md` as a runbook to follow later, not a
-description of current state.
-
 The scraper (9 platform fetchers, game-agnostic) is the original core and still
 runs standalone; `api/` + `frontend/` are the newer product layer built on top
 of the same local SQLite data. `app.py` (Streamlit) is the legacy local-only
 dashboard, superseded by `frontend/` but kept for quick local inspection.
+
+## Deployment status (à jour au 2026-08-17)
+
+**L'alpha est déployée**, selon le plan `DEPLOYMENT_ALPHA.md` (pas `DEPLOYMENT.md`,
+qui reste la cible complète à atteindre) :
+
+| Brique | État |
+|---|---|
+| Frontend Vercel — https://tcgwatch.vercel.app | ✅ en ligne (landing v2 + pages app) |
+| API Railway — https://tcgwatch-production.up.railway.app | ✅ en ligne (`/health`) |
+| DB Supabase Postgres | ✅ en ligne — **free tier : se met en pause après ~7 j d'inactivité**. Symptôme : `/health` répond 200 mais tous les endpoints DB renvoient 500. Réveiller le projet dans la console Supabase. |
+| Worker scraper (`railway.worker.toml`) | ❌ pas de service Railway — **la prod ne se rafraîchit pas toute seule** |
+| Cloudflare R2 | ❌ non branché — les images sont servies par Railway (`/images`) |
+| Domaine propre / facturation | ❌ inexistants (les formules de la landing sont décoratives) |
+
+Conséquences pratiques :
+- **La prod est un miroir en lecture seule du SQLite local.** On scrape en local,
+  puis on pousse avec `python -m scripts.sync_to_prod` (rejouable, cf. Run).
+- Inscriptions publiques fermées (`ALLOW_PUBLIC_SIGNUP=false`) : les comptes se
+  créent à la main via `python -m scripts.manage_users create`.
+- `/docs`, `/redoc` et `/openapi.json` sont désactivés en prod (`ENVIRONMENT=production`).
+- Le formulaire de liste d'attente de la landing est en `action="#"` — **aucun
+  e-mail n'est collecté** pour l'instant.
+- Le repo GitHub (`MathisLeM/tcgwatch`) est **public** (aucun secret commité).
+
+Le dev local reste 100 % SQLite (`data/tcg_stock.sqlite`) + `uvicorn --reload` /
+`npm run dev` — aucune variable d'environnement requise.
 
 ## Run
 - API (dev, reads local SQLite): `uvicorn main:app --reload` → http://127.0.0.1:8000/docs
@@ -41,7 +60,15 @@ dashboard, superseded by `frontend/` but kept for quick local inspection.
   `python -m scraper.valuation.rank --all` (all keyless, HTML cached under `data/valuation/`).
 - Legacy Streamlit dashboard: `streamlit run app.py` (or `launch_dashboard.bat`)
 - Migrate old OPTCG DB: `python -m scraper.migrate_from_optcg`
-- Migrate SQLite → Postgres (one-time, only needed once actually deploying): `python -m scripts.migrate_sqlite_to_postgres`
+- **Pousser les données locales en prod** (rejouable, `DATABASE_URL` = Supabase) :
+  `python -m scripts.sync_to_prod --dry-run` puis `python -m scripts.sync_to_prod`
+  (ou `launch_sync_prod.bat`, qui enchaîne les deux avec confirmation). Upsert :
+  `sites`/`sets`/`catalog`/`products`/`cm_tracked` sont mis à jour intégralement,
+  `snapshots`/`cm_prices` sont incrémentales (seules les lignes au-dessus du
+  max(id) cible partent ; `--full` renvoie tout). Les tables applicatives
+  (`users`, `favorites`, `alert_*`) ne sont jamais touchées.
+- Migration initiale SQLite → Postgres (one-shot historique, non rejouable —
+  utiliser `sync_to_prod` à la place) : `python -m scripts.migrate_sqlite_to_postgres`
 - Tests: `pytest`
 
 ## Layout
@@ -73,12 +100,19 @@ dashboard, superseded by `frontend/` but kept for quick local inspection.
   `kinds.py` = kind effectif + libellé lisible),
   `retailers.py` = curated registry of big retail chains (live/soon/blocked, for the
   "grandes enseignes" UI overlay — separate from the scraped `sites` table).
+  **Aucune enseigne n'est `live` aujourd'hui** : Micromania est repassée en `soon`
+  (POC stealth-browser + stock magasin pas assez fiables), le chantier "grandes
+  enseignes" est en pause. Les endpoints `/retailers/{id}/products` et `/stores`
+  répondent donc 409 ; leur code reste couvert par un test qui promeut
+  temporairement Micromania en `live`.
 - `frontend/`       — Next.js 16 / React 19 / TypeScript app (see `frontend/CLAUDE.md`;
   update that file too when frontend conventions change — it currently says the
   backend isn't built, which is now stale).
 - `migrations/`     — Alembic migrations, run automatically at API startup in prod.
-- `scripts/`        — one-off tools: `migrate_sqlite_to_postgres.py`,
-  `build_promo_packs.py`, `fetch_promo_pack_images.py`, `merge_optcg_history.py`.
+- `scripts/`        — `sync_to_prod.py` (push local → prod, rejouable) et
+  `manage_users.py` (création de comptes alpha) sont les deux outils de routine ;
+  one-off : `migrate_sqlite_to_postgres.py`, `build_promo_packs.py`,
+  `fetch_promo_pack_images.py`, `merge_optcg_history.py`.
 - `tests/`          — pytest for the API (`test_api.py`, `test_retailers.py`) and
   scraper logic (`test_pokemon_categorize.py`, `test_cleanup_language.py`,
   `test_micromania.py`).

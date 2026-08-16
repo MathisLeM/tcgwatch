@@ -24,8 +24,13 @@ class Retailer(BaseModel):
 
 
 RETAILERS: list[Retailer] = [
+    # Le scraping Micromania (stealth browser) et le stock par magasin marchent en
+    # POC mais ne sont pas assez fiables pour être exposés — repassés en "soon" en
+    # attendant la reprise du chantier "grandes enseignes". `platform` reste
+    # renseigné pour que l'overlay affiche le volume déjà collecté.
     Retailer(id="micromania", name="Micromania", platform="micromania",
-             status="live", has_store_stock=True),
+             status="soon", has_store_stock=False,
+             note="Scraping + stock magasin en POC — fiabilité à consolider"),
     Retailer(id="smythstoys", name="Smyths Toys", status="soon",
              note="Incapsula — même approche que Micromania, à valider"),
     Retailer(id="fnac", name="Fnac", status="blocked", note="Akamai Bot Manager"),
