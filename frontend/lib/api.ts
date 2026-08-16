@@ -365,3 +365,17 @@ export const deleteAlert = (id: number) =>
   request<void>(`/alerts/${id}`, { method: "DELETE" });
 export const testAlert = (id: number) =>
   request<{ success: boolean; detail: string }>(`/alerts/${id}/test`, { method: "POST" });
+
+// ── Waitlist ────────────────────────────────────────────────────────────────
+export interface WaitlistJoined {
+  ok: boolean;
+  message: string;
+}
+
+/** Inscription à la liste d'attente (endpoint public, rate-limité côté API).
+ *  Idempotent : une adresse déjà inscrite renvoie le même message de succès. */
+export const joinWaitlist = (email: string, source = "landing") =>
+  request<WaitlistJoined>("/waitlist", {
+    method: "POST",
+    body: JSON.stringify({ email, source }),
+  });

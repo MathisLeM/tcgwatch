@@ -8,6 +8,7 @@ from api.models.user import User  # noqa: F401
 from api.models.favorite import Favorite  # noqa: F401
 from api.models.alert import AlertConfig, AlertEvent  # noqa: F401
 from api.models.cardmarket import CmPrice, CmTracked  # noqa: F401
+from api.models.waitlist import WaitlistSignup  # noqa: F401
 
 __all__ = [
     "Site",
@@ -21,4 +22,5 @@ __all__ = [
     "AlertEvent",
     "CmTracked",
     "CmPrice",
+    "WaitlistSignup",
 ]

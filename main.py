@@ -16,7 +16,7 @@ from api.config import _WEAK_SECRET, settings
 from api.database import init_db
 from api.limiter import limiter
 from api.routers import (
-    alerts, auth, catalog, favorites, products, retailers, sets, trends,
+    alerts, auth, catalog, favorites, products, retailers, sets, trends, waitlist,
 )
 from scraper.config import IMAGES_DIR
 
@@ -83,6 +83,7 @@ app.include_router(trends.router, prefix="/trends", tags=["Trends"])
 app.include_router(retailers.router, prefix="/retailers", tags=["Retailers"])
 app.include_router(favorites.router, prefix="/favorites", tags=["Favorites"])
 app.include_router(alerts.router, prefix="/alerts", tags=["Alerts"])
+app.include_router(waitlist.router, prefix="/waitlist", tags=["Waitlist"])
 
 # Reference images (block / set logos) served for the frontend catalogue. Paths
 # returned by /sets/blocks are root-relative ("images/Pokemon/...") so the URL is

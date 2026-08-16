@@ -1,6 +1,7 @@
 import Image from "next/image";
 import LandingNav from "@/components/LandingNav";
 import Icon, { type IconName } from "@/components/Icons";
+import WaitlistForm from "@/components/WaitlistForm";
 import { BRAND, SITE_URL } from "@/lib/brand";
 
 /* Classes partagées — reprises de la maquette « Landing v2 ». */
@@ -688,31 +689,7 @@ export default function LandingPage() {
               d&apos;articles et formules d&apos;abonnement. Laissez votre e-mail et on vous
               prévient.
             </p>
-            <form
-              action="#"
-              className="flex flex-wrap items-center justify-center gap-2.5 w-full max-w-[460px]"
-            >
-              <label htmlFor="waitlist-email" className="sr-only">
-                Adresse e-mail
-              </label>
-              <input
-                id="waitlist-email"
-                name="email"
-                type="email"
-                required
-                placeholder="vous@exemple.com"
-                className="flex-1 min-w-[220px] bg-canvas border border-line-strong rounded-xl px-4 py-3.5
-                           text-sm text-ink placeholder-dim outline-none focus:border-accent transition-colors"
-              />
-              <button
-                type="submit"
-                className="bg-accent text-on-accent font-semibold px-[22px] py-3.5 rounded-xl text-sm whitespace-nowrap
-                           cursor-pointer hover:brightness-110 transition-[filter]"
-              >
-                Prévenez-moi
-              </button>
-            </form>
-            <p className="text-xs text-dim">Pas de spam — juste un e-mail à l&apos;ouverture.</p>
+            <WaitlistForm />
           </div>
         </div>
       </section>

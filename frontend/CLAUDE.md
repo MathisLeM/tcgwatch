@@ -27,7 +27,9 @@ backend. L'API FastAPI existe (`api/`) et tourne en local sur `:8000`.
 - `components/`      — `LandingNav` (client : nav sticky + menu mobile), `Icons`
   (jeu d'icônes SVG inline partagé landing + app, pas de dépendance externe),
   `AppNav` (header applicatif : pastilles de nav, pastilles scrollables en mobile),
-  `Protected` (auth gate + `AppNav` + le `<main>` de toutes les pages applicatives).
+  `Protected` (auth gate + `AppNav` + le `<main>` de toutes les pages applicatives),
+  `WaitlistForm` (client : le formulaire de liste d'attente de la landing, POST
+  `/waitlist`, états idle/envoi/succès/erreur — la landing reste statique).
 - `lib/api.ts`       — typed fetch wrappers. `imageUrl(path)` turns a root-relative reference
   image path (`images/Pokemon/...` from the API) into an absolute, URL-encoded `${API}/…` URL;
   the backend serves these via a `/images` static mount (Cloudflare R2 in prod).
@@ -63,7 +65,8 @@ backend. L'API FastAPI existe (`api/`) et tourne en local sur `:8000`.
 - **Object storage** → Cloudflare R2 **pas encore branché** : les images de référence
   sont servies par le mount `/images` de Railway. **Secrets** dans les dashboards,
   jamais dans le repo.
-- ⚠️ Le formulaire waitlist de `app/page.tsx` est en `action="#"` — il ne collecte
-  rien. À brancher avant toute campagne d'acquisition.
+- Le formulaire waitlist poste sur `POST /waitlist` via `components/WaitlistForm.tsx`
+  — il a donc besoin que l'API réponde. Si Supabase dort, l'inscription échoue et
+  le message d'erreur s'affiche sous le champ.
 - **Git workflow:** feature branch → PR → merge to `main`. Show commit messages
   before pushing; no Co-Authored-By trailers (matches Vigilyx).

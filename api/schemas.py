@@ -7,7 +7,7 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 
 
 # ── Auth ────────────────────────────────────────────────────────────────────
@@ -147,4 +147,25 @@ class AlertConfigOut(BaseModel):
     alert_type: str
     price_threshold: Optional[float] = None
     active: bool
+    created_at: datetime
+
+
+# ── Waitlist ────────────────────────────────────────────────────────────────
+class WaitlistCreate(BaseModel):
+    email: EmailStr
+    source: Optional[str] = "landing"
+
+
+class WaitlistJoined(BaseModel):
+    """Réponse publique — volontairement identique que l'e-mail soit nouveau ou
+    déjà présent, pour ne pas transformer l'endpoint en oracle d'inscription."""
+    ok: bool = True
+    message: str
+
+
+class WaitlistOut(BaseModel):
+    """Réservé à l'export admin."""
+    id: int
+    email: str
+    source: Optional[str] = None
     created_at: datetime

@@ -33,8 +33,6 @@ Conséquences pratiques :
 - Inscriptions publiques fermées (`ALLOW_PUBLIC_SIGNUP=false`) : les comptes se
   créent à la main via `python -m scripts.manage_users create`.
 - `/docs`, `/redoc` et `/openapi.json` sont désactivés en prod (`ENVIRONMENT=production`).
-- Le formulaire de liste d'attente de la landing est en `action="#"` — **aucun
-  e-mail n'est collecté** pour l'instant.
 - Le repo GitHub (`MathisLeM/tcgwatch`) est **public** (aucun secret commité).
 
 Le dev local reste 100 % SQLite (`data/tcg_stock.sqlite`) + `uvicorn --reload` /
@@ -93,8 +91,8 @@ Le dev local reste 100 % SQLite (`data/tcg_stock.sqlite`) + `uvicorn --reload` /
   see `.env.example`), `database.py` (SQLAlchemy engine/session, `create_all` in dev,
   Alembic in prod), `models/` (ORM — `catalog.py` mirrors the scraper's raw schema
   column-for-column so both layers read/write the same tables; `user.py`, `favorite.py`,
-  `alert.py` are API-only, new tables), `routers/` (`auth`, `products`, `sets`,
-  `retailers`, `favorites`, `alerts`), `services/` (`email_service.py`, `discord_service.py`,
+  `alert.py`, `waitlist.py` are API-only, new tables), `routers/` (`auth`, `products`,
+  `sets`, `retailers`, `favorites`, `alerts`, `waitlist`), `services/` (`email_service.py`, `discord_service.py`,
   `notify.py` = channel dispatch, `r2.py` = image upload, `listings.py`, `store_inventory.py`,
   `images.py` = vignette par (game, set, kind) réutilisant l'art du catalogue,
   `kinds.py` = kind effectif + libellé lisible),
@@ -205,6 +203,20 @@ in both the raw SQLite layer (`scraper/db.py`) and as SQLAlchemy models
 - `users` / `favorites` / `alert_configs` / `alert_events` — accounts, watchlist
   (targets either a `product_id` or a `catalog_id`), and alert rules + a sent-event
   log used to de-duplicate restock/price-drop notifications.
+- `waitlist_signups` — e-mails collectés par la landing. Table autonome (pas de FK
+  vers `users` : un inscrit waitlist n'a pas de compte).
+
+## Liste d'attente (landing)
+`POST /waitlist` est, avec `/auth/login`, le **seul endpoint public non
+authentifié** — d'où le rate limit slowapi (5/min/IP) et une réponse volontairement
+**identique que l'adresse soit nouvelle ou déjà inscrite** (sinon l'endpoint
+devient un oracle permettant de tester si un e-mail est dans la base). L'unicité
+sur `email` (normalisé strip+lowercase) rend l'inscription idempotente ;
+l'`IntegrityError` est rattrapée pour couvrir la course entre deux requêtes.
+`GET /waitlist` (export) et `GET /waitlist/stats` exigent `users.is_admin`.
+Côté front, `components/WaitlistForm.tsx` (client component) remplace le
+formulaire mort de la maquette. **Pas de double opt-in** : à ajouter
+(`confirmed_at` + token) ou à déléguer à un ESP avant d'envoyer une campagne.
 
 ## Conventions
 - `language` is a first-class dimension. OPTCG/Naruto are always `'fr'`; Pokemon is
