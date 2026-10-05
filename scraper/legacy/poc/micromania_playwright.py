@@ -16,15 +16,15 @@ It is deliberately gentle:
 
 USAGE
 -----
-    python -m scraper.poc.micromania_playwright              # headless, no proxy
-    python -m scraper.poc.micromania_playwright --headful    # visible browser
-    PROXY_URL=http://user:pass@host:port python -m scraper.poc.micromania_playwright
+    python -m scraper.legacy.poc.micromania_playwright              # headless, no proxy
+    python -m scraper.legacy.poc.micromania_playwright --headful    # visible browser
+    PROXY_URL=http://user:pass@host:port python -m scraper.legacy.poc.micromania_playwright
 
 Artifacts (screenshot + HTML dump per page) are written next to this file so
 the run leaves auditable proof of what Incapsula actually returned.
 
 Importing this module must have no side effects (it only defines functions),
-so `python -c "import scraper.poc.micromania_playwright"` is safe.
+so `python -c "import scraper.legacy.poc.micromania_playwright"` is safe.
 """
 from __future__ import annotations
 

@@ -17,8 +17,8 @@ Dry-run by default: prints what it would delete (grouped by shop) and writes an
 audit CSV to data/. Pass --apply to delete (snapshots cascade via ON DELETE
 CASCADE).
 
-Run:  python -m scraper.recategorize_optcg            # dry-run
-      python -m scraper.recategorize_optcg --apply    # delete
+Run:  python -m scraper.legacy.recategorize_optcg            # dry-run
+      python -m scraper.legacy.recategorize_optcg --apply    # delete
 """
 import argparse
 import csv
@@ -29,9 +29,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
 from bs4 import BeautifulSoup
 
-from .db import connect
-from .config import USER_AGENT, REQUEST_TIMEOUT, PER_DOMAIN_DELAY, DATA_DIR
-from . import cleanup
+from ..db import connect
+from ..config import USER_AGENT, REQUEST_TIMEOUT, PER_DOMAIN_DELAY, DATA_DIR
+from .. import cleanup
 
 HEADERS = {
     "User-Agent": USER_AGENT,

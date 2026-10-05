@@ -3,9 +3,9 @@
 Usage (run AFTER `alembic upgrade head` has created the schema on the target):
 
     # target comes from DATABASE_URL (.env) — must be the Postgres URL
-    python -m scripts.migrate_sqlite_to_postgres
-    python -m scripts.migrate_sqlite_to_postgres --source data/tcg_stock.sqlite
-    python -m scripts.migrate_sqlite_to_postgres --dry-run
+    python -m scripts.legacy.migrate_sqlite_to_postgres
+    python -m scripts.legacy.migrate_sqlite_to_postgres --source data/tcg_stock.sqlite
+    python -m scripts.legacy.migrate_sqlite_to_postgres --dry-run
 
 Copies the scraper's reference + operational tables. User/favorite/alert tables
 start empty in production, so they are not copied.

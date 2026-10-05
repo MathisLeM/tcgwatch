@@ -4,6 +4,9 @@
 > plutôt [`DEPLOYMENT_ALPHA.md`](DEPLOYMENT_ALPHA.md) : version minimale (API
 > Railway + Supabase + Vercel, images servies par Railway, comptes créés à la
 > main, pas de worker). Ce document-ci est le plan **cible** complet.
+>
+> **État au 2026-10-05** : §1, §2, §3 et §6 sont faits (alpha). Restent §4 (worker),
+> §5 (R2) et §7 (domaine).
 
 Stack identique à Vigilyx : **GitHub → Vercel (frontend) + Railway (API + worker
 scraper) + Supabase (Postgres) + Cloudflare R2 (images)**. Tout le code est prêt ;
@@ -23,12 +26,11 @@ ce guide couvre le provisioning et la mise en ligne.
 2. Elle servira de `DATABASE_URL` côté Railway (API **et** worker).
 
 ## 2. Reprise des données locales → Supabase
-Depuis la machine locale, `.env` pointant `DATABASE_URL` sur Supabase :
+Depuis la machine locale, `DATABASE_URL` pointant sur Supabase pour la session :
 ```bash
-python -m alembic upgrade head                 # crée le schéma sur Postgres
-python -m scripts.migrate_sqlite_to_postgres   # copie sites/sets/catalog/products/snapshots
+python -m scripts.sync_to_prod --migrate --dry-run   # alembic upgrade head + aperçu
+python -m scripts.sync_to_prod --migrate             # upsert, rejouable
 ```
-(Le script re-synchronise les séquences Postgres ; `--dry-run` pour vérifier d'abord.)
 
 ## 3. Railway — service API
 - Nouveau service depuis le repo GitHub. `railway.toml` est détecté (nixpacks,

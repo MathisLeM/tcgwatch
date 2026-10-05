@@ -1,7 +1,7 @@
 """Pousse les données scrapées en local vers la base de prod (Supabase Postgres).
 
 **Rejouable autant de fois qu'on veut** — contrairement à
-`scripts.migrate_sqlite_to_postgres` qui fait des INSERT bruts et explose au
+`scripts.legacy.migrate_sqlite_to_postgres` qui fait des INSERT bruts et explose au
 second passage. Ici tout passe par un UPSERT (`ON CONFLICT`) :
 
 - `sites`, `sets`, `catalog`, `products`, `cm_tracked` : upsert intégral

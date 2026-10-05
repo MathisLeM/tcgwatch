@@ -3,6 +3,10 @@
 Version **rapide et minimale** pour faire tester l'app à quelques proches, sur la
 stack Vigilyx : **GitHub → Railway (API) + Supabase (Postgres) + Vercel (frontend)**.
 
+> **État : déployée depuis fin juillet 2026.** Ce document sert désormais de
+> référence pour reconstruire l'environnement. Les commandes du quotidien sont
+> dans [docs/workflows.md](docs/workflows.md).
+
 Choix assumés pour l'alpha (différences avec le plan cible [`DEPLOYMENT.md`](DEPLOYMENT.md)) :
 - **Comptes créés à la main** (pas d'inscription publique) — `scripts/manage_users`.
 - **Images servies par Railway** (logos de blocs/sets versionnés dans le repo,
@@ -20,16 +24,9 @@ Vercel redéploient tout seuls.**
 python -c "import secrets; print(secrets.token_hex(32))"   # -> SECRET_KEY
 ```
 
-## 1. Git + GitHub (fondation du « push facile »)
-Le dossier n'est pas encore un dépôt git. Depuis `C:\Users\mathi\TCG_Scrapper` :
-```bash
-git init -b main
-git add -A
-git commit -m "TCGWatch alpha: scraper + API + frontend"
-# Créer le repo côté GitHub (UI : github.com/new, nom "tcgwatch", privé), puis :
-git remote add origin https://github.com/MathisLeM/tcgwatch.git
-git push -u origin main
-```
+## 1. Git + GitHub
+Dépôt : https://github.com/MathisLeM/tcgwatch (public, aucun secret commité).
+Workflow : branche → PR → merge sur `main` ; chaque merge redéploie Railway et Vercel.
 > Le `.gitignore` exclut déjà `.env`, la base SQLite locale, les dumps `data/*.xlsx`
 > et `node_modules`. Il **inclut** volontairement les logos de référence
 > (`images/Pokemon/Image_*`, ~10 Mo) pour que Railway les serve.
@@ -40,16 +37,18 @@ git push -u origin main
    `postgresql://postgres:[PASSWORD]@db.[REF].supabase.co:5432/postgres`.
    → ce sera `DATABASE_URL`.
 
-## 3. Charger les données locales → Supabase (une fois)
-Depuis la machine locale, avec `DATABASE_URL` pointant sur Supabase :
+## 3. Charger les données locales → Supabase
+Depuis la machine locale, avec `DATABASE_URL` pointant sur Supabase **pour la
+session seulement**. Ne pas la laisser dans `.env`, sinon le scraper écrit
+directement en prod.
 ```bash
-# .env local temporaire OU variable d'environnement :
 DATABASE_URL='postgresql://postgres:...supabase.co:5432/postgres' \
-  python -m alembic upgrade head                 # crée le schéma (9 tables)
+  python -m scripts.sync_to_prod --migrate --dry-run   # alembic upgrade head + aperçu
 DATABASE_URL='postgresql://postgres:...supabase.co:5432/postgres' \
-  python -m scripts.migrate_sqlite_to_postgres   # copie sites/sets/catalog/products/snapshots
+  python -m scripts.sync_to_prod --migrate             # push (upsert, rejouable)
 ```
-(Pour rafraîchir les données plus tard : rescraper en local puis rejouer cette commande.)
+Pour les rafraîchissements suivants : rescraper en local, puis `launch_sync_prod.bat`.
+(L'ancien `scripts/legacy/migrate_sqlite_to_postgres.py` n'est pas rejouable.)
 
 ## 4. Railway — service API (unique)
 1. **New Project → Deploy from GitHub repo** → le repo `tcgwatch`.
@@ -102,7 +101,8 @@ git add -A && git commit -m "…"
 git push                # Railway (API) et Vercel (frontend) redéploient automatiquement
 ```
 - Changement de schéma DB → ajouter une migration Alembic (jouée au boot Railway).
-- Rafraîchir les données → rescraper en local, puis `migrate_sqlite_to_postgres`.
+- Rafraîchir les données → rescraper en local, puis `python -m scripts.sync_to_prod`
+  (ou `launch_sync_prod.bat`).
 
 ## Checklist go-live
 - [ ] `GET https://<api>/health` répond `200`

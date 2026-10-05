@@ -3,13 +3,13 @@
 Copies `products` (tagging language='fr') and `snapshots` (preserving ids so the
 FK links stay intact), then seeds the `sites` table from the imported shops.
 
-Run:  python -m scraper.migrate_from_optcg
-      python -m scraper.migrate_from_optcg --src "C:\\path\\to\\tcg_stock.sqlite" --force
+Run:  python -m scraper.legacy.migrate_from_optcg
+      python -m scraper.legacy.migrate_from_optcg --src "C:\\path\\to\\tcg_stock.sqlite" --force
 """
 import argparse
 import sqlite3
 from pathlib import Path
-from .db import connect, init_db
+from ..db import connect, init_db
 
 DEFAULT_SRC = Path(r"C:\Users\mathi\OPTCG_Scrapper\data\tcg_stock.sqlite")
 

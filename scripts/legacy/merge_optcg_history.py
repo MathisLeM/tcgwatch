@@ -1,7 +1,7 @@
 """Merge the snapshot history from the legacy OPTCG_Scrapper DB into the current
 TCG_Scrapper DB, non-destructively, to get the complete MAJ history.
 
-Unlike `scraper.migrate_from_optcg` (which DELETEs + replaces), this MERGES:
+Unlike `scraper.legacy.migrate_from_optcg` (which DELETEs + replaces), this MERGES:
   - products are matched on the stable key (platform, shop, platform_pid);
   - products absent from the target are re-created (language='fr', new ids);
   - snapshots are inserted only when (product_id, observed_at) isn't already
@@ -10,9 +10,9 @@ Unlike `scraper.migrate_from_optcg` (which DELETEs + replaces), this MERGES:
 A timestamped backup of the target DB is written before any change.
 
 Run:
-    python scripts/merge_optcg_history.py            # apply
-    python scripts/merge_optcg_history.py --dry-run  # report only
-    python scripts/merge_optcg_history.py --src "C:\\path\\to\\old.sqlite"
+    python scripts/legacy/merge_optcg_history.py            # apply
+    python scripts/legacy/merge_optcg_history.py --dry-run  # report only
+    python scripts/legacy/merge_optcg_history.py --src "C:\\path\\to\\old.sqlite"
 """
 import argparse
 import shutil
@@ -20,7 +20,7 @@ import sqlite3
 import time
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 TARGET = ROOT / "data" / "tcg_stock.sqlite"
 DEFAULT_SRC = Path(r"C:\Users\mathi\OPTCG_Scrapper\data\tcg_stock.sqlite")
 BACKUP_DIR = ROOT / "data" / "backups"

@@ -1,4 +1,8 @@
-"""Rarity / alt-art catalog for OPTCG cards — keyless source.
+"""[LEGACY] Rarity / alt-art catalog for OPTCG cards — keyless apitcg source.
+
+Superseded by `scraper.valuation.cards_limitless` (apitcg lacks recent sets and
+its signup was broken). Kept for reference; only `tests/test_valuation.py`
+still exercises its pure helpers (`canon_rarity`, `consolidate`).
 
 Pulls per-set card data from the public **apitcg/one-piece-tcg-data** GitHub
 mirror (same data as API TCG, no key needed) and consolidates it into a single
@@ -9,13 +13,13 @@ and `id` adds a parallel suffix for alt arts (`OP09-051_p1`, `..._p2`). We keep
 the base printing's rarity and record how many parallels exist, so downstream
 valuation can flag alt-art premiums.
 
-    from scraper.valuation.rarity import build_catalog, load_catalog
+    from scraper.legacy.apitcg_rarity import build_catalog, load_catalog
     build_catalog()                 # download + consolidate (cached on disk)
     cards = load_catalog()          # {code: {...}}  read-only
 
 CLI:
-    python -m scraper.valuation.rarity              # build (uses cache if present)
-    python -m scraper.valuation.rarity --refresh    # re-download every set
+    python -m scraper.legacy.apitcg_rarity              # build (uses cache if present)
+    python -m scraper.legacy.apitcg_rarity --refresh    # re-download every set
 """
 from __future__ import annotations
 
@@ -27,7 +31,10 @@ import urllib.error
 import urllib.request
 from collections import defaultdict
 
-from . import APITCG_CACHE_DIR, OPTCG_CARDS, VALUATION_DIR
+from ..valuation import VALUATION_DIR
+
+APITCG_CACHE_DIR = VALUATION_DIR / "apitcg"      # raw per-set dumps (regenerable)
+OPTCG_CARDS = VALUATION_DIR / "optcg_cards.json"  # consolidated rarity catalog
 
 RAW_BASE = "https://raw.githubusercontent.com/apitcg/one-piece-tcg-data/main/cards/en"
 INDEX_API = "https://api.github.com/repos/apitcg/one-piece-tcg-data/contents/cards/en"

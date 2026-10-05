@@ -1,4 +1,7 @@
-"""Load the 3 curated Excel files into the `products` table.
+"""Load the curated `data/discovered_<platform>.xlsx` files into the `products` table.
+
+Called by `scraper.add_site` after a new shop is reviewed. Missing files are
+skipped (only the platforms you have curated locally are loaded).
 
 Idempotent: re-running upserts based on (platform, shop, platform_pid).
 """

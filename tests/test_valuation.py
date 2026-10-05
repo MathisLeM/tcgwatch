@@ -9,7 +9,7 @@ from scraper.valuation.playability import (
     parse_metagame,
 )
 from scraper.valuation.popularity import popularity_rank, popularity_score
-from scraper.valuation.rarity import canon_rarity, consolidate
+from scraper.legacy.apitcg_rarity import canon_rarity, consolidate
 
 
 def test_canon_rarity_maps_source_strings():

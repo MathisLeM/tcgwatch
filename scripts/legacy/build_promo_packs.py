@@ -21,14 +21,14 @@ Key rules (validated with the user)
 
 Run
 ---
-    python scripts/build_promo_packs.py
+    python scripts/legacy/build_promo_packs.py
 Outputs: data/optcg_promo_packs.json  and  data/optcg_promo_packs.xlsx
 """
 from __future__ import annotations
 import json, re, os, time, urllib.request
 from collections import defaultdict
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DUMP = os.path.join(ROOT, "data", "OP26062026")
 CACHE = os.path.join(ROOT, "data", "reference", "limitless_promo_cache")
 OUT_JSON = os.path.join(ROOT, "data", "optcg_promo_packs.json")
