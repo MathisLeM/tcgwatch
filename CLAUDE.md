@@ -38,35 +38,25 @@ Conséquences pratiques :
 Le dev local reste 100 % SQLite (`data/tcg_stock.sqlite`) + `uvicorn --reload` /
 `npm run dev` — aucune variable d'environnement requise.
 
-## Run
-- API (dev, reads local SQLite): `uvicorn main:app --reload` → http://127.0.0.1:8000/docs
-- Frontend (dev): `cd frontend && npm run dev` → http://localhost:3000
-- Scraper worker (prod-like loop): `python -m scraper.worker`
-- Snapshot OPTCG:   `python -m scraper.run --game optcg`   (or `launch_scraping_optcg.bat`)
-- Snapshot Pokemon: `python -m scraper.run --game pokemon` (or `launch_scraping_pokemon.bat`)
-- Snapshot all:     `python -m scraper.run` (default `--game all`)
-- Alerting only:    `python -c "from scraper.alerting import run_alerting; run_alerting()"`
-- Rebuild Pokemon set reference: `python -m scraper.games.build_pokemon_sets`
-- Build Pokemon navigation tree (block > set > type): `python -m scraper.games.pokemon_hierarchy`
-- Fill missing set images (TCGdex CDN): `python -m scraper.fetch_set_images`
-- Cardmarket price trends (OPTCG): seed `python -m scraper.cardmarket.track seed`,
-  ingest `python -m scraper.cardmarket.ingest`, add a single
-  `python -m scraper.cardmarket.track add-single <cardmarket-url>` (all honour `DATABASE_URL`).
-- Card valuation (OPTCG over/under-valued): build the card source
-  `python -m scraper.valuation.cards_limitless OP15 OP16 EB03`, refresh the meta
-  `python -m scraper.valuation.playability`, then rank
-  `python -m scraper.valuation.rank --all` (all keyless, HTML cached under `data/valuation/`).
-- Legacy Streamlit dashboard: `streamlit run app.py` (or `launch_dashboard.bat`)
-- Migrate old OPTCG DB: `python -m scraper.migrate_from_optcg`
-- **Pousser les données locales en prod** (rejouable, `DATABASE_URL` = Supabase) :
-  `python -m scripts.sync_to_prod --dry-run` puis `python -m scripts.sync_to_prod`
-  (ou `launch_sync_prod.bat`, qui enchaîne les deux avec confirmation). Upsert :
-  `sites`/`sets`/`catalog`/`products`/`cm_tracked` sont mis à jour intégralement,
-  `snapshots`/`cm_prices` sont incrémentales (seules les lignes au-dessus du
-  max(id) cible partent ; `--full` renvoie tout). Les tables applicatives
-  (`users`, `favorites`, `alert_*`) ne sont jamais touchées.
-- Migration initiale SQLite → Postgres (one-shot historique, non rejouable —
-  utiliser `sync_to_prod` à la place) : `python -m scripts.migrate_sqlite_to_postgres`
+## Documentation humaine (source de vérité pour l'usage)
+La doc utilisateur vit dans `docs/` — **la tenir à jour quand un script, un
+argument CLI, une dépendance ou un workflow change** :
+- `docs/workflows.md`    — ordres d'exécution (routine, nouvelle boutique, catalogue Pokémon, Cardmarket, valorisation, comptes).
+- `docs/scripts.md`      — chaque script : type (routine / ponctuel / legacy), commande, arguments, entrées → sorties.
+- `docs/dependencies.md` — librairies et leur usage ; `requirements.txt` (Railway) vs `requirements-dev.txt` (local : playwright, numpy/scipy/matplotlib, Pillow).
+- `docs/data.md`         — contenu de `data/` / `images/`, versionné ou non, régénérable ou non.
+- `docs/architecture.md` — flux de données, modèle, API, état du déploiement.
+
+## Run (essentiel)
+- API (dev, reads local SQLite): `uvicorn main:app --reload` · Frontend: `cd frontend && npm run dev` · les deux : `launch_app.bat`
+- Snapshot: `python -m scraper.run --game optcg|pokemon|all`
+- **Pousser en prod** (rejouable) : `python -m scripts.sync_to_prod --dry-run` puis sans `--dry-run`
+  (ou `launch_sync_prod.bat`). Upsert intégral du référentiel, séries temporelles
+  incrémentales (`--full` = tout) ; tables applicatives jamais touchées.
+- ⚠️ `scraper/db.py` passe sur Postgres dès que `DATABASE_URL` (env **ou `.env`**) n'est
+  pas SQLite : un `.env` resté sur Supabase fait écrire le scraper en prod.
+- ⚠️ `scraper.categorize_pokemon` DELETE les produits Pokémon (hors Micromania) avant
+  rechargement → l'historique `snapshots` part en cascade.
 - Tests: `pytest`
 
 ## Layout
@@ -76,9 +66,10 @@ Le dev local reste 100 % SQLite (`data/tcg_stock.sqlite`) + `uvicorn --reload` /
   `db.py` = raw SQLite layer (legacy, still used by standalone scraper scripts);
   `worker.py` = Railway worker entrypoint (scheduled scrape + alert loop);
   `alerting.py` = restock/price-drop detection + dispatch; `cleanup.py`,
-  `categorize_pokemon.py`, `recategorize_optcg.py`, `new_products.py` = maintenance
-  scripts; `stealth_browser.py` + `poc/` = Playwright-based fetching for
-  anti-bot-protected shops (Micromania).
+  `categorize_pokemon.py`, `new_products.py` = maintenance scripts;
+  `stealth_browser.py` = Playwright-based fetching for anti-bot-protected shops
+  (Micromania). `legacy/` = one-shot scripts kept for reference
+  (`migrate_from_optcg`, `recategorize_optcg`, `apitcg_rarity`, `poc/` Micromania).
 - `scraper/games/`  — per-game logic: `optcg.py`, `pokemon.py`, registry in `__init__.py`,
   shared helpers in `base.py`; `build_pokemon_sets.py` / `build_pokemon_dictionary.py`
   pull TCGdex reference data; `cardmarket.py` derives which product kinds exist per
@@ -104,22 +95,25 @@ Le dev local reste 100 % SQLite (`data/tcg_stock.sqlite`) + `uvicorn --reload` /
   répondent donc 409 ; leur code reste couvert par un test qui promeut
   temporairement Micromania en `live`.
 - `frontend/`       — Next.js 16 / React 19 / TypeScript app (see `frontend/CLAUDE.md`;
-  update that file too when frontend conventions change — it currently says the
-  backend isn't built, which is now stale).
+  update that file too when frontend conventions change).
 - `migrations/`     — Alembic migrations, run automatically at API startup in prod.
 - `scripts/`        — `sync_to_prod.py` (push local → prod, rejouable) et
   `manage_users.py` (création de comptes alpha) sont les deux outils de routine ;
-  one-off : `migrate_sqlite_to_postgres.py`, `build_promo_packs.py`,
+  one-off dans `scripts/legacy/` : `migrate_sqlite_to_postgres.py`, `build_promo_packs.py`,
   `fetch_promo_pack_images.py`, `merge_optcg_history.py`.
-- `tests/`          — pytest for the API (`test_api.py`, `test_retailers.py`) and
-  scraper logic (`test_pokemon_categorize.py`, `test_cleanup_language.py`,
-  `test_micromania.py`).
+- `tests/`          — pytest for the API (`test_api.py`, `test_retailers.py`, `test_waitlist.py`)
+  and scraper logic (`test_pokemon_categorize.py`, `test_pokemon_hierarchy.py`,
+  `test_cleanup_language.py`, `test_micromania.py`, `test_valuation.py`).
+- `docs/`           — documentation humaine (voir plus haut) + `boutiques_optcg.xlsx`
+  (registre des boutiques évaluées : Tracked / Skipped + raison) + `notes/`.
+- Hors repo : `C:\Users\mathi\TCG_Scrapper_archive\` (backups SQLite, dump `OP26062026/`
+  requis par `scripts/legacy/build_promo_packs.py`, captures POC).
 - `data/`           — `tcg_stock.sqlite` (dev DB, also the source read by `api/` locally);
   `pokemon_catalog.xlsx` (hand-editable SKU list); `reference/` (TCGdex sets/series
   cache, Cardmarket + TCGplayer dumps, Pokecardex images cache).
 - `images/`         — product thumbnails (served from Cloudflare R2 in prod).
 - `main.py`         — FastAPI entrypoint (`uvicorn main:app`); `DEPLOYMENT.md` and
-  `README.md` cover the Railway/Vercel/Supabase/R2 deploy in detail.
+  `DEPLOYMENT_ALPHA.md` cover the Railway/Vercel/Supabase/R2 deploy in detail.
 
 ## Pokemon catalog workflow
 1. `python -m scraper.games.build_pokemon_sets`         — refresh set reference (TCGdex).

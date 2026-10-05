@@ -3,9 +3,14 @@
 Two layers:
   - `model` — the pure over/under-valuation math (demand/supply, pull rate,
     value-conserving normalisation). No I/O, no network.
-  - data adapters that feed it real features:
-      * `rarity`      — card rarity / alt-art, from the keyless apitcg dump.
-      * (next) playability from Limitless, price join from Cardmarket.
+  - data adapters that feed it real features (all keyless):
+      * `cards_limitless` — rarity, per-version EUR price, alt identity (Limitless).
+      * `playability`     — share-weighted metagame usage (Limitless).
+      * `popularity`      — character rank from the WT100 reader poll.
+      * `odds`            — user-sourced pull rates per tier.
+  - `rank` fits the regression and ranks over/under-valued printings.
+
+The former apitcg rarity source lives in `scraper.legacy.apitcg_rarity`.
 
 All cached artefacts live under `data/valuation/`.
 """
@@ -22,8 +27,6 @@ from .model import (
 )
 
 VALUATION_DIR = DATA_DIR / "valuation"
-APITCG_CACHE_DIR = VALUATION_DIR / "apitcg"      # raw per-set dumps (regenerable)
-OPTCG_CARDS = VALUATION_DIR / "optcg_cards.json"  # consolidated rarity catalog
 
 __all__ = [
     "Card",
@@ -35,6 +38,4 @@ __all__ = [
     "evaluate_set",
     "pull_rate",
     "VALUATION_DIR",
-    "APITCG_CACHE_DIR",
-    "OPTCG_CARDS",
 ]

@@ -9,6 +9,9 @@ echo.
 echo   DATABASE_URL doit pointer sur Supabase (fichier .env).
 echo   Rejouable autant de fois que necessaire (upsert).
 echo.
+echo   /!\ Retire DATABASE_URL du .env apres le push : sinon les
+echo       prochains scrapes ecriront DIRECTEMENT dans la prod.
+echo.
 echo ---------------------------------------------------------------
 echo   1/2  Apercu (dry-run) : rien n'est ecrit
 echo ---------------------------------------------------------------

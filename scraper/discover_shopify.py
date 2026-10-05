@@ -1,6 +1,6 @@
 """Discover all OPTCG and Naruto Mythos booster/display products across Shopify shops.
 
-Output: data/discovered.xlsx — user reviews and prunes to a curated list.
+Output: data/discovered_shopify.xlsx — user reviews and prunes to a curated list.
 
 Approach (deliberately broad — user will hand-curate):
 1. For each shop, hit /collections.json to find OPTCG + Naruto collections.

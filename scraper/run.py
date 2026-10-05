@@ -1,5 +1,9 @@
-"""Main runner: take a fresh snapshot across all 3 platforms, then report
-what changed since the previous run (restocks + price changes + stockouts)."""
+"""Main runner: take a fresh snapshot across every platform fetcher (9, see
+`FETCHERS`), then report what changed since the previous run (restocks + price
+changes + stockouts).
+
+Run:  python -m scraper.run [--game optcg|pokemon|all]
+"""
 import sys, io, os
 # Force UTF-8 stdout on Windows. Skip under pytest (its capture stream must not
 # be re-wrapped, or it gets closed when our wrapper is GC'd at exit).

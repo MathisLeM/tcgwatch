@@ -14,12 +14,12 @@ Pipeline
 3. Download images to images/promo_packs/<tcgplayer_id>.jpg.
 4. Rewrite the JSON in place.
 
-Run:  python scripts/fetch_promo_pack_images.py [--no-download]
+Run:  python scripts/legacy/fetch_promo_pack_images.py [--no-download]
 """
 from __future__ import annotations
 import json, re, os, time, argparse, urllib.request
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 JSON_PATH = os.path.join(ROOT, "data", "optcg_promo_packs.json")
 GROUPS_CACHE = os.path.join(ROOT, "data", "reference", "tcgplayer_promo_products.json")
 IMG_DIR = os.path.join(ROOT, "images", "promo_packs")

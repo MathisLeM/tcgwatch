@@ -1,0 +1,21 @@
+# ============================================================================
+# TCGWatch — dépendances LOCALES (en plus de requirements.txt).
+# Pas installées sur Railway : uniquement pour les outils lancés depuis le poste.
+#   pip install -r requirements-dev.txt
+#   python -m playwright install chromium     # une fois, pour Micromania
+# Détail par librairie : docs/dependencies.md
+# ============================================================================
+-r requirements.txt
+
+# ---- Navigateur furtif (Micromania / boutiques anti-bot Imperva) ------------
+# scraper/stealth_browser.py, discover_micromania.py, fetch_micromania.py
+playwright>=1.45.0
+playwright-stealth>=2.0.0
+
+# ---- Valorisation des cartes OPTCG (scraper/valuation/) ---------------------
+numpy>=1.26.0                     # rank.py : régression OLS
+scipy>=1.11.0                     # rank.py / analysis.py : corrélations de Spearman
+matplotlib>=3.8.0                 # analysis.py : graphiques d'analyse exploratoire
+
+# ---- Scripts legacy -----------------------------------------------------------
+Pillow>=10.0.0                    # scripts/legacy/fetch_promo_pack_images.py (vignettes)

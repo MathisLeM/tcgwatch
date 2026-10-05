@@ -54,8 +54,8 @@ data/valuation/apitcg/
 data/valuation/limitless/
 
 # ---- Playwright/POC debug captures (screenshots, HTML dumps) ----
-scraper/poc/*.png
-scraper/poc/*.html
+scraper/legacy/poc/*.png
+scraper/legacy/poc/*.html
 store_stock_poc/*.png
 
 # ---- Images ----
