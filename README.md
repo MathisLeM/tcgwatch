@@ -55,6 +55,7 @@ Pokémon, valorisation, comptes…) sont décrits dans [docs/workflows.md](docs/
 
 | Document | Contenu |
 |---|---|
+| [docs/vue-ensemble.md](docs/vue-ensemble.md) | **Commencer ici** : le projet en une page, sans jargon |
 | [docs/architecture.md](docs/architecture.md) | Vue d'ensemble, flux de données, modèle de données, API, état du déploiement |
 | [docs/workflows.md](docs/workflows.md) | **Ordres d'exécution** : quoi lancer, dans quel ordre, pour chaque tâche |
 | [docs/scripts.md](docs/scripts.md) | Référence de **chaque script** : rôle, commande, arguments, entrées/sorties |
